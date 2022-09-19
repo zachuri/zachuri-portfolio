@@ -8,7 +8,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme='dark'
+      defaultTheme='system'
+      storageKey="theme"
     >
       <Navbar />
       <Component {...pageProps} />
