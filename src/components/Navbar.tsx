@@ -2,7 +2,14 @@ import React from 'react'
 
 const Navbar: React.FC = () => {
   return (
-    <div>Navbar</div>
+    <div>
+      {/* Left */}
+
+      {/* Middle */}
+
+
+      {/* Right */}
+    </div>
   )
 }
 
