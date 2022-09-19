@@ -4,6 +4,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from 'next-themes'
 import { WiMoonAltThirdQuarter } from "react-icons/wi"
+import { GiHamburgerMenu } from "react-icons/gi"
 
 
 function classNames(...classes: string[]) {
@@ -80,14 +81,18 @@ const Navbar: React.FC = () => {
         {/* Right (Hamburger)*/}
         <div className='flex justify-between items-center md:hidden'>
           <button onClick={handleTheme} className="flex justify-between items-center ">
-            <WiMoonAltThirdQuarter size={32} /> :
+            <WiMoonAltThirdQuarter size={32} />
           </button>
           <Menu as="div" className="relative text-left mt-1 ml-2">
-            <div className="flex">
-              <Menu.Button>
-                (<Image src="/assets/icons/hamburger-light.png" height="32" width="32" alt='toggle-theme-light' />) :
-              </Menu.Button>
-            </div>
+            <Menu.Button>
+              <div className="flex lg:hidden">
+                <div className="space-y-1.5">
+                  <span className="block w-7 h-0.5 bg-black  dark:bg-white"></span>
+                  <span className="block w-7 h-0.5 bg-black  dark:bg-white"></span>
+                  <span className="block w-7 h-0.5 bg-black  dark:bg-white"></span>
+                </div>
+              </div>
+            </Menu.Button>
 
             <Transition
               as={Fragment}
