@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
 	background: white;
 	font-family: Questrial, SF Pro Display, SF Pro Icons, Helvetica Neue,
 		Helvetica, Arial, sans-serif;
 	line-height: 1.1;
 	letter-spacing: 0em;
+*/
+
+@layer base {
+	body {
+		/* @apply max-w-2xl mx-auto px-4; */
+		@apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900;
+	}
 }

@@ -1,10 +1,32 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
+import { Menu, Transition } from "@headlessui/react";
+import { useTheme } from 'next-themes'
+
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const Navbar: React.FC = () => {
+
+  const { theme, setTheme } = useTheme()
+  const [darkToggle, setDarkToggle] = useState<boolean>(true);
+
+  function handleTheme() {
+    if (theme === 'dark') {
+      setTheme('light')
+      setDarkToggle(false)
+    }
+    else {
+      setTheme('dark')
+      setDarkToggle(true)
+    }
+  }
+
   return (
-    <div className='fixed w-full h-20 z-[100]'>
+    <div className='fixed w-full h-20 z-[100] dark:bg-black'>
       <div className='flex justify-between items-center w-full h-full px-8'>
         {/* Left */}
         <Link href="/">
@@ -37,11 +59,14 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
 
-        {/* Right md and lg*/}
+        {/* Right (medium and large)*/}
         <div className='justify-between items-center hidden md:flex'>
-          <Link href="/">
-            <Image src="/assets/icons/toggle-theme.png" height="32" width="32" alt='toggle-theme'></Image>
-          </Link>
+          <button onClick={handleTheme} className="flex justify-between items-center ">
+            {!darkToggle ?
+              <Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' /> :
+              <Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />
+            }
+          </button>
           <Link href="/">
             <div className='ml-2'>
               CONTACT
@@ -50,13 +75,83 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right (Hamburger)*/}
-        <div className='md:hidden'>
-          <Link href="/">
-            <Image src="/assets/icons/toggle-theme.png" height="32" width="32" alt='toggle-theme'></Image>
-          </Link>
-          <Link href="/">
-            <Image src="/assets/icons/hamburger.png" height="32" width="32" alt='hamgurger menu'></Image>
-          </Link>
+        <div className='flex justify-between items-center md:hidden'>
+          <button onClick={handleTheme} className="flex justify-between items-center ">
+            {!darkToggle ?
+              (<Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' />) :
+              (<Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />)
+            }
+          </button>
+          <Menu as="div" className="relative text-left mt-1 ml-2">
+            <div className="flex">
+              <Menu.Button>
+                {!darkToggle ?
+                  (<Image src="/assets/icons/hamburger-light.png" height="32" width="32" alt='toggle-theme-light' />) :
+                  (<Image src="/assets/icons/hamburger-dark.png" height="32" width="32" alt='toggle-theme-dark' />)
+                }
+              </Menu.Button>
+            </div>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#0e0e10] ring-1 ring-white ring-opacity-5 focus:outline-none">
+                <div className="py-1">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-500 text-gray-100"
+                            : "text-gray-200",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        About
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-500 text-gray-100"
+                            : "text-gray-200",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Projects
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-500 text-gray-100"
+                            : "text-gray-200",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        License
+                      </a>
+                    )}
+                  </Menu.Item>
+                </div>
+              </Menu.Items>
+            </Transition>
+          </Menu>
         </div>
       </div>
     </div>
