@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from 'next-themes'
+import { WiMoonAltWaxingGibbous3, WiMoonAltWaxingCrescent3 } from "react-icons/wi"
 
 
 function classNames(...classes: string[]) {
@@ -67,8 +68,10 @@ const Navbar: React.FC = () => {
         <div className='justify-between items-center hidden md:flex'>
           <button onClick={handleTheme} className="flex justify-between items-center ">
             {!darkToggle ?
-              <Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' /> :
-              <Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />
+              <WiMoonAltWaxingGibbous3 size={32} /> :
+              <WiMoonAltWaxingCrescent3 size={32} />
+              // <Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' /> :
+              // <Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />
             }
           </button>
           <Link href="/">
@@ -82,8 +85,11 @@ const Navbar: React.FC = () => {
         <div className='flex justify-between items-center md:hidden'>
           <button onClick={handleTheme} className="flex justify-between items-center ">
             {!darkToggle ?
-              (<Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' />) :
-              (<Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />)
+              <WiMoonAltWaxingGibbous3 size={32} /> :
+              <WiMoonAltWaxingCrescent3 size={32} />
+
+              // (<Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' />) :
+              // (<Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />)
             }
           </button>
           <Menu as="div" className="relative text-left mt-1 ml-2">
