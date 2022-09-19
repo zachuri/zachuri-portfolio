@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from 'next-themes'
 
@@ -13,6 +13,10 @@ const Navbar: React.FC = () => {
 
   const { theme, setTheme } = useTheme()
   const [darkToggle, setDarkToggle] = useState<boolean>(true);
+
+  useEffect(() => {
+    handleTheme()
+  }, [])
 
   function handleTheme() {
     if (theme === 'dark') {
