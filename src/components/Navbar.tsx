@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from 'next-themes'
-import { WiMoonAltWaxingGibbous3, WiMoonAltWaxingCrescent3 } from "react-icons/wi"
+import { WiMoonAltThirdQuarter } from "react-icons/wi"
 
 
 function classNames(...classes: string[]) {
@@ -13,11 +13,12 @@ function classNames(...classes: string[]) {
 const Navbar: React.FC = () => {
 
   const { theme, setTheme } = useTheme()
-  const [darkToggle, setDarkToggle] = useState<boolean>(true);
+  const [darkToggle, setDarkToggle] = useState<boolean>(theme === "dark" ? false : true);
 
-  useEffect(() => {
-    handleTheme()
-  }, [])
+  console.log(theme);
+  console.log(darkToggle);
+
+  useEffect(() => { darkToggle }, [])
 
   function handleTheme() {
     if (theme === 'dark') {
@@ -67,12 +68,7 @@ const Navbar: React.FC = () => {
         {/* Right (medium and large)*/}
         <div className='justify-between items-center hidden md:flex'>
           <button onClick={handleTheme} className="flex justify-between items-center ">
-            {!darkToggle ?
-              <WiMoonAltWaxingGibbous3 size={32} /> :
-              <WiMoonAltWaxingCrescent3 size={32} />
-              // <Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' /> :
-              // <Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />
-            }
+            <WiMoonAltThirdQuarter size={32} />
           </button>
           <Link href="/">
             <div className='ml-2'>
@@ -84,21 +80,12 @@ const Navbar: React.FC = () => {
         {/* Right (Hamburger)*/}
         <div className='flex justify-between items-center md:hidden'>
           <button onClick={handleTheme} className="flex justify-between items-center ">
-            {!darkToggle ?
-              <WiMoonAltWaxingGibbous3 size={32} /> :
-              <WiMoonAltWaxingCrescent3 size={32} />
-
-              // (<Image src="/assets/icons/toggle-theme-light.png" height="32" width="32" alt='toggle-theme-light' />) :
-              // (<Image src="/assets/icons/toggle-theme-dark.png" height="32" width="32" alt='toggle-theme-dark' />)
-            }
+            <WiMoonAltThirdQuarter size={32} /> :
           </button>
           <Menu as="div" className="relative text-left mt-1 ml-2">
             <div className="flex">
               <Menu.Button>
-                {!darkToggle ?
-                  (<Image src="/assets/icons/hamburger-light.png" height="32" width="32" alt='toggle-theme-light' />) :
-                  (<Image src="/assets/icons/hamburger-dark.png" height="32" width="32" alt='toggle-theme-dark' />)
-                }
+                (<Image src="/assets/icons/hamburger-light.png" height="32" width="32" alt='toggle-theme-light' />) :
               </Menu.Button>
             </div>
 
