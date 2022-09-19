@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	background: white;
+	font-family: Questrial, SF Pro Display, SF Pro Icons, Helvetica Neue,
+		Helvetica, Arial, sans-serif;
+	line-height: 1.1;
+	letter-spacing: 0em;
+}
