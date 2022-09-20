@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <div className='fixed w-full h-20 z-[100] bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg'>
+    <div className='fixed w-full h-20 z-[100] bg-opacity-20 backdrop-blur-lg drop-shadow-lg'>
       <div className='flex justify-between items-center w-full h-full px-10'>
         {/* Left */}
         <Link href="/">
