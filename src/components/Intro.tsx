@@ -8,8 +8,10 @@ const Intro: React.FC = () => {
         <div className="max-w-lg flex-1 flex flex-col justify-center items-center pt-10 lg:pt-6">
 
           {/* Where I'm from */}
-          <div className='w-full bg-[#dbd7d7] dark:bg-[#1c1c1c] p-5 rounded-xl mb-6' >
+          <div className='bg-[#dbd7d7] dark:bg-[#1c1c1c] p-5 rounded-xl mb-6' >
+            <h1>
               Hello, I&apos;m a Web Developer based in Irvine, California!
+            </h1>
           </div>
 
           {/* Name */}
@@ -27,18 +29,17 @@ const Intro: React.FC = () => {
           <div className='max-w-md flex flex-items-center'>
             <div>
               <h2 className='text-2xl dark:text-[#bd93f9]'>Work</h2>
-              <p >Takuya is a freelance and a full-stack developer based
-                in Osaka with a passion for building digital services/stuff
-                he wants. He has a knack for all things launching products,
-                from planning and designing all the way to solving real-life
-                problems with code. When not online, he loves hanging out with
-                his camera. Currently, he is living off of his own product called
-                Inkdrop. He publishes content for marketing his products and his
-                YouTube channel called &quot;Dev as Life&quot; has more than 100k subscribers.
+              <p>
+                Hola I&apos;m ZACHURI. I&apos;m a Computer and Information Science major from the University of California, Ivine.
+                What inspires me is to code is being able to build valuable projects that can help people. Also just love how we live
+                in a society where we can build things with words which can make our lives better. I aspire to beomce a Web Developer
+                in the far future! I&apos;m always here to learn about anything new. Lets build something together!
               </p>
+              <div className='flex justify-center'>
+                <button className='bg-[#bd93f9] rounded-xl px-8 py-2 text-black'>My portfolio &gt;</button>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
