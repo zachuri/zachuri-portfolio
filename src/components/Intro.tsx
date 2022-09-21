@@ -4,8 +4,8 @@ import React from 'react'
 const Intro: React.FC = () => {
   return (
     <div>
-      <div className='flex flex-col justify-center items-center pt-20 '>
-        <div className="max-w-lg flex-1 flex flex-col justify-center items-center pt-10 lg:pt-6">
+      <div className='flex flex-col justify-center items-center pt-20 px-10'>
+        <div className="flex-1 flex flex-col justify-center items-center pt-10 lg:pt-6">
 
           {/* Where I'm from */}
           <div className='bg-[#dbd7d7] dark:bg-[#1c1c1c] p-5 rounded-xl mb-6' >
