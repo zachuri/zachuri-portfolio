@@ -14,8 +14,8 @@ const Navbar: React.FC = () => {
   const { theme, setTheme } = useTheme()
   const [darkToggle, setDarkToggle] = useState<boolean>(theme === "dark" ? false : true);
 
-  console.log(theme);
-  console.log(darkToggle);
+  // console.log(theme);
+  // console.log(darkToggle);
 
   useEffect(() => { darkToggle }, [])
 
