@@ -41,11 +41,6 @@ const Navbar: React.FC = () => {
         {/* Middle */}
         <div>
           <ul className='hidden md:flex'>
-            <Link href="/" >
-              <li className="ml-10 text-sm uppercase hover:border-b">
-                INTRO
-              </li>
-            </Link>
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 WHO
