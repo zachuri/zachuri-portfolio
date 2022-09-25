@@ -140,7 +140,7 @@ const ContactUs: React.FC = () => {
                   onChange={handleOnChange}
                   value={inputs.message}
                 ></textarea>
-                <div className="text-center mt-10">
+                <div className="text-center mt-5">
                   <button type="submit" className="bg-[#bd93f9] text-black px-8 py-2">
                     {!status.submitting ? !status.submitted ? 'Submit' : 'Submitted' : 'Submitting...'}
                   </button>
