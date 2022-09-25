@@ -90,14 +90,14 @@ const ContactUs: React.FC = () => {
 
         <form onSubmit={handleSubmit} className='flex flex-col gap-4 mt-5 px-10 min-w-full lg:min-w-[500px]'>
           {status.info.error && (
-            <div className='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative' role="alert">
+            <div className='bg-red-100 border border-red-400 text-red-700 px-4 py-3 relative' role="alert">
               <strong className='font-bold'>Error</strong>:{' '}
               <span className='block sm:inline'>{status.info.msg}</span>
             </div>
           )}
 
           {status.submitted ? (
-            <div className='text-white text-xl font-bold px-4 py-3 rounded relative'> Your message has been successfully sent. We will contact you very soon!</div>
+            <div className='text-white text-xl font-bold px-4 py-3 relative'> Your message has been successfully sent. We will contact you very soon!</div>
           ) :
             (
               <>
