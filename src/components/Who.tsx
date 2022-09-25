@@ -30,10 +30,10 @@ const Who: React.FC = () => {
             <div>
               <h2 className='text-2xl dark:text-[#bd93f9] mb-2'>Work</h2>
               <p>
-                Hola I&apos;m ZACHURI. I&apos;m a Computer and Information Science major from the University of California, Ivine.
-                What inspires me is to code is being able to build valuable projects that can help people. Also just love how we live
-                in a society where we can build things with words which can make our lives better. I aspire to beomce a Web Developer
-                in the far future! I&apos;m always here to learn about anything new. Lets build something together!
+                Hola I&apos;m ZACHURI. I&apos;m a Computer and Information Science graduate from the University of California, Irvine.
+                What inspires me to code is being able to build valuable projects that can help people. Also just love how we live
+                in a society where we can build things with words which can make our lives better. I aspire to become a Web Developer
+                in the far future! I&apos;m always here to learn new ideas and technologies. Lets build something together!
               </p>
               <div className='flex justify-center mt-2'>
                 <button className='bg-[#bd93f9] rounded-xl px-8 py-2 text-black'>My portfolio &gt;</button>
@@ -46,7 +46,7 @@ const Who: React.FC = () => {
             <div className='w-full'>
               <h2 className='text-2xl dark:text-[#bd93f9] mb-2'>Bio</h2>
               <div className='grid grid-cols-3 mb-4'><span className='font-bold'>1999</span><p className='col-span-2'> Born in Los Angeles, California</p></div>
-              <div className='grid grid-cols-3 mb-4'><span className='font-bold'>2017 to 2019</span><p className='col-span-2'> Mount San San Antonio Community College (Computer Science)</p></div>
+              <div className='grid grid-cols-3 mb-4'><span className='font-bold'>2017 to 2019</span><p className='col-span-2'> Mount San Antonio Community College (Computer Science)</p></div>
               <div className='grid grid-cols-3 mb-4'><span className='font-bold'>2019-2022</span><p className='col-span-2'> University of Califonia, Irvine (Computer and Information Science)</p></div>
             </div>
           </div>
