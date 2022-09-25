@@ -111,7 +111,22 @@ const Navbar: React.FC = () => {
                           "block px-4 py-2 text-sm"
                         )}
                       >
-                        About
+                        Who
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-500 text-gray-100"
+                            : "text-gray-200",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        What
                       </a>
                     )}
                   </Menu.Item>
@@ -127,6 +142,21 @@ const Navbar: React.FC = () => {
                         )}
                       >
                         Projects
+                      </a>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <a
+                        href="/contact"
+                        className={classNames(
+                          active
+                            ? "bg-gray-500 text-gray-100"
+                            : "text-gray-200",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        Contact
                       </a>
                     )}
                   </Menu.Item>
