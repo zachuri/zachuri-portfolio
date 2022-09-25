@@ -29,6 +29,7 @@ export default forwardRef(
       // ...props,
       active
     }: NextLinkProps,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ref: any,
   ) => {
     return (

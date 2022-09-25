@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React, { Fragment, useEffect, useState } from 'react'
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from 'next-themes'
-import { forwardRef } from 'react'
 import MyLink from './MyLink';
 
 const links = [
@@ -22,7 +21,7 @@ const Navbar: React.FC = () => {
   // console.log(theme);
   // console.log(darkToggle);
 
-  useEffect(() => { darkToggle }, [])
+  useEffect(() => { darkToggle }, [darkToggle])
 
   function handleTheme() {
     if (theme === 'dark') {

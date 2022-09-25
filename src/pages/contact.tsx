@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import Image from 'next/image'
 import axios from 'axios'
-import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const ContactUs: React.FC = () => {
