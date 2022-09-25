@@ -13,7 +13,7 @@ const Who: React.FC = () => {
       </div>
 
       {/* Name */}
-      <div className='w-full flex items-center gap-9 mb-6'>
+      <div className='w-full flex flex-col sm:flex-row items-center gap-9 mb-6'>
         <div>
           <h1 className='text-4xl dark:text-[#bd93f9]'>Zachary Punsalang</h1>
           <p>Developer (Web, Application, Game)</p>
