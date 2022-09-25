@@ -3,6 +3,7 @@ import Image from 'next/image'
 import axios from 'axios'
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import Link from 'next/link';
 
 const ContactUs: React.FC = () => {
   const [status, setStatus] = useState({
@@ -75,16 +76,24 @@ const ContactUs: React.FC = () => {
         <h2 className="text-black dark:text-[#bd93f9] text-4xl font-bold">Contact Us</h2>
         <div className="container mx-auto flex items-center justify-between my-4 px-10 py-2">
           <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <FaLinkedin className='fill-black dark:fill-white' />
+            <a href="https://www.linkedin.com/in/zachary-punsalang/">
+              <FaLinkedin className='fill-black dark:fill-white' />
+            </a>
           </div>
           <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <FaGithub className='fill-black dark:fill-white' />
+            <a href="https://github.com/zachuri">
+              <FaGithub className='fill-black dark:fill-white' />
+            </a>
           </div>
           <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <FaTwitter className='fill-black dark:fill-white' />
+            <a href="https://twitter.com/zachurii">
+              <FaTwitter className='fill-black dark:fill-white' />
+            </a>
           </div>
           <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <AiOutlineMail className='fill-black dark:fill-white' />
+            <a href="mailto:punsalang.zachary.work@gmial.com?body=">
+              <AiOutlineMail className='fill-black dark:fill-white' />
+            </a>
           </div>
         </div>
 
