@@ -4,7 +4,7 @@ import axios from 'axios'
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import Link from 'next/link';
-import Layout from '../components/Layouts/Article';
+import Layout from '../components/Layouts/Motion';
 
 const ContactUs: React.FC = () => {
   const [status, setStatus] = useState({

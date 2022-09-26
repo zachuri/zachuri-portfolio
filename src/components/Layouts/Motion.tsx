@@ -7,7 +7,7 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 }
 }
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const LayoutMotion: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <motion.article
       initial="hidden"
@@ -22,4 +22,4 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   )
 }
 
-export default Layout
+export default LayoutMotion

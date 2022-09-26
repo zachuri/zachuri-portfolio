@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../components/Layouts/Article';
+import LayoutMotion from '../components/Layouts/Motion';
 import MainLayout from '../components/Layouts/Main';
 
 const Works = () => {
   return (
     <>
       <MainLayout>
-        <Layout>
+        <LayoutMotion>
           <h1>Works</h1>
-        </Layout>
+        </LayoutMotion>
       </MainLayout>
     </>
   )
