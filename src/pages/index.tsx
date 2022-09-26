@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import type { NextPage } from "next";
 import Head from "next/head";
+import Layout from '../components/Layouts/Article';
 import Main from "../components/Layouts/Main";
 import Who from "../components/Who";
 
@@ -21,16 +22,9 @@ const Home: NextPage = () => {
       </Head>
 
 
-      <motion.article
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        variants={variants}
-        transition={{ duration: 0.4, type: 'easeInOut' }}
-        style={{ position: 'relative' }}
-      >
+      <Layout>
         <Who />
-      </motion.article>
+      </Layout>
     </>
   );
 };
