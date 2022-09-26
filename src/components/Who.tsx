@@ -35,7 +35,9 @@ const Who: React.FC = () => {
             in the far future! I&apos;m always here to learn new ideas and technologies. Lets build something together!
           </p>
           <div className='flex justify-center mt-2'>
-            <button className='bg-[#bd93f9] rounded-xl px-8 py-2 text-black'>My portfolio &gt;</button>
+            <Link href="/works">
+              <button className='bg-[#bd93f9] rounded-xl px-8 py-2 text-black'>My portfolio &gt;</button>
+            </Link>
           </div>
         </div>
       </div>
