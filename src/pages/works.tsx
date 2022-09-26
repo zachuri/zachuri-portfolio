@@ -1,13 +1,15 @@
 import React from 'react'
 import LayoutMotion from '../components/Layouts/Motion';
 import MainLayout from '../components/Layouts/Main';
+import Projects from '../components/Projects';
 
 const Works = () => {
   return (
     <>
       <MainLayout>
         <LayoutMotion>
-          <h1>Works</h1>
+          <h2 className='text-2xl dark:text-[#bd93f9] mb-2'>Work</h2>
+          <Projects />
         </LayoutMotion>
       </MainLayout>
     </>
