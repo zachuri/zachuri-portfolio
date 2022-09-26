@@ -7,7 +7,7 @@ import MyLink from './MyLink';
 const links = [
   { href: '/who', name: 'Who' },
   { href: '/what', name: 'What' },
-  { href: '/projects', name: 'Projects' },
+  { href: '/works', name: 'Works' },
   { href: '/contact', name: 'Contact' },
   { href: '/support', name: 'Support' },
   { href: '/license', name: 'License' },
@@ -55,9 +55,9 @@ const Navbar: React.FC = () => {
                 WHAT
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/works">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                PROJECTS
+                WORKS
               </li>
             </Link>
           </ul>
