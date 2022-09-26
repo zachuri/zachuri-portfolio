@@ -16,6 +16,7 @@ const Project: React.FC<Props> = ({ id, name }) => {
         width="1000"
         height="700"
         className='rounded-xl'
+        loading="lazy"
       />
       <div className="">{name}</div>
     </div>
