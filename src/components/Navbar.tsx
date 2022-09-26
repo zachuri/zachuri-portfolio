@@ -47,17 +47,23 @@ const Navbar: React.FC = () => {
           <ul className='hidden md:flex'>
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                WHO
+                <button>
+                  WHO
+                </button>
               </li>
             </Link>
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                WHAT
+                <button>
+                  WHAT
+                </button>
               </li>
             </Link>
             <Link href="/works">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                WORKS
+                <button>
+                  WORKS
+                </button>
               </li>
             </Link>
           </ul>
