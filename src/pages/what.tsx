@@ -11,7 +11,7 @@ const What: React.FC = () => {
         <div>
           <h1>Technical</h1>
           <h2>skills</h2>
-          <div className='grid grid-cols-4 '>
+          <div className='grid grid-cols-3 md:grid-cols-4 '>
             <Skills />
           </div>
         </div>
