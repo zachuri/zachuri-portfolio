@@ -20,7 +20,15 @@ const EcommerceMovie = () => {
               <Badge>
                 Source
               </Badge>
-              <a href="https://github.com/zachuri/DiversityHotlineApp">github.com/zachuri/DiversityHotlineApp</a>
+              <a href="https://github.com/zachuri/122b">https://github.com/zachuri/122b</a>
+            </li>
+            <li>
+              <Badge>
+                Videos
+              </Badge>
+              <a href="https://youtu.be/eg1VJATdAPM">Desktop Link</a>
+              <span> / </span>
+              <a href="https://youtu.be/EaT3hTv7-7s">Mobile LInk</a>
             </li>
             <li>
               <Badge>
