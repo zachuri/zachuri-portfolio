@@ -69,7 +69,7 @@ const ContactUs: React.FC = () => {
 
   return (
     <Layout>
-      <div className="dark:bg-black text-white flex flex-col justify-center items-center min-h-screen -m-10">
+      <div className="dark:bg-black text-white flex flex-col justify-center items-center min-h-screen -my-10">
         <div className="flex-1 flex flex-col justify-center items-center ">
 
           <div className='pb-5 pt-5 md:pt-0'>
