@@ -28,12 +28,12 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
             height="700"
             className='rounded-xl'
             loading="lazy"
-         />
+          />
         </button>
       </Link>
       <div className="text-center">
-        <h1 className='text-xl mb-2'>{title}</h1>
-        <p className='md:text-sm'>{desc}</p>
+        <h1 className='text-xl mb-1'>{title}</h1>
+        <p className='md:text-sm mb-8'>{desc}</p>
       </div>
     </div>
   )
