@@ -18,14 +18,14 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
             src={`/assets/projects/${id}.png`}
             alt={id}
             width="1200"
-            height="800"
+            height="700"
             className='rounded-xl'
             loading="lazy"
           />
         </button>
       </Link>
       <div className="text-center">
-        <h1 className='text-xl'>{title}</h1>
+        <h1 className='text-xl mb-2'>{title}</h1>
         <p className='text-sm'>{desc}</p>
       </div>
     </div>
