@@ -19,7 +19,7 @@ const twitchclone = () => {
               <Badge>
                 Website
               </Badge>
-              <a href="https://twitch-clone-react-zachuri.vercel.app/">https://twitch-clone-react-zachuri.vercel.app/</a>
+              <a href="https://twitch-clone-react-zachuri.vercel.app/" className='hover:underline text-purple-900 dark:text-[#bd93f9]'>https://twitch-clone-react-zachuri.vercel.app/</a>
             </li>
             <li>
               <Badge>
@@ -37,41 +37,41 @@ const twitchclone = () => {
               <Badge>
                 Source
               </Badge>
-              <a href="https://github.com/zachuri/twitch-clone-react">github.com/zachuri/twitch-clone-react</a>
-            </li>
-          </ul>
+              <a href="https://github.com/zachuri/twitch-clone-react" className='hover:underline text-purple-900 dark:text-[#bd93f9]'>github.com/zachuri/twitch-clone-react</a>
+          </li>
+        </ul>
 
-          <div className='flex flex-col gap-8'>
-            <Image
-              src={`/assets/projects/twitch-clone.png`}
-              alt={"twitch-clone"}
-              width="1200"
-              height="700"
-              className='rounded-xl mb-5'
-              loading="lazy"
-            />
+        <div className='flex flex-col gap-8'>
+          <Image
+            src={`/assets/projects/twitch-clone.png`}
+            alt={"twitch-clone"}
+            width="1200"
+            height="700"
+            className='rounded-xl mb-5'
+            loading="lazy"
+          />
 
-            <Image
-              src={`/assets/projects/twitch-clone-1.png`}
-              alt={"twitch-clone-1"}
-              width="1200"
-              height="1000"
-              className='rounded-xl mb-5'
-              loading="lazy"
-            />
+          <Image
+            src={`/assets/projects/twitch-clone-1.png`}
+            alt={"twitch-clone-1"}
+            width="1200"
+            height="1000"
+            className='rounded-xl mb-5'
+            loading="lazy"
+          />
 
-            <Image
-              src={`/assets/projects/twitch-clone-2.png`}
-              alt={"twitch-clone"}
-              width="1200"
-              height="1000"
-              className='rounded-xl'
-              loading="lazy"
-            />
-          </div>
-        </LayoutMotion>
-      </MainLayout>
-    </div>
+          <Image
+            src={`/assets/projects/twitch-clone-2.png`}
+            alt={"twitch-clone"}
+            width="1200"
+            height="1000"
+            className='rounded-xl'
+            loading="lazy"
+          />
+        </div>
+      </LayoutMotion>
+    </MainLayout>
+    </div >
   )
 }
 

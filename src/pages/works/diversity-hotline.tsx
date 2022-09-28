@@ -21,7 +21,7 @@ const DiversityHotline = () => {
               <Badge>
                 Website
               </Badge>
-              <a href="https://suspicious-euclid-dddcf0.netlify.app/">DiversityHotline.com</a>
+              <a href="https://suspicious-euclid-dddcf0.netlify.app/" className='hover:underline text-purple-900 dark:text-[#bd93f9] '>DiversityHotline.com</a>
             </li>
             <li>
               <Badge>
@@ -39,7 +39,7 @@ const DiversityHotline = () => {
               <Badge>
                 Source
               </Badge>
-              <a href="https://github.com/zachuri/DiversityHotlineApp">github.com/zachuri/DiversityHotlineApp</a>
+              <a href="https://github.com/zachuri/DiversityHotlineApp" className='hover:underline text-purple-900 dark:text-[#bd93f9]' >github.com/zachuri/DiversityHotlineApp</a>
             </li>
           </ul>
 
