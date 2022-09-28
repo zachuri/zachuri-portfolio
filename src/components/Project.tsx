@@ -4,10 +4,11 @@ import React from 'react'
 
 interface Props {
   id: string;
-  name: string;
+  title: string;
+  desc: string;
 }
 
-const Project: React.FC<Props> = ({ id, name }) => {
+const Project: React.FC<Props> = ({ id, title, desc }) => {
   return (
     <div>
       <Image
@@ -18,7 +19,8 @@ const Project: React.FC<Props> = ({ id, name }) => {
         className='rounded-xl'
         loading="lazy"
       />
-      <div className="">{name}</div>
+      <div className="">{title}</div>
+      <div className="">{desc}</div>
     </div>
   )
 }
