@@ -41,33 +41,34 @@ const twitchclone = () => {
             </li>
           </ul>
 
-          <Image
-            src={`/assets/projects/twitch-clone.png`}
-            alt={"twitch-clone"}
-            width="1200"
-            height="700"
-            className='rounded-xl mb-5'
-            loading="lazy"
-          />
+          <div className='flex flex-col gap-8'>
+            <Image
+              src={`/assets/projects/twitch-clone.png`}
+              alt={"twitch-clone"}
+              width="1200"
+              height="700"
+              className='rounded-xl mb-5'
+              loading="lazy"
+            />
 
-          <Image
-            src={`/assets/projects/twitch-clone-1.png`}
-            alt={"twitch-clone-1"}
-            width="1200"
-            height="1000"
-            className='rounded-xl mb-5'
-            loading="lazy"
-          />
+            <Image
+              src={`/assets/projects/twitch-clone-1.png`}
+              alt={"twitch-clone-1"}
+              width="1200"
+              height="1000"
+              className='rounded-xl mb-5'
+              loading="lazy"
+            />
 
-          <Image
-            src={`/assets/projects/twitch-clone-2.png`}
-            alt={"twitch-clone"}
-            width="1200"
-            height="1000"
-            className='rounded-xl'
-            loading="lazy"
-          />
-
+            <Image
+              src={`/assets/projects/twitch-clone-2.png`}
+              alt={"twitch-clone"}
+              width="1200"
+              height="1000"
+              className='rounded-xl'
+              loading="lazy"
+            />
+          </div>
         </LayoutMotion>
       </MainLayout>
     </div>
