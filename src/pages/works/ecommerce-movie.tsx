@@ -26,9 +26,8 @@ const EcommerceMovie = () => {
               <Badge>
                 Videos
               </Badge>
-              <a href="https://youtu.be/eg1VJATdAPM">Desktop Link</a>
-              <span> / </span>
-              <a href="https://youtu.be/EaT3hTv7-7s">Mobile LInk</a>
+              <a href="https://youtu.be/eg1VJATdAPM" className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Desktop tour</a>
+              <a href="https://youtu.be/EaT3hTv7-7s" className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Mobile Tour</a>
             </li>
             <li>
               <Badge>
