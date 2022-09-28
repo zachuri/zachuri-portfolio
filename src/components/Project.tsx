@@ -13,17 +13,21 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
   return (
     <div>
       <Link href={`works/${id}`}>
-        <Image
-          src={`/assets/projects/${id}.png`}
-          alt={id}
-          width="1000"
-          height="700"
-          className='rounded-xl'
-          loading="lazy"
-        />
+        <button>
+          <Image
+            src={`/assets/projects/${id}.png`}
+            alt={id}
+            width="1200"
+            height="800"
+            className='rounded-xl'
+            loading="lazy"
+          />
+        </button>
       </Link>
-      <div className="">{title}</div>
-      <div className="">{desc}</div>
+      <div className="text-center">
+        <h1 className='text-xl'>{title}</h1>
+        <p className='text-sm'>{desc}</p>
+      </div>
     </div>
   )
 }
