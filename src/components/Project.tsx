@@ -33,7 +33,7 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
               blurDataURL={`/assets/projects/${id}.png`}
             />
             <div className="text-center">
-              <h1 className='text-2xl mb-1'>{title}</h1>
+              <h1 className='text-xl mb-1 font-bold'>{title}</h1>
               <p className='md:text-sm mb-8'>{desc}</p>
             </div>
           </button>
