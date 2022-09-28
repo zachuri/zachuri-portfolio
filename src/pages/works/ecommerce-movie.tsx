@@ -1,8 +1,8 @@
 import React from 'react'
-import MainLayout from '../../components/Layouts/Main'
-import LayoutMotion from '../../components/Layouts/Motion'
+import MainLayout from '../../components/Layouts/Main';
+import LayoutMotion from '../../components/Layouts/Motion';
 
-const twitchclone = () => {
+const EcommerceMovie = () => {
   return (
     <div>
       <MainLayout>
@@ -14,4 +14,4 @@ const twitchclone = () => {
   )
 }
 
-export default twitchclone
+export default EcommerceMovie; 
