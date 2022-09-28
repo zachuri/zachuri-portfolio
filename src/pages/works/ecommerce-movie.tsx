@@ -84,18 +84,19 @@ const EcommerceMovie = () => {
               loading="lazy"
             />
 
-
-
             <Disclosure>
               {({ open }) => (
 
                 <>
-                  <Disclosure.Button className="bg-[#bd93f9] rounded-xl mx-24 py-2 text-black">
+                  <Disclosure.Button className=" rounded-xl mx-24 py-2 dark:text-black dark:bg-[#bd93f9]
+                    bg-purple-200 text-purple-900 
+                  ">
                     <div className='flex flex-row justify-center items-center'>
                       Mobile Images
                       <AiFillCaretRight className={open ? 'rotate-90' : ""} />
                     </div>
-                  </Disclosure.Button><Disclosure.Panel className="text-gray-500">
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="text-gray-500">
                     <Image
                       src={`/assets/projects/ecommerce-movie-3.png`}
                       alt={"twitch-clone"}
