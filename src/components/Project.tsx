@@ -27,7 +27,8 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
             width="1200"
             height="700"
             className='rounded-xl'
-            loading="lazy"
+            loading="eager"
+            placeholder='blur'
           />
         </button>
       </Link>
