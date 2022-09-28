@@ -8,7 +8,7 @@ const Works = () => {
     <>
       <MainLayout>
         <LayoutMotion>
-          <h2 className='text-2xl dark:text-[#bd93f9] mb-2'>Work</h2>
+          <h2 className='text-2xl dark:text-[#bd93f9] mb-2 font-bold'>Works</h2>
           <Projects />
         </LayoutMotion>
       </MainLayout>
