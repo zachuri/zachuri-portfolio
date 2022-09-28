@@ -1,15 +1,7 @@
-import { motion } from 'framer-motion'
 import type { NextPage } from "next";
 import Head from "next/head";
 import LayoutMotion from '../components/Layouts/Motion';
-import Main from "../components/Layouts/Main";
 import Who from "../components/Who";
-
-const variants = {
-  hidden: { opacity: 0, x: 0, y: 20 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: -0, y: 20 }
-}
 
 const Home: NextPage = () => {
   return (
