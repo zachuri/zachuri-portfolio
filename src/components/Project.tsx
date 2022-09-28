@@ -29,6 +29,7 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
             className='rounded-xl'
             loading="eager"
             placeholder="blur"
+            blurDataURL={`/assets/projects/${id}.png`}
           />
         </button>
       </Link>
