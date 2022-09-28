@@ -20,23 +20,25 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
   return (
     <div>
       <Link href={`works/${id}`}>
-        <button>
-          <Image
-            src={`/assets/projects/${id}.png`}
-            alt={id}
-            width="1200"
-            height="700"
-            className='rounded-xl'
-            loading="eager"
-            placeholder="blur"
-            blurDataURL={`/assets/projects/${id}.png`}
-          />
-        </button>
+        <div>
+          <button>
+            <Image
+              src={`/assets/projects/${id}.png`}
+              alt={id}
+              width="1200"
+              height="700"
+              className='rounded-xl'
+              loading="eager"
+              placeholder="blur"
+              blurDataURL={`/assets/projects/${id}.png`}
+            />
+            <div className="text-center">
+              <h1 className='text-2xl mb-1'>{title}</h1>
+              <p className='md:text-sm mb-8'>{desc}</p>
+            </div>
+          </button>
+        </div>
       </Link>
-      <div className="text-center">
-        <h1 className='text-2xl mb-1'>{title}</h1>
-        <p className='md:text-sm mb-8'>{desc}</p>
-      </div>
     </div>
   )
 }
