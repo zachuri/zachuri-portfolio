@@ -39,7 +39,7 @@ const DiversityHotline = () => {
               <Badge>
                 Source
               </Badge>
-              <a href="https://github.com/zachuri/DiversityHotlineApp">https://github.com/zachuri/DiversityHotlineApp</a>
+              <a href="https://github.com/zachuri/DiversityHotlineApp">github.com/zachuri/DiversityHotlineApp</a>
             </li>
           </ul>
 

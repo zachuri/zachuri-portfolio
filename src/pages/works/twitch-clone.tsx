@@ -37,7 +37,7 @@ const twitchclone = () => {
               <Badge>
                 Source
               </Badge>
-              <a href="https://github.com/zachuri/twitch-clone-react">https://github.com/zachuri/twitch-clone-react</a>
+              <a href="https://github.com/zachuri/twitch-clone-react">github.com/zachuri/twitch-clone-react</a>
             </li>
           </ul>
 
