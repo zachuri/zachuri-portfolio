@@ -3,6 +3,8 @@ import React from 'react'
 import MainLayout from '../../components/Layouts/Main';
 import LayoutMotion from '../../components/Layouts/Motion';
 import { Badge } from '../../components/Project';
+import { Disclosure } from '@headlessui/react'
+import { AiFillCaretRight } from 'react-icons/ai'
 
 const EcommerceMovie = () => {
   return (
@@ -64,10 +66,67 @@ const EcommerceMovie = () => {
               className='rounded-xl mb-5'
               loading="lazy"
             />
+            <Image
+              src={`/assets/projects/ecommerce-movie-1.png`}
+              alt={"twitch-clone"}
+              width="1200"
+              height="900"
+              className='rounded-xl mb-5'
+              loading="lazy"
+            />
+
+            <Image
+              src={`/assets/projects/ecommerce-movie-2.png`}
+              alt={"twitch-clone"}
+              width="1200"
+              height="600"
+              className='rounded-xl mb-5'
+              loading="lazy"
+            />
+
+
+
+            <Disclosure>
+              {({ open }) => (
+
+                <>
+                  <Disclosure.Button className="bg-[#bd93f9] rounded-xl mx-24 py-2 text-black">
+                    <div className='flex flex-row justify-center items-center'>
+                      Mobile Images
+                      <AiFillCaretRight className={open ? 'rotate-90' : ""} />
+                    </div>
+                  </Disclosure.Button><Disclosure.Panel className="text-gray-500">
+                    <Image
+                      src={`/assets/projects/ecommerce-movie-3.png`}
+                      alt={"twitch-clone"}
+                      width="600"
+                      height="1300"
+                      className='rounded-xl mb-5'
+                      loading="lazy" />
+
+                    <Image
+                      src={`/assets/projects/ecommerce-movie-4.png`}
+                      alt={"twitch-clone"}
+                      width="600"
+                      height="1300"
+                      className='rounded-xl mb-5'
+                      loading="lazy" />
+
+                    <Image
+                      src={`/assets/projects/ecommerce-movie-5.png`}
+                      alt={"twitch-clone"}
+                      width="600"
+                      height="1300"
+                      className='rounded-xl mb-5'
+                      loading="lazy" />
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
           </div>
         </LayoutMotion>
       </MainLayout>
-    </div>
+    </div >
   )
 }
 
