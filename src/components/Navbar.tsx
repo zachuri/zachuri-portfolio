@@ -5,12 +5,10 @@ import { useTheme } from 'next-themes'
 import MyLink from './MyLink';
 
 const links = [
-  { href: '/who', name: 'Who' },
+  { href: '/', name: 'Who' },
   { href: '/what', name: 'What' },
   { href: '/works', name: 'Works' },
   { href: '/contact', name: 'Contact' },
-  { href: '/support', name: 'Support' },
-  { href: '/license', name: 'License' },
 ]
 
 const Navbar: React.FC = () => {
