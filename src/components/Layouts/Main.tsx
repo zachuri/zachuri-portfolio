@@ -5,7 +5,7 @@ interface mainProps {
 }
 
 
-const Main: React.FC<mainProps> = ({ children }) => {
+const MainLayout: React.FC<mainProps> = ({ children }) => {
   return (
     <main>
       <div className='flex flex-col justify-center items-center px-10 pt-10 md:pt-20 '>
@@ -18,4 +18,4 @@ const Main: React.FC<mainProps> = ({ children }) => {
   )
 }
 
-export default Main
+export default MainLayout
