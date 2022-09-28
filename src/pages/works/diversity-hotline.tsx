@@ -51,6 +51,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              placeholder="blur"
             />
 
             <Image
@@ -60,6 +61,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              placeholder="blur"
             />
 
             <Image
@@ -69,6 +71,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              placeholder="blur"
             />
 
             <Image
@@ -78,6 +81,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              placeholder="blur"
             />
           </div>
         </LayoutMotion>
