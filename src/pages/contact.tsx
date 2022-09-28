@@ -75,7 +75,7 @@ const ContactUs: React.FC = () => {
           <div className='pb-5 pt-5 md:pt-0'>
             <Image src="/favicon.ico" width={30} height={30} alt="logo" />
           </div>
-          <h2 className="text-black dark:text-[#bd93f9] text-4xl font-bold">Contact Us</h2>
+          <h2 className="text-black dark:text-[#bd93f9] text-4xl font-bold">Contact</h2>
           <div className="container mx-auto flex items-center justify-between my-4 px-10 py-2">
             <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
               <a href="https://www.linkedin.com/in/zachary-punsalang/">
