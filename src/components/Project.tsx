@@ -32,7 +32,7 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
         </button>
       </Link>
       <div className="text-center">
-        <h1 className='text-xl mb-1'>{title}</h1>
+        <h1 className='text-2xl mb-1'>{title}</h1>
         <p className='md:text-sm mb-8'>{desc}</p>
       </div>
     </div>
