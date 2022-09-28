@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                 </button>
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/what">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 <button>
                   WHAT
