@@ -26,7 +26,7 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
       </Link>
       <div className="text-center">
         <h1 className='text-xl mb-2'>{title}</h1>
-        <p className='text-sm'>{desc}</p>
+        <p className='md:text-sm'>{desc}</p>
       </div>
     </div>
   )
