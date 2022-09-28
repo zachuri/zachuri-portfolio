@@ -3,6 +3,7 @@ import type { AppType } from "next/dist/shared/lib/utils";
 import { ThemeProvider } from 'next-themes'
 import Navbar from "../components/Navbar";
 import { AnimatePresence } from 'framer-motion'
+import Footer from "../components/Footer";
 
 
 const MyApp: AppType = ({ Component, pageProps }) => {
@@ -17,6 +18,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <AnimatePresence exitBeforeEnter initial={true}>
         <Component {...pageProps} />
       </AnimatePresence>
+      <Footer />
     </ThemeProvider>
   )
 };
