@@ -14,7 +14,7 @@ const LayoutMotion: React.FC<{ children: React.ReactNode }> = ({ children }) => 
       animate="enter"
       exit="exit"
       variants={variants}
-      transition={{ duration: 0.4, type: 'easeInOut' }}
+      transition={{ duration: 0.6, type: 'easeInOut' }}
       style={{ position: 'relative' }}
     >
       {children}
