@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import { Menu, Transition } from "@headlessui/react";
 import { useTheme } from 'next-themes'
 import MyLink from './MyLink';
+import router, { Router } from 'next/router';
 
 const links = [
   { href: '/', name: 'Who' },
@@ -11,7 +12,14 @@ const links = [
   { href: '/contact', name: 'Contact' },
 ]
 
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+
 const Navbar: React.FC = () => {
+
+  const ref = useRef(null);
+
 
   const { theme, setTheme } = useTheme()
   const [darkToggle, setDarkToggle] = useState<boolean>(theme === "dark" ? false : true);
@@ -87,39 +95,72 @@ const Navbar: React.FC = () => {
             </svg>
           </button>
           <Menu as="div" className="relative inline-block text-left mt-1">
-            <Menu.Button>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </Menu.Button>
+            {({ open }) => (
+              <>
+                <Menu.Button>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </Menu.Button>
 
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-100"
-              enterFrom="transform opacity-0 scale-95"
-              enterTo="transform opacity-100 scale-100"
-              leave="transition ease-in duration-75"
-              leaveFrom="transform opacity-100 scale-100"
-              leaveTo="transform opacity-0 scale-95"
-            >
-              <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#0e0e10] ring-1 ring-white ring-opacity-5 focus:outline-none">
-                {/* <Menu.Items> */}
-                {links.map((link) => (
-                  /* Use the `active` state to conditionally style the active item. */
-                  <Menu.Item key={link.href} as={Fragment}>
-                    {({ active }) => (
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-[#0e0e10] ring-1 ring-white ring-opacity-5 focus:outline-none">
+                    {/* <Menu.Items> */}
+                    {links.map((link) => (
+                      /* Use the `active` state to conditionally style the active item. */
+                      <Menu.Item key={link.href} as={Fragment}>
+                        {({ active }) => (
+                          // Headless UI needs to use a tag
+                          //  mylink component helps to make it work
 
-                      // Headless UI needs to use a tag
-                      //  mylink component helps to make it work
-                      <MyLink href={`${link.href}`} active={active}>
-                        {link.name}
-                      </MyLink>
-                    )}
-                  </Menu.Item>
-                ))}
-              </Menu.Items>
+                          // <MyLink href={`${link.href}`} active={active} onClick={() => {
+                          //   setTimeout(() => {
+                          //     ref.current?.click();
+                          //   }, 0);
+                          // }}>
+                          //   {link.name}
+                          // </MyLink>
 
-            </Transition>
+                          // <Link href={link.href}>{link.name}</Link>
+
+                          // <a href={link.href}
+                          //   className={classNames(
+                          //     active
+                          //       ? "bg-gray-500 text-gray-100"
+                          //       : "text-gray-200",
+                          //     "block px-4 py-2 text-sm"
+                          //   )}
+                          // >
+                          //   {link.name}
+                          // </a>
+
+                          // Work around for menu to close
+                          <button
+                            className={classNames(
+                              active
+                                ? "bg-gray-500 text-gray-100"
+                                : "text-gray-200",
+                              "text-left w-full block px-4 py-2 text-sm"
+                            )}
+
+                            onClick={() => {
+                              router.push(`${link.href}`)
+                            }}>{link.name}</button>
+                        )}
+                      </Menu.Item>
+                    ))}
+                  </Menu.Items>
+                </Transition>
+              </>
+            )}
           </Menu>
         </div>
       </div>
