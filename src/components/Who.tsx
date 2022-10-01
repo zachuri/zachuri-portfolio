@@ -81,7 +81,7 @@ const Who: React.FC = () => {
           <h2 className='text-2xl dark:text-[#bd93f9] mb-2 font-bold'>Bio</h2>
           <div className='grid grid-cols-3 mb-4'><span className='font-bold'>1999</span><p className='col-span-2'> Born in Los Angeles, California</p></div>
           <div className='grid grid-cols-3 mb-4'><span className='font-bold'>2017 to 2019</span><p className='col-span-2'> Mount San Antonio Community College (Computer Science)</p></div>
-          <div className='grid grid-cols-3 mb-3'><span className='font-bold'>2019 to 2022</span><p className='col-span-2'> University of Califonia, Irvine (Computer and Information Science)</p></div>
+          <div className='grid grid-cols-3 mb-4'><span className='font-bold'>2019 to 2022</span><p className='col-span-2'> University of Califonia, Irvine (Computer and Information Science)</p></div>
         </div>
       </div>
       <div className='flex justify-center'>
@@ -89,7 +89,7 @@ const Who: React.FC = () => {
           <button
             role="navigate to what page"
             aria-label='press to get to know more about me (link to what page)'
-            className="rounded px-2 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA]">^ MORE ABOUT ME ^</button>
+            className="rounded px-4 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA]">^ MORE ABOUT ME ^</button>
         </Link>
       </div>
     </MainLayout>
