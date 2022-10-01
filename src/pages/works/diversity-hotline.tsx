@@ -51,6 +51,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              blurDataURL={`/assets/projects/diversity-hotline.png`}
             />
 
             <Image
@@ -60,6 +61,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              blurDataURL={`/assets/projects/diversity-hotline-1.png`}
             />
 
             <Image
@@ -69,6 +71,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              blurDataURL={`/assets/projects/diversity-hotline-2.png`}
             />
 
             <Image
@@ -78,6 +81,7 @@ const DiversityHotline = () => {
               height="700"
               className='rounded-xl mb-5'
               loading="lazy"
+              blurDataURL={`/assets/projects/diversity-hotline-3.png`}
             />
           </div>
         </LayoutMotion>

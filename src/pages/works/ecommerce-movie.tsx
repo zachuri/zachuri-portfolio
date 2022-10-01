@@ -103,7 +103,9 @@ const EcommerceMovie = () => {
                       width="600"
                       height="1300"
                       className='rounded-xl mb-5'
-                      loading="lazy" />
+                      loading="lazy"
+                      blurDataURL={`/assets/projects/ecommerce-movie-3.png`}
+                    />
 
                     <Image
                       src={`/assets/projects/ecommerce-movie-4.png`}
@@ -111,7 +113,9 @@ const EcommerceMovie = () => {
                       width="600"
                       height="1300"
                       className='rounded-xl mb-5'
-                      loading="lazy" />
+                      loading="lazy"
+                      blurDataURL={`/assets/projects/ecommerce-movie-4.png`}
+                    />
 
                     <Image
                       src={`/assets/projects/ecommerce-movie-5.png`}
@@ -119,7 +123,9 @@ const EcommerceMovie = () => {
                       width="600"
                       height="1300"
                       className='rounded-xl mb-5'
-                      loading="lazy" />
+                      loading="lazy" 
+                      blurDataURL={`/assets/projects/ecommerce-movie-5.png`}
+                      />
                   </Disclosure.Panel>
                 </>
               )}
