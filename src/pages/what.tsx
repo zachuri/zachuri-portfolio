@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MainLayout from '../components/Layouts/Main';
 import LayoutMotion from '../components/Layouts/Motion';
 import Skills from '../components/Skills';
@@ -23,7 +23,24 @@ const Container: React.FC<Props> = ({ children, title, subTitle, justify }) => {
   )
 }
 
+const ReadMoreWhy: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isReadMoreShown, setReadMoreShown] = useState(false);
+
+  const toggleBtn = () => {
+    setReadMoreShown(!isReadMoreShown);
+  }
+
+  return (
+    <div>
+      {isReadMoreShown ? children : ""}
+      <button onClick={toggleBtn} className="rounded px-2  text-[#333333]">{isReadMoreShown ? 'Read Less' : '...Read More'}</button>
+    </div>
+  )
+}
+
+
 const What: React.FC = () => {
+
   return (
     <MainLayout>
       <LayoutMotion>
@@ -45,6 +62,7 @@ const What: React.FC = () => {
               <li>Vim / TMUX</li>
             </Container>
             <Container subTitle='Why?'>
+
               <p className='pb-2'>
                 For most of my work flow it really depends on a keyboard. When I was a student
                 in college, I would use my laptop mouse pad to navigate my code. My first class at UCI,
@@ -53,26 +71,29 @@ const What: React.FC = () => {
                 I adored him and saw him as a professional coder because of that.
                 He showed us how to use it but again it took practice.
               </p>
-              <p className='pb-2'>
-                Throughout my college carrer I was able to use vim really well; however, this abiilty to increase work flow only really worked in an IDE. I later discovered
-                the power of linux (Arch) and a desktop enviroment called &quot;Suckless Dynamic Window Manager
-                (DWM)&quot;.
-                These two combined helped me reach another level as a developer which for me increased
-                my work flow and love for coding.
-              </p>
-              <p className='pb-2'>
-                Linux showed me the power of the terminal. I remember dreading to use the terminal and typing
-                commands but later enjoy it so much that I try to use a CLI instead of GUI. Also, I use a linux
-                distribution called Arch. I spent couple months building my own linux from sractch and I love it.
-                I&apos; learned so much about linux which made me forget about Windows LOL. There are many specfic
-                reasons but I&apos;ll go into detail later.
-              </p>
-              <p>
-                Laslty, DWM made my linux experince even better. The way DWM is able to organize your windows efficently
-                and being able to navigate around your desktop with only a keyboard again made me feel like a
-                professional developer. Just to be clear all of these configs I&apos; mentioned are a preference
-                and it isn&apos;t for everyone. For me, it just makes me feel proud to be a coder.
-              </p>
+
+              <ReadMoreWhy>
+                <p className='pb-2'>
+                  Throughout my college carrer I was able to use vim really well; however, this abiilty to increase work flow only really worked in an IDE. I later discovered
+                  the power of linux (Arch) and a desktop enviroment called &quot;Suckless Dynamic Window Manager
+                  (DWM)&quot;.
+                  These two combined helped me reach another level as a developer which for me increased
+                  my work flow and love for coding.
+                </p>
+                <p className='pb-2'>
+                  Linux showed me the power of the terminal. I remember dreading to use the terminal and typing
+                  commands but later enjoy it so much that I try to use a CLI instead of GUI. Also, I use a linux
+                  distribution called Arch. I spent couple months building my own linux from sractch and I love it.
+                  I&apos; learned so much about linux which made me forget about Windows LOL. There are many specfic
+                  reasons but I&apos;ll go into detail later.
+                </p>
+                <p>
+                  Laslty, DWM made my linux experince even better. The way DWM is able to organize your windows efficently
+                  and being able to navigate around your desktop with only a keyboard again made me feel like a
+                  professional developer. Just to be clear all of these configs I&apos; mentioned are a preference
+                  and it isn&apos;t for everyone. For me, it just makes me feel proud to be a coder.
+                </p>
+              </ReadMoreWhy>
 
             </Container>
           </Container>
