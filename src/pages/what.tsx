@@ -47,7 +47,7 @@ const What: React.FC = () => {
 
           <Container title={"Personal Interests"}>
             <Container subTitle='Keyboards'>
-              <p className='pb-2 -mx-4'>
+              <p className='pb-2 text-xs md:text-base'>
                 During covid I fell in love with the keyboard community. As a developer I do
                 feel a bit more professional with my handy keyboard! My first ever keeb I built
                 is the Tofu 60%. It was my first baby and I adored it a lot. It got the job done and sounded
