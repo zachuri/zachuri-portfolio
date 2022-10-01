@@ -55,11 +55,18 @@ const What: React.FC = () => {
           <Container title={"Work Flow"}>
             <Container subTitle='Operating System'>
               <li>Arch Linux</li>
-              <li>Dynamic Window Manager (DWM Suckless)</li>
+              <li>Dynamic Window Manager</li>
+              <li className='indent-6'>
+                <a
+                  href='https://dwm.suckless.org/'
+                  className='hover:underline text-purple-900 dark:text-[#bd93f9]'
+                >(DWM) Suckless</a>
+              </li>
             </Container>
             <Container subTitle='Coding'>
               <li>Visual Studio Code</li>
               <li>Vim / TMUX</li>
+              <li>Zsh / Bash</li>
             </Container>
             <Container subTitle='Why?'>
 
@@ -90,7 +97,7 @@ const What: React.FC = () => {
                 <p className='pb-2'>
                   Laslty, DWM made my linux experince even better. The way DWM is able to organize your windows efficently
                   and being able to navigate around your desktop with only a keyboard again made me feel like a
-                  professional developer. Just to be clear all of these configs I&apos; mentioned are a preference
+                  professional developer. Just to be clear all of these configs I&apos;ve mentioned are preference
                   and it isn&apos;t for everyone. For me, it just makes me feel proud to be a coder.
                 </p>
               </ReadMoreWhy>
