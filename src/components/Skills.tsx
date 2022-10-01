@@ -13,6 +13,8 @@ const names = [
   { id: "springboot", skillName: 'SpringBoot' },
   { id: "mysql", skillName: 'MySQL' },
   { id: "trpc", skillName: 'TRPC' },
+  { id: "htmlcss", skillName: 'HTML/CSS' },
+  { id: "vim", skillName: 'VIM' },
   { id: "git", skillName: 'Git' },
 ]
 
