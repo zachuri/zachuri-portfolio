@@ -65,6 +65,7 @@ const What: React.FC = () => {
                 alt='jp-02 keyboard'
                 placeholder='blur'
                 blurDataURL='assets/keyboards/jp-02.jpeg'
+                className='rounded'
               />
             </Container>
             <Container subTitle='Tofu 60 (60%)'>
@@ -73,7 +74,9 @@ const What: React.FC = () => {
                 width="350"
                 height="500"
                 alt='tofu 60 keyboard'
+                placeholder='blur'
                 blurDataURL='assets/keyboards/tofu60.jpeg'
+                className='rounded'
               />
             </Container>
           </Container>
