@@ -72,7 +72,7 @@ const What: React.FC = () => {
 
               <p className='pb-2'>
                 For most of my work flow it really depends on a keyboard. When I was a student
-                in college, I would use my laptop mouse pad to navigate my code. My first class at UCI,
+                in college, I would use my laptop track pad to navigate my code. My first class at UCI,
                 one of my professors taught his course while using VIM. It was amazing to see him
                 code like a hacker who can type and navigate around his code really fast. To me
                 I adored him and saw him as a professional coder because of that.
@@ -89,7 +89,7 @@ const What: React.FC = () => {
                 </p>
                 <p className='pb-2'>
                   Linux showed me the power of the terminal. I remember dreading to use the terminal and typing
-                  commands but later enjoy it so much that I try to use a CLI instead of GUI. Also, I use a linux
+                  commands but later enjoyed it so much that I&apos;d rather use a CLI instead of GUI. Also, I use a linux
                   distribution called Arch. I spent couple months building my own linux from sractch and I love it.
                   I&apos; learned so much about linux which made me forget about Windows LOL. There are many specfic
                   reasons but I&apos;ll go into detail later.
