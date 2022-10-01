@@ -22,7 +22,15 @@ const Who: React.FC = () => {
           <p>Developer (Web, Application, Game)</p>
         </div>
         <div>
-          <Image className='rounded-full' src="/assets/github-profile-pic.jpeg" width={100} height={100} alt="profile picture" />
+          <Image
+            className='rounded-full'
+            src="/assets/github-profile-pic.jpeg"
+            width={100}
+            height={100}
+            alt="profile picture"
+            placeholder='blur'
+            blurDataURL="/assets/github-profile-pic.jpeg"
+          />
         </div>
       </div>
 
