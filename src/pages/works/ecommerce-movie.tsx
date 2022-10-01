@@ -12,7 +12,7 @@ const EcommerceMovie = () => {
       <MainLayout>
         <LayoutMotion>
           <h1 className='text-2xl font-bold dark:text-[#bd93f9] mb-5'> <span className='text-base font-normal text-black dark:text-white'>Works &gt;</span> Ecommerce Movie Shop</h1>
-          <p className='indent-8 mb-5'>
+          <p className='ml-5 mb-5'>
             Implemented a web-based ecommerce system that allows customers to
             locate movies, place them in a shopping cart, and checkout/pay.
           </p>

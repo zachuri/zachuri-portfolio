@@ -10,7 +10,7 @@ const DiversityHotline = () => {
       <MainLayout>
         <LayoutMotion>
           <h1 className='text-2xl font-bold dark:text-[#bd93f9] mb-5'> <span className='text-base font-normal text-black dark:text-white'>Works &gt;</span> Diversity Hotline</h1>
-          <p className='indent-8 mb-5'>
+          <p className='ml-5 mb-5'>
             Collaborated with Student Service Counselor of UCI who wanted a Progressive Web Application where
             mentors and users can schedule counseling meetings and users can access multiple resources regarding
             diversity, equity and inclusion.
