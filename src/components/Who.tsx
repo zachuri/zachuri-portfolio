@@ -32,7 +32,7 @@ const Who: React.FC = () => {
             Hola I&apos;m ZACHURI. I&apos;m a Computer and Information Science graduate from the University of California, Irvine.
             What inspires me to code is being able to build valuable projects that can help people. Also just love how we live
             in a society where we can build things with words which can make our lives better. I aspire to become a Web Developer
-            in the far future! I&apos;m always here to learn new ideas and technologies. Lets build something together!
+            in the far future! I&apos;m always here to learn new ideas and technologies. Let&apos;s build something together!
           </p>
           <div className='flex justify-center mt-2'>
             <Link href="/works">
