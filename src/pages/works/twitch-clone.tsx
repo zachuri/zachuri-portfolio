@@ -9,7 +9,7 @@ const twitchclone = () => {
     <div>
       <MainLayout>
         <LayoutMotion>
-          <h1 className='text-2xl font-bold dark:text-[#bd93f9] text-center mb-5'> <span className='text-base font-normal text-black dark:text-white'>Works &gt;</span> Twitch Clone</h1>
+          <h1 className='text-2xl font-bold dark:text-[#bd93f9] mb-5'> <span className='text-base font-normal text-black dark:text-white'>Works &gt;</span> Twitch Clone</h1>
           <p className='mx-5 mb-5'>A clone of Twitch to develop my understanding of Tailwind css. Understand fundamentals of tailwind which helped me apply
             these fundamentals to other projects.
           </p>
