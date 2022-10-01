@@ -87,7 +87,7 @@ const What: React.FC = () => {
                   I&apos; learned so much about linux which made me forget about Windows LOL. There are many specfic
                   reasons but I&apos;ll go into detail later.
                 </p>
-                <p>
+                <p className='pb-2'>
                   Laslty, DWM made my linux experince even better. The way DWM is able to organize your windows efficently
                   and being able to navigate around your desktop with only a keyboard again made me feel like a
                   professional developer. Just to be clear all of these configs I&apos; mentioned are a preference
