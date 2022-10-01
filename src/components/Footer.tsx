@@ -5,11 +5,11 @@ import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
 
-  const fillColor = "fill-[#999999] dark:fill-[#999999]"
+  const fillColor = "fill-[#333333] dark:fill-[#999999]"
 
   return (
     <LayoutMotion>
-      <div className="text-center text-[#999999] dark:text-[#999999] text-sm p-4">
+      <div className="text-center text-[#333333] dark:text-[#999999] text-sm p-4">
         &copy; {new Date().getFullYear()} Zachary Punsalang. All Rights Reserved.
         <div className='flex flex-cols gap-5 justify-center'>
           <a href="https://www.linkedin.com/in/zachary-punsalang/">
