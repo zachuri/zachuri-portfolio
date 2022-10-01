@@ -33,7 +33,7 @@ const ReadMoreWhy: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div>
       {isReadMoreShown ? children : ""}
-      <button onClick={toggleBtn} className="rounded px-2  text-[#333333]">{isReadMoreShown ? 'Read Less' : '...Read More'}</button>
+      <button onClick={toggleBtn} className="border border-[#AAAAAA] rounded px-2 text-[#AAAAAA]">{isReadMoreShown ? 'Read Less' : '...Read More'}</button>
     </div>
   )
 }
