@@ -144,6 +144,8 @@ const Navbar: React.FC = () => {
 
                           // Work around for menu to close
                           <button
+                            name={link.name}
+
                             className={classNames(
                               active
                                 ? "bg-gray-500 text-gray-100"
@@ -153,7 +155,9 @@ const Navbar: React.FC = () => {
 
                             onClick={() => {
                               router.push(`${link.href}`)
-                            }}>{link.name}</button>
+                            }}>
+                            {link.name}
+                          </button>
                         )}
                       </Menu.Item>
                     ))}
