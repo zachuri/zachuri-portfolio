@@ -37,7 +37,7 @@ const Who: React.FC = () => {
             how one is able to express their ideas through code. I am a developer that is willing to learn new ideas
             and technologies.
           </p>
-          <div className='pt-2'>
+          <div className='mt-6'>
             <h2 className='text-xl text-center'>Let&apos;s build something together!</h2>
             <div className='flex flex-cols gap-5 justify-center'>
               <a
@@ -81,10 +81,10 @@ const Who: React.FC = () => {
           <h2 className='text-2xl dark:text-[#bd93f9] mb-2 font-bold'>Bio</h2>
           <div className='grid grid-cols-3 mb-4'><span className='font-bold'>1999</span><p className='col-span-2'> Born in Los Angeles, California</p></div>
           <div className='grid grid-cols-3 mb-4'><span className='font-bold'>2017 to 2019</span><p className='col-span-2'> Mount San Antonio Community College (Computer Science)</p></div>
-          <div className='grid grid-cols-3 mb-4'><span className='font-bold'>2019 to 2022</span><p className='col-span-2'> University of Califonia, Irvine (Computer and Information Science)</p></div>
+          <div className='grid grid-cols-3'><span className='font-bold'>2019 to 2022</span><p className='col-span-2'> University of Califonia, Irvine (Computer and Information Science)</p></div>
         </div>
       </div>
-      <div className='flex justify-center'>
+      <div className='flex justify-center my-6'>
         <Link href="/what">
           <button
             role="navigate to what page"
