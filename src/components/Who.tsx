@@ -9,8 +9,8 @@ const Who: React.FC = () => {
   return (
     <MainLayout>
       {/* Where I'm from */}
-      <div className='bg-[#dbd7d7] dark:bg-[#1c1c1c] p-5 rounded-xl mb-6' >
-        <h1>
+      <div className='bg-[#dbd7d7] dark:bg-[#1c1c1c] p-5 rounded-xl mb-6 w-full' >
+        <h1 className='text-center'>
           Hello, I&apos;m a Web Developer based in Irvine, California!
         </h1>
       </div>
