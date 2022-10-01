@@ -41,7 +41,7 @@ const EcommerceMovie = () => {
               <Badge>
                 Front-End
               </Badge>
-              React.js, React Native, Bootstrap.css
+              React.js, React Native, Bootstrap CSS
             </li>
             <li>
               <Badge>

@@ -33,7 +33,7 @@ const DiversityHotline = () => {
               <Badge>
                 Stack
               </Badge>
-              React.js & Bootstrap css
+              React.js & CSS
             </li>
             <li>
               <Badge>

@@ -5,7 +5,7 @@ const names = [
   { id: "reactjs", skillName: 'React.js' },
   { id: "nextjs", skillName: 'Next.js' },
   { id: "reactnative", skillName: 'React Native' },
-  { id: "tailwindd", skillName: 'Tailwind.css' },
+  { id: "tailwindd", skillName: 'Tailwind CSS' },
   { id: "java", skillName: 'Java' },
   { id: "c/c++", skillName: 'C/C++' },
   { id: "javascript", skillName: 'JavaScript' },
