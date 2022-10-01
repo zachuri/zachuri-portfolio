@@ -113,28 +113,28 @@ const What: React.FC = () => {
                 their own keyboard with their own personality on it!
               </p>
 
-            </Container>
-            <Container subTitle='JP-02 (Arisu)' justify='flex items-center justify-center items-center'>
-              <Image
-                src="/assets/keyboards/jp-02.jpeg"
-                width="350"
-                height="550"
-                alt='jp-02 keyboard'
-                placeholder='blur'
-                blurDataURL='assets/keyboards/jp-02.jpeg'
-                className='rounded'
-              />
-            </Container>
-            <Container subTitle='Tofu 60 (60%)' justify='flex items-center justify-center items-center'>
-              <Image
-                src="/assets/keyboards/tofu60.jpeg"
-                width="350"
-                height="500"
-                alt='tofu 60 keyboard'
-                placeholder='blur'
-                blurDataURL='assets/keyboards/tofu60.jpeg'
-                className='rounded'
-              />
+              <Container subTitle='JP-02 (Arisu)' justify='flex items-center justify-center items-center'>
+                <Image
+                  src="/assets/keyboards/jp-02.jpeg"
+                  width="350"
+                  height="550"
+                  alt='jp-02 keyboard'
+                  placeholder='blur'
+                  blurDataURL='assets/keyboards/jp-02.jpeg'
+                  className='rounded'
+                />
+              </Container>
+              <Container subTitle='Tofu 60 (60%)' justify='flex items-center justify-center items-center'>
+                <Image
+                  src="/assets/keyboards/tofu60.jpeg"
+                  width="350"
+                  height="500"
+                  alt='tofu 60 keyboard'
+                  placeholder='blur'
+                  blurDataURL='assets/keyboards/tofu60.jpeg'
+                  className='rounded'
+                />
+              </Container>
             </Container>
           </Container>
         </div>
