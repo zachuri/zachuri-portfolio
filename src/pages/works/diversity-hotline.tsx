@@ -50,7 +50,7 @@ const DiversityHotline = () => {
               width="1200"
               height="700"
               className='rounded-xl mb-5'
-              loading="lazy"
+              placeholder='blur'
               blurDataURL={`/assets/projects/diversity-hotline.png`}
             />
 
@@ -60,7 +60,7 @@ const DiversityHotline = () => {
               width="1200"
               height="700"
               className='rounded-xl mb-5'
-              loading="lazy"
+              placeholder='blur'
               blurDataURL={`/assets/projects/diversity-hotline-1.png`}
             />
 
@@ -70,7 +70,7 @@ const DiversityHotline = () => {
               width="1200"
               height="700"
               className='rounded-xl mb-5'
-              loading="lazy"
+              placeholder='blur'
               blurDataURL={`/assets/projects/diversity-hotline-2.png`}
             />
 

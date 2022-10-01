@@ -48,7 +48,7 @@ const twitchclone = () => {
               width="1200"
               height="700"
               className='rounded-xl mb-5'
-              loading="lazy"
+              placeholder='blur'
               blurDataURL={`/assets/projects/twitch-clone.png`}
             />
 
@@ -58,7 +58,7 @@ const twitchclone = () => {
               width="1200"
               height="1000"
               className='rounded-xl mb-5'
-              loading="lazy"
+              placeholder='blur'
               blurDataURL={`/assets/projects/twitch-clone-1.png`}
             />
 
@@ -68,7 +68,7 @@ const twitchclone = () => {
               width="1200"
               height="1000"
               className='rounded-xl'
-              loading="lazy"
+              placeholder='blur'
               blurDataURL={`/assets/projects/twitch-clone-2.png`}
             />
           </div>
