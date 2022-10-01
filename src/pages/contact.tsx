@@ -78,22 +78,34 @@ const ContactUs: React.FC = () => {
           <h2 className="text-black dark:text-[#bd93f9] text-4xl font-bold">Contact</h2>
           <div className="container mx-auto flex items-center justify-between my-4 px-10 py-2">
             <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="https://www.linkedin.com/in/zachary-punsalang/">
+              <a
+                href="https://www.linkedin.com/in/zachary-punsalang/"
+                aria-label='link to linkden'
+              >
                 <FaLinkedin className='fill-black dark:fill-white' />
               </a>
             </div>
             <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="https://github.com/zachuri">
+              <a
+                href="https://github.com/zachuri"
+                aria-label='link to github'
+              >
                 <FaGithub className='fill-black dark:fill-white' />
               </a>
             </div>
             <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="https://twitter.com/zachurii">
+              <a
+                href="https://twitter.com/zachurii"
+                aria-label='link to twitter'
+              >
                 <FaTwitter className='fill-black dark:fill-white' />
               </a>
             </div>
             <div className="border-black dark:border-white border-2 shadow-lg  p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-              <a href="mailto:punsalang.zachary.work@gmial.com?body=">
+              <a
+                href="mailto:punsalang.zachary.work@gmail.com?body="
+                aria-label='link to my email'
+              >
                 <AiOutlineMail className='fill-black dark:fill-white' />
               </a>
             </div>

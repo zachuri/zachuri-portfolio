@@ -40,16 +40,28 @@ const Who: React.FC = () => {
           <div className='pt-2'>
             <h2 className='text-xl text-center'>Let&apos;s build something together!</h2>
             <div className='flex flex-cols gap-5 justify-center'>
-              <a href="https://www.linkedin.com/in/zachary-punsalang/">
+              <a
+                href="https://www.linkedin.com/in/zachary-punsalang/"
+                aria-label='link to linkden'
+              >
                 <FaLinkedin size={20} className='fill-black dark:fill-white' />
               </a>
-              <a href="https://github.com/zachuri">
+              <a
+                href="https://github.com/zachuri"
+                aria-label='link to github'
+              >
                 <FaGithub size={20} className='fill-black dark:fill-white' />
               </a>
-              <a href="https://twitter.com/zachurii">
+              <a
+                href="https://twitter.com/zachurii"
+                aria-label='link to twitter'
+              >
                 <FaTwitter size={20} className='fill-black dark:fill-white' />
               </a>
-              <a href="mailto:punsalang.zachary.work@gmial.com?body=">
+              <a
+                href="mailto:punsalang.zachary.work@gmail.com?body="
+                aria-label='link to my email'
+              >
                 <AiOutlineMail size={20} className='fill-black dark:fill-white' />
               </a>
             </div>
