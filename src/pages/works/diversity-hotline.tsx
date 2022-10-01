@@ -19,6 +19,12 @@ const DiversityHotline = () => {
           <ul className='mb-5'>
             <li>
               <Badge>
+                Source
+              </Badge>
+              <a href="https://github.com/zachuri/DiversityHotlineApp" className='hover:underline text-purple-900 dark:text-[#bd93f9]' >github.com/zachuri/DiversityHotlineApp</a>
+            </li>
+            <li>
+              <Badge>
                 Website
               </Badge>
               <a href="https://suspicious-euclid-dddcf0.netlify.app/" className='hover:underline text-purple-900 dark:text-[#bd93f9] '>DiversityHotline.com</a>
@@ -34,12 +40,6 @@ const DiversityHotline = () => {
                 Stack
               </Badge>
               React.js & CSS
-            </li>
-            <li>
-              <Badge>
-                Source
-              </Badge>
-              <a href="https://github.com/zachuri/DiversityHotlineApp" className='hover:underline text-purple-900 dark:text-[#bd93f9]' >github.com/zachuri/DiversityHotlineApp</a>
             </li>
           </ul>
 
