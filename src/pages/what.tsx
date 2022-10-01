@@ -120,7 +120,7 @@ const What: React.FC = () => {
                 their own keyboard with their own personality on it!
               </p>
               <ReadMore>
-                <p className='pb-2'>
+                <p>
                   One more thing, the best part about building these type of keyboards is that it&apos;s yours. It&apos;s
                   something you created to your liking (the sound, looks, feel, keycaps, switches, etc.). With these attributes,
                   it makes me want to type more and even code more.
