@@ -86,7 +86,10 @@ const Who: React.FC = () => {
       </div>
       <div className='flex justify-center'>
         <Link href="/what">
-          <button className="rounded px-2 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA]">^ MORE ABOUT ME ^</button>
+          <button
+            role="navigate to what page"
+            aria-label='press to get to know more about me (link to what page)'
+            className="rounded px-2 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA]">^ MORE ABOUT ME ^</button>
         </Link>
       </div>
     </MainLayout>
