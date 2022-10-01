@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import MainLayout from './Layouts/Main'
+import { AiOutlineMail } from "react-icons/ai";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Who: React.FC = () => {
   return (
@@ -27,14 +29,33 @@ const Who: React.FC = () => {
       {/* Work */}
       <div className='w-full flex flex-items-center'>
         <div>
-          <h2 className='text-2xl dark:text-[#bd93f9] mb-2'>Work</h2>
+          <h2 className='text-2xl dark:text-[#bd93f9] mb-2'>Who</h2>
           <p>
-            Hola I&apos;m ZACHURI. I&apos;m a Computer and Information Science graduate from the University of California, Irvine.
-            What inspires me to code is being able to build valuable projects that can help people. Also just love how we live
-            in a society where we can build things with words which can make our lives better. I aspire to become a Web Developer
-            in the far future! I&apos;m always here to learn new ideas and technologies. Let&apos;s build something together!
+            Hola I&apos;m <span className='dark:text-[#bd93f9]'>ZACHURI</span>. I&apos;m a Computer and Information Science graduate
+            from the University of California, Irvine. What inspires me to code is being able to build valuable projects that
+            can help individuals with their lives, my curiosity on wanting to know how things are built from the ground up, and
+            how one is able to express their ideas through code. I am a developer that is willing to learn new ideas
+            and technologies.
           </p>
-          <div className='flex justify-center mt-2'>
+          <div className='pt-2'>
+            <h2 className='text-xl text-center'>Let&apos;s build something together!</h2>
+            <div className='flex flex-cols gap-5 justify-center'>
+              <a href="https://www.linkedin.com/in/zachary-punsalang/">
+                <FaLinkedin size={20} className='fill-black dark:fill-white' />
+              </a>
+              <a href="https://github.com/zachuri">
+                <FaGithub size={20} className='fill-black dark:fill-white' />
+              </a>
+              <a href="https://twitter.com/zachurii">
+                <FaTwitter size={20} className='fill-black dark:fill-white' />
+              </a>
+              <a href="mailto:punsalang.zachary.work@gmial.com?body=">
+                <AiOutlineMail size={20} className='fill-black dark:fill-white' />
+              </a>
+            </div>
+          </div>
+
+          <div className='flex justify-center mt-5'>
             <Link href="/works">
               <button className='bg-purple-200 text-purple-900 dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 '>My portfolio &gt;</button>
             </Link>
