@@ -17,6 +17,12 @@ const twitchclone = () => {
           <ul className='mb-5'>
             <li>
               <Badge>
+                Source
+              </Badge>
+              <a href="https://github.com/zachuri/twitch-clone-react" className='hover:underline text-purple-900 dark:text-[#bd93f9]'>github.com/zachuri/twitch-clone-react</a>
+            </li>
+            <li>
+              <Badge>
                 Website
               </Badge>
               <a href="https://twitch-clone-react-zachuri.vercel.app/" className='hover:underline text-purple-900 dark:text-[#bd93f9]'>https://twitch-clone-react-zachuri.vercel.app/</a>
@@ -32,12 +38,6 @@ const twitchclone = () => {
                 Stack
               </Badge>
               Next.js, Tailwind.css
-            </li>
-            <li>
-              <Badge>
-                Source
-              </Badge>
-              <a href="https://github.com/zachuri/twitch-clone-react" className='hover:underline text-purple-900 dark:text-[#bd93f9]'>github.com/zachuri/twitch-clone-react</a>
             </li>
           </ul>
 
