@@ -98,7 +98,9 @@ const What: React.FC = () => {
                   Laslty, DWM made my linux experince even better. The way DWM is able to organize your windows efficently
                   and being able to navigate around your desktop with only a keyboard again made me feel like a
                   professional developer. Just to be clear all of these configs I&apos;ve mentioned are preference
-                  and it isn&apos;t for everyone. For me, it just makes me feel proud to be a coder.
+                  and it isn&apos;t for everyone. It&apos;s very technical and takes a while to get used to. Similar to driving
+                  a manual transmission because when your starting you will make a lot of mistakes but once you get it down the more
+                  fun it becomes. For me, it just makes me feel proud to be a coder.
                 </p>
               </ReadMore>
 
@@ -148,6 +150,17 @@ const What: React.FC = () => {
                   blurDataURL='assets/keyboards/tofu60.jpeg'
                   className='rounded'
                 />
+              </Container>
+            </Container>
+            <Container subTitle='Games'>
+              <Container subTitle='Super Smash Bros Melee'>
+
+              </Container>
+              <Container subTitle='Valorant'>
+
+              </Container>
+              <Container subTitle='CSGO'>
+
               </Container>
             </Container>
           </Container>
