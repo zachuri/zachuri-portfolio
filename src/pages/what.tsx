@@ -23,7 +23,7 @@ const Container: React.FC<Props> = ({ children, title, subTitle, justify }) => {
   )
 }
 
-const ReadMoreWhy: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const ReadMore: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isReadMoreShown, setReadMoreShown] = useState(false);
 
   const toggleBtn = () => {
@@ -79,7 +79,7 @@ const What: React.FC = () => {
                 He showed us how to use it but again it took practice.
               </p>
 
-              <ReadMoreWhy>
+              <ReadMore>
                 <p className='pb-2'>
                   Throughout my college carrer I was able to use vim really well; however, this abiilty to increase work flow only really worked in an IDE. I later discovered
                   the power of linux (Arch) and a desktop enviroment called &quot;Suckless Dynamic Window Manager
@@ -100,7 +100,7 @@ const What: React.FC = () => {
                   professional developer. Just to be clear all of these configs I&apos;ve mentioned are preference
                   and it isn&apos;t for everyone. For me, it just makes me feel proud to be a coder.
                 </p>
-              </ReadMoreWhy>
+              </ReadMore>
 
             </Container>
           </Container>
@@ -113,12 +113,19 @@ const What: React.FC = () => {
                 is the Tofu 60%. It was my first baby and I adored it a lot. It got the job done and sounded
                 really great.
               </p>
-              <p>
+              <p className='pb-2'>
                 However, I fell into the rabbit hole of looking at luxury keyboards.
                 I found the JP-02 which is an arisu layout and is a slightly ergonmic. It looks really interesting
                 and typing on it is really comforatble. I would always encourage other developrs to obtain
                 their own keyboard with their own personality on it!
               </p>
+              <ReadMore>
+                <p>
+                  One more thing, the best part about building these type of keyboards is that it&apos;s yours. It&apos;s
+                  something you created to your liking (the sound, looks, feel, keycaps, switches, etc.). With these attributes,
+                  it makes me want to type more and even code more.
+                </p>
+              </ReadMore>
 
               <Container subTitle='JP-02 (Arisu)' justify='flex items-center justify-center items-center'>
                 <Image
