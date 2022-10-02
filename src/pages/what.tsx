@@ -178,19 +178,53 @@ const What: React.FC = () => {
                     applied to ones life.
                   </p>
                   <p className='pb-2'>
-                    For sure, school was something that I wasn&apos;t really proud of myself for because again not being able to see
-                    any improvement, seeing a lot of mistakes being made, failing, not being the best was something that killed my self esteem.
+                    For sure, school was something that I wasn&apos;t really proud of myself for because not being able to see
+                    any improvement, seeing a lot of mistakes being made, failing, and not being the best was something that killed my self esteem.
                     Obviously gaming and school are in different categories but gaming is something that brought my self esteem up.
                     Being able to be good at a game brought joy to my life becuase I was able to make a lot of friends through it who would
                     want to play together to be better.
                   </p>
-
+                  <p className='pb-2'>
+                    Again growing up, any parent wants to be proud of their child academicly and not being able to provide that killed my own self respect.
+                    Them seeing me play games made me feel like games was the main problem. And to be honest it probably was because I spent more time gaming
+                    than studying in school LOL. Later in life such as high school and college, I&apos;ve come to realize that there needs to be a balance
+                    in what you put your time into.
+                  </p>
+                  <p className='pb-2'>
+                    Defintely now games are not hitting as hard for me as before maybe because they are not the same as they used to, I just moved on to
+                    another part of my life, or I&apos;d rather prioritze my time to something else like building projects. No matter what, games will
+                    always be part of my life and the thought of thinking about my gaming days for sure does bring back nostalgia of what I thought was the
+                    golden age of gaming.
+                  </p>
                 </ReadMore>
 
                 <Container subTitleH3='Super Smash Bros Melee'>
+                  <ReadMore>
+                    <p className='pb-2'>
+                      Started to play Super Smash Bros Melee about the end of 2018. What inpsired me to play the game was the Smash Bros Documentary which
+                      was created by the Smash Community. Watching that showed me the era of competitve smash in the early 2000&apos;s. Back then there was no
+                      online multiplayer which in order to get better, people had to find lan tournaments and continuosly visit to get better. It&apos;s crazy to see how
+                      Melee has changed about 20 years later to where now we can play others online using an emulator called Slippi which also is community made.
+                      Also, this game was just so fast that as a spectator not know anything about the game it just looked amazing. It looked like another level
+                      of gaming that is so hard to understand to play but looks really cool to watch.
+                    </p>
+                    <p className='pb-2'>
+                      My main is Marth! The main reason is that his dash dancing is smooth and I feel like he is definetly an OP charcter when you are able to space
+                      with him correctly. Plus, his punished look so disrespectful LOL like his down air off ledge. This might be a bit technical and I would just
+                      reccomend watching a melee set with marth dominating.
+                    </p>
+                    <p className='pb-2'>
+                      This game was one of the hardest to get good at. The main reason is that in order to get better you have to accept losing. When you start out playing,
+                      you dont&apos;t know how control your characters movement, the best timing, the correct spacing, etc. and this can be frustrating for new players.
+                      One way to get better is tech skill which there are fundamentals like l-canceling or wave-dashing which can make faster. But I later learned taught
+                      tech skill isn&apos;t everything. There is a player named &quot;Borp&quot; who is know to not use tech skill but is still able to place top 10 in tournaments.
+                    </p>
+                    <p className='pb-2'>
+                      The most important thing inorder to win is to be able to know how your opponent plays, what are his
+                    </p>
+                  </ReadMore>
 
                 </Container>
-
                 <Container subTitleH3='Valorant'>
 
                 </Container>
