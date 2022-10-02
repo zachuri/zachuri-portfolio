@@ -224,24 +224,33 @@ const What: React.FC = () => {
                       dominate over your opponents. This game is legit just a mental game of many rock, paper, scissor moments. Find which moves win the most and you will
                       eventually win.
                     </p>
-                    <p>
+                    <p className="pb-2">
                       It&apos;s been about 4 years since I started to play the game and I&apos;ve seen so much improvement. I&apos;ve thought about doing lan tournaments
                       but never found the time to. But when I do I want to test out my skills and see how good I am. I would reccomend giving melee a try. It&apos;s hard
-                      at first but to me it&apos;s worth it in the end. Being able to play another person at a high level makes the game look more fund and pushed the 
-                      competitive meta. 
+                      at first but to me it&apos;s worth it in the end. Being able to play another person at a high level makes the game look more fund and pushed the
+                      competitive meta.
                     </p>
                   </ReadMore>
 
                 </Container>
                 <Container subTitleH3='Valorant'>
+                  <ReadMore>
+                    <p>Under Construction... </p>
+                  </ReadMore>
 
                 </Container>
 
                 <Container subTitleH3='CSGO'>
+                  <ReadMore>
+                    <p>Under Construction... </p>
+                  </ReadMore>
 
                 </Container>
 
                 <Container subTitleH3='Call Of Duty'>
+                  <ReadMore>
+                    <p>Under Construction... </p>
+                  </ReadMore>
 
                 </Container>
               </ReadMore>
