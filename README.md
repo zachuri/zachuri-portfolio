@@ -1,4 +1,4 @@
-# ZAACHRI's Portfolio
+# Zachuri's Portfolio
 
 [https://zachuri.vercel.app/](https://zachuri.vercel.app/)
 
