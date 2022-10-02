@@ -15,7 +15,7 @@ $PROJECT_ROOT
 ├── pages
 │   # React component files
 ├── components
-│   # Static files for images and 3d model file
+│   # Static files for images
 └── public
 ```
 
