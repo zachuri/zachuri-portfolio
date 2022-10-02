@@ -1,4 +1,4 @@
-# ZAACHRI's Portfolio
+# Zachuri's Portfolio
 
 [https://zachuri.vercel.app/](https://zachuri.vercel.app/)
 
@@ -15,7 +15,7 @@ $PROJECT_ROOT
 ├── pages
 │   # React component files
 ├── components
-│   # Static files for images and 3d model file
+│   # Static files for images
 └── public
 ```
 
@@ -23,6 +23,6 @@ $PROJECT_ROOT
 
 MIT License.
 
-Check out [LICENSE](./LICENSE) for more detail.
+Check out [LICENSE](./LICENSE.md) for more detail.
 
 ---
