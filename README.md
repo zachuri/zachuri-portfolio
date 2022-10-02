@@ -23,6 +23,6 @@ $PROJECT_ROOT
 
 MIT License.
 
-Check out [LICENSE](./LICENSE) for more detail.
+Check out [LICENSE](./LICENSE.md) for more detail.
 
 ---
