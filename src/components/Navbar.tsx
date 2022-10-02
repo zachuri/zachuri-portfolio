@@ -10,6 +10,7 @@ const links = [
   { href: '/what', name: 'What' },
   { href: '/works', name: 'Works' },
   { href: '/contact', name: 'Contact' },
+  { href: 'https://github.com/zachuri/zachuri-portfolio', name: 'Source' },
 ]
 
 function classNames(...classes: string[]) {
