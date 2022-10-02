@@ -77,7 +77,7 @@ const Who: React.FC = () => {
 
           <div className='flex justify-center mt-5'>
             <Link href="/works">
-              <button className='bg-purple-200 text-purple-900 dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 '>My portfolio &gt;</button>
+              <button className='bg-purple-200 text-purple-900 dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 '>My Portfolio &gt;</button>
             </Link>
           </div>
         </div>
@@ -97,7 +97,7 @@ const Who: React.FC = () => {
           <button
             role="navigate to what page"
             aria-label='press to get to know more about me (link to what page)'
-            className="rounded px-4 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA]">^ MORE ABOUT ME ^</button>
+            className="rounded px-4 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA]">MORE ABOUT ME &gt;</button>
         </Link>
       </div>
     </MainLayout>
