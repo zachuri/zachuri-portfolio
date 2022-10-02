@@ -7,15 +7,17 @@ import Image from 'next/image';
 interface Props {
   children: React.ReactNode;
   title?: string;
-  subTitle?: string
+  subTitleH2?: string
+  subTitleH3?: string
   justify?: string
 }
 
-const Container: React.FC<Props> = ({ children, title, subTitle, justify }) => {
+const Container: React.FC<Props> = ({ children, title, subTitleH2, subTitleH3, justify }) => {
   return (
     <div className='mb-2'>
       <h1 className='text-2xl mb-2 font-bold dark:text-[#bd93f9]'>{title}</h1>
-      <h2 className='text-l mb-2 font-bold'>{subTitle}</h2>
+      <h2 className='text-xl mb-2 font-bold'>{subTitleH2}</h2>
+      <h3 className='text-xl mb-2 font-medium'>{subTitleH3}</h3>
       <div className={`mx-5 ${justify}`}>
         {children}
       </div>
@@ -53,7 +55,7 @@ const What: React.FC = () => {
           </Container>
 
           <Container title={"Work Flow"}>
-            <Container subTitle='Operating System'>
+            <Container subTitleH2='Operating System'>
               <li>Arch Linux</li>
               <li>Dynamic Window Manager</li>
               <li className='indent-6'>
@@ -63,12 +65,12 @@ const What: React.FC = () => {
                 >(DWM) Suckless</a>
               </li>
             </Container>
-            <Container subTitle='Coding'>
+            <Container subTitleH2='Coding'>
               <li>Visual Studio Code</li>
               <li>Vim / TMUX</li>
               <li>Zsh / Bash</li>
             </Container>
-            <Container subTitle='Why?'>
+            <Container subTitleH2='Why?'>
 
               <p className='pb-2'>
                 For most of my work flow it really depends on a keyboard. When I was a student
@@ -108,7 +110,7 @@ const What: React.FC = () => {
           </Container>
 
           <Container title={"Personal Interests"}>
-            <Container subTitle='Keyboards'>
+            <Container subTitleH2='Keyboards'>
               <p className='pb-2'>
                 During covid I fell in love with the keyboard community. As a developer I do
                 feel a bit more professional with my handy keyboard! My first ever keeb I ever built
@@ -129,7 +131,7 @@ const What: React.FC = () => {
                 </p>
               </ReadMore>
 
-              <Container subTitle='JP-02 (Arisu)' justify='flex items-center justify-center items-center'>
+              <Container subTitleH3='JP-02 (Arisu)' justify='flex items-center justify-center items-center'>
                 <Image
                   src="/assets/keyboards/jp-02.jpeg"
                   width="350"
@@ -140,7 +142,7 @@ const What: React.FC = () => {
                   className='rounded'
                 />
               </Container>
-              <Container subTitle='Tofu 60 (60%)' justify='flex items-center justify-center items-center'>
+              <Container subTitleH3='Tofu 60 (60%)' justify='flex items-center justify-center items-center'>
                 <Image
                   src="/assets/keyboards/tofu60.jpeg"
                   width="350"
@@ -152,16 +154,55 @@ const What: React.FC = () => {
                 />
               </Container>
             </Container>
-            <Container subTitle='Games'>
-              <Container subTitle='Super Smash Bros Melee'>
+            <Container subTitleH2='Games'>
+              <ReadMore>
+                <p className='pb-2'>
+                  Gaming has been one of the most influential thing in my life because it gave me a sense of
+                  accomplishment. Each individual game has their own technical aspect and game theory where it
+                  can push one&apos;s competitve side. Just to be clear there are multiple genres of gaming and the one that
+                  stuck to me the most is competitve gaming.
+                </p>
+                <ReadMore>
+                  <p className='pb-2'>
+                    The days of &quot;Major League Gaming (MLG)&quot; is where it inspired many young gamers to become a professional gamer
+                    because being able to be the best at a game can bring the upmost respect to an individual as gamer. The idea
+                    of being able play games for a living was something that I grew up adoring becuase of the joy and pride can
+                    bring to a person. It would be cool to say that &quot;Yes, I&apos;m a professional gamer and do it for a living&quot;
+                    but of course one has to earn it.
+                  </p>
+                  <p className='pb-2'>
+                    The competitive idea pushed me further to game because being able to win and see improvement
+                    brings out one&apos;s alter ego, and being able to earn the highest rank possible does make oneself
+                    feel proud and have pride. However, there is another side towards gaming which is losing.
+                    Learning to lose a lot is the reality of being the best. Learning the hard way, this lesson can be
+                    applied to ones life.
+                  </p>
+                  <p className='pb-2'>
+                    For sure, school was something that I wasn&apos;t really proud of myself for because again not being able to see
+                    any improvement, seeing a lot of mistakes being made, failing, not being the best was something that killed my self esteem.
+                    Obviously gaming and school are in different categories but gaming is something that brought my self esteem up.
+                    Being able to be good at a game brought joy to my life becuase I was able to make a lot of friends through it who would
+                    want to play together to be better.
+                  </p>
 
-              </Container>
-              <Container subTitle='Valorant'>
+                </ReadMore>
 
-              </Container>
-              <Container subTitle='CSGO'>
+                <Container subTitleH3='Super Smash Bros Melee'>
 
-              </Container>
+                </Container>
+
+                <Container subTitleH3='Valorant'>
+
+                </Container>
+
+                <Container subTitleH3='CSGO'>
+
+                </Container>
+
+                <Container subTitleH3='Call Of Duty'>
+
+                </Container>
+              </ReadMore>
             </Container>
           </Container>
         </div>
