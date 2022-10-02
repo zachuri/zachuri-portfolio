@@ -1,6 +1,6 @@
 # ZAACHRI's Portfolio
 
-[https://www.zachuri.vercel.app/](https://www.zachuri.vercel.app/)
+[https://zachuri.vercel.app/](https://zachuri.vercel.app/)
 
 ## Stack
 
