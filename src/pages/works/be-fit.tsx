@@ -25,11 +25,14 @@ const Befit = () => {
               (Artifactz1)
             </a>
           </span>{' '}
-          to develop a web and mobile application that allows me and my brother
-          to be able to track our fitness journey. The main aspects we wanted to
-          track are diet, weight and workouts. We wanted to build this app with
-          what that other fitness trackers are lacking and hope that our
-          knowledge will help others who are getting into fitness succeed.
+          to develop a Web and Mobile application that allows users to be able
+          to track their fitness journey. It started off with helping me and my
+          brother improve our fitness progress and later wanted to help
+          beginners and advances individuals with their fitness progress too.
+          The main aspects we wanted to track are diet, weight and workouts. We
+          wanted to build this app with what that other fitness trackers are
+          lacking and hope that our knowledge will help others who are getting
+          into fitness succeed.
         </p>
 
         <ul className="mb-5">

@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
         id={'be-fit'}
         title={'BeFit'}
         desc={
-          'Full Stack Fitness tracker to help me and my brother keep track of our fitness progress'
+          'Full Stack Fitness tracker that allows user to keep track of their diet, weight, and workouts'
         }
       />
       <Project
