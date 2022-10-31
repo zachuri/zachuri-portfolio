@@ -10,11 +10,16 @@
 	letter-spacing: 0em;
 */
 
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../../public/assets/fonts/Roboto-Regular.ttf');
+}
+
 @layer base {
-	body {
-		/* @apply max-w-2xl mx-auto px-4; */
-		font-family: Questrial, SF Pro Display, SF Pro Icons, Helvetica Neue,
-			Helvetica, Arial, sans-serif;
-		@apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900;
-	}
+  body {
+    /* @apply max-w-2xl mx-auto px-4; */
+    font-family: Roboto-Regular, Questrial, SF Pro Display, SF Pro Icons,
+      Helvetica Neue, Helvetica, Arial, sans-serif;
+    @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900;
+  }
 }
