@@ -81,7 +81,7 @@ const ContactUs: React.FC = () => {
       <div className="dark:bg-black text-white flex flex-col justify-center items-center min-h-screen -my-10">
         <div className="flex-1 flex flex-col justify-center items-center ">
           <div className="pb-5 pt-5 md:pt-0">
-            <Image src="/logo.png " width={30} height={30} alt="logo" />
+            <Image src="/logo.png" width={30} height={30} alt="logo" />
           </div>
           <h2 className="text-black dark:text-[#bd93f9] text-4xl font-bold">
             Contact
