@@ -1,21 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { MetaProps } from '../../../types/layout';
+import Head from './Head';
 
 interface mainProps {
   children: React.ReactNode;
+  customMeta?: MetaProps;
 }
 
-
-const MainLayout: React.FC<mainProps> = ({ children }) => {
+const MainLayout: React.FC<mainProps> = ({ children, customMeta }) => {
   return (
-    <main>
-      <div className='flex flex-col justify-center items-center px-10 pt-10 md:pt-20 '>
-        <div className="max-w-lg flex-1 flex flex-col justify-center items-center pt-6">
-          {children}
+    <>
+      {customMeta !== null && <Head customMeta={customMeta} />}
+      <main>
+        <div className="flex flex-col justify-center items-center px-10 pt-10 md:pt-20 ">
+          <div className="max-w-xl flex-1 flex flex-col justify-center items-center pt-6">
+            {children}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
+  );
+};
 
-  )
-}
-
-export default MainLayout
+export default MainLayout;

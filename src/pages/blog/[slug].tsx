@@ -17,6 +17,8 @@ import remarkGfm from 'remark-gfm';
 import { MetaProps } from '../../../types/layout';
 import { PostType } from '../../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../../utils/mdxUtils';
+import MainLayout from '../../components/Layouts/Main';
+import LayoutMotion from '../../components/Layouts/Motion';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -35,28 +37,28 @@ type PostPageProps = {
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const customMeta: MetaProps = {
-    title: `${frontMatter.title} - Hunter Chang`,
+    title: `${frontMatter.title} - ZACHURI | DEV`,
     description: frontMatter.description,
     // image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
     date: frontMatter.date,
     type: 'article'
   };
   return (
-    // <Layout customMeta={customMeta}>
-    <div>
-      <article>
-        <h1 className="mb-3 text-gray-900 dark:text-white">
-          {frontMatter.title}
-        </h1>
-        <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
-          {format(parseISO(frontMatter.date as string), 'MMMM dd, yyyy')}
-        </p>
-        <div className="prose dark:prose-dark">
-          <MDXRemote {...source} components={components} />
-        </div>
-      </article>
-    </div>
-    // </Layout>
+    <MainLayout customMeta={customMeta}>
+      <LayoutMotion>
+        <article>
+          <h1 className="mb-3 text-gray-900 dark:text-white">
+            {frontMatter.title}
+          </h1>
+          <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
+            {format(parseISO(frontMatter.date as string), 'MMMM dd, yyyy')}
+          </p>
+          <div className="prose dark:prose-dark">
+            <MDXRemote {...source} components={components} />
+          </div>
+        </article>
+      </LayoutMotion>
+    </MainLayout>
   );
 };
 
