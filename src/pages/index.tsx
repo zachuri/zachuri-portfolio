@@ -7,7 +7,7 @@ import Who from "../components/Who";
 const url = "https://zachuri.com";
 const title = "Home";
 const description =
-	"Hello, I&apos;m a Web Developer based in Irvine, California! Zachary Punsalang. ZACHRUI. Developer (Web, Application, Game)`";
+	"Hello, I&apos;m a Web Developer based in Irvine, California! Zachary Punsalang. Developer (Web, Application, Game)`";
 
 const Home: NextPage = () => {
 	return (
