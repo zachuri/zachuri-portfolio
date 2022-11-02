@@ -34,6 +34,7 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
       {meta.date && (
         <meta property="article:published_time" content={meta.date} />
       )}
+      <link rel="icon" href="/logo.png" />
     </NextHead>
   );
 };
