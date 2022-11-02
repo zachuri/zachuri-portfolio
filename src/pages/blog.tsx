@@ -32,7 +32,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             <p className="mb-3">{post.description}</p>
             <p className="text-black dark:text-purple-200">
               <Link as={`/blog/${post.slug}`} href={`/blog/[slug]`}>
-                <a>Read More...</a>
+                <button className="text-sm rounded px-2 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA] hover:dark:border-gray-200 transition hover:border-gray-600 hover:dark:text-gray-200 hover:text-gray-600">
+                  <a>Read More...</a>
+                </button>
               </Link>
             </p>
           </article>
