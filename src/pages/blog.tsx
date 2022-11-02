@@ -18,21 +18,21 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         {/* <Layout> */}
         <h1 className="text-4xl">Blog</h1>
         {posts.map(post => (
-          <article key={post.slug} className="mt-12">
+          <article key={post.slug} className="my-5">
             <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
               {format(parseISO(post.date as string), 'MMMM dd, yyyy')}
             </p>
             <h1 className="mb-2 text-xl">
               <Link as={`/blog/${post.slug}`} href={`/blog/[slug]`}>
-                <a className="text-gray-900 dark:text-white dark:hover:text-blue-400">
+                <a className="text-gray-900 dark:text-[#bd93f9] dark:hover:text-purple-500">
                   {post.title}
                 </a>
               </Link>
             </h1>
             <p className="mb-3">{post.description}</p>
-            <p>
+            <p className="text-black dark:text-purple-200">
               <Link as={`/blog/${post.slug}`} href={`/blog/[slug]`}>
-                <a>Read More</a>
+                <a>Read More...</a>
               </Link>
             </p>
           </article>
