@@ -1,11 +1,22 @@
 import type { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import LayoutMotion from '../components/Layouts/Motion';
 import Who from '../components/Who';
 
+const url = 'https://zachuri.com';
+const title = 'Home';
+const description = 'Introduction about ZACHURI';
+
 const Home: NextPage = () => {
   return (
     <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{ url, title, description }}
+      />
       <Head>
         <title>ZACHURI | DEV</title>
         <meta
