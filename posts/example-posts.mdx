@@ -17,38 +17,42 @@ image: '/images/bridge.jpg'
 
 This is an example blog post with React components. This page is using the `Image` component from Next.js.
 
-```jsx:example-post.mdx
-<Image
-  alt={`Bridge`}
-  src={`/assets/keyboards/jp-02.jpeg`}
-  width={1440}
-  height={960}
-  priority
-/>
-```
+<font size="1">
+  ```jsx:example-post.mdx
+  <Image
+    alt={`Bridge`}
+    src={`/assets/keyboards/jp-02.jpeg`}
+    width={1440}
+    height={960}
+    priority
+  />
+  ```
+</font>
 
 ### Code Blocks
 
 This starter also comes with fancy code blocks with code titles.
 
-<font size="2">
+<font size="1">
 ```jsx:example.jsx
 import React, { useState } from 'react';
 
 function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+// Declare a new state variable, which we'll call "count"
+const [count, setCount] = useState(0);
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
+return (
+
+<div>
+  <p>You clicked {count} times</p>
+  <button onClick={() => setCount(count + 1)}>
+    Click me
+  </button>
+</div>
+); }
+
 ```
 </font>
 
 Go back [Home](/).
+```
