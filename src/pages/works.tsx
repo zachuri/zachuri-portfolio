@@ -12,7 +12,7 @@ const Works = () => {
 
   const customMeta: MetaProps = {
     title: `ZACHURI | Works`,
-    description: 'Get to know more about me :)'
+    description: "View my personal projects I've worked on"
   };
   return (
     <>

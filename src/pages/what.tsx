@@ -53,7 +53,7 @@ const ReadMore: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
 const url = 'https://zachuri.com/what';
 const title = 'What';
-const description = 'What - get to know more about ZACHURI';
+const description = 'Get to know more about ZACHURI';
 
 const What: React.FC = () => {
   const customMeta: MetaProps = {

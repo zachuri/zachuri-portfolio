@@ -4,6 +4,7 @@ import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import React from 'react';
 import { getAllPosts } from '../../lib/api';
+import { MetaProps } from '../../types/layout';
 import { PostType } from '../../types/post';
 import MainLayout from '../components/Layouts/Main';
 import LayoutMotion from '../components/Layouts/Motion';
@@ -13,10 +14,14 @@ type IndexProps = {
 };
 
 const url = 'https://zachuri.com/blog';
-const title = 'Blog';
+const title = 'ZACHURI | Blog';
 const description = 'Blog posts of ZACHURI';
 
 export const Index = ({ posts }: IndexProps): JSX.Element => {
+  const customMeta: MetaProps = {
+    title: `ZACHURI | Blog`,
+    description: 'Get to know more about me :)'
+  };
   return (
     <>
       <NextSeo
@@ -25,7 +30,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         canonical={url}
         openGraph={{ url, title, description }}
       />
-      <MainLayout>
+      <MainLayout customMeta={customMeta}>
         <LayoutMotion>
           {/* <Layout> */}
           <h1 className="text-4xl">Blog</h1>
