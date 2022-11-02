@@ -1,72 +1,54 @@
-import React from 'react';
-import MainLayout from '../components/Layouts/Main';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import { format, parseISO } from 'date-fns';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
+import React from 'react';
+import { getAllPosts } from '../../lib/api';
+import { PostType } from '../../types/post';
+import MainLayout from '../components/Layouts/Main';
 import LayoutMotion from '../components/Layouts/Motion';
 
-const Blog = (props: {
-  posts: [
-    {
-      slug: string;
-      frontMatter: { [key: string]: string };
-    }
-  ];
-}) => {
+type IndexProps = {
+  posts: PostType[];
+};
+
+export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <MainLayout>
       <LayoutMotion>
-        <h1 className="text-bold text-4xl dark:text-[#bd93f9] mb-5">Blog</h1>
-        <div className="flex flex-col items-center justify-center">
-          {props.posts.map(({ slug, frontMatter: { title, description } }) => (
-            <Link key={slug} href={`/blog/${slug}`} passHref>
-              <a>
-                <h5 className="text-2xl dark:text-[#bd93f9]">{title}</h5>
-                <p>{description}</p>
-                <hr className="my-5" />
-              </a>
-            </Link>
-          ))}
-        </div>
+        {/* <Layout> */}
+        <h1 className="text-4xl">Blog</h1>
+        {posts.map(post => (
+          <article key={post.slug} className="mt-12">
+            <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
+              {format(parseISO(post.date as string), 'MMMM dd, yyyy')}
+            </p>
+            <h1 className="mb-2 text-xl">
+              <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
+                <a className="text-gray-900 dark:text-white dark:hover:text-blue-400">
+                  {post.title}
+                </a>
+              </Link>
+            </h1>
+            <p className="mb-3">{post.description}</p>
+            <p>
+              <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
+                <a>Read More</a>
+              </Link>
+            </p>
+          </article>
+        ))}
+        {/* </Layout> */}
       </LayoutMotion>
     </MainLayout>
   );
 };
 
-export default Blog;
-
-export async function getStaticProps() {
-  // Get files from the posts dir
-  const files = fs.readdirSync(path.join('posts'));
-
-  const posts = files
-    .filter(filename => filename.includes('.mdx'))
-    .map(filename => {
-      // Create slug
-      const slug = filename.replace('.mdx', '');
-
-      const markdownWithMeta = fs.readFileSync(
-        path.join('posts', filename),
-        'utf-8'
-      );
-
-      const { data: frontMatter } = matter(markdownWithMeta);
-
-      return {
-        slug,
-        frontMatter
-      };
-    })
-    .sort(
-      (a, b) =>
-        new Date(b.frontMatter.date).getTime() -
-        new Date(a.frontMatter.date).getTime()
-    );
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts(['date', 'description', 'slug', 'title']);
 
   return {
-    props: {
-      posts
-    }
+    props: { posts }
   };
-}
+};
+
+export default Index;
