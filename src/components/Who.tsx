@@ -4,10 +4,16 @@ import React from 'react';
 import MainLayout from './Layouts/Main';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { MetaProps } from '../../types/layout';
 
 const Who: React.FC = () => {
+  const customMeta: MetaProps = {
+    title: `ZACHURI | Home`,
+    description:
+      'Hello, I&apos;m a Web Developer based in Irvine, California! Zachary Punsalang. Developer (Web, Application, Game)'
+  };
   return (
-    <MainLayout>
+    <MainLayout customMeta={customMeta}>
       {/* Where I'm from */}
       <div className="bg-[#dbd7d7] dark:bg-[#1c1c1c] p-5 rounded-xl mb-6 w-full">
         <h1 className="text-center">

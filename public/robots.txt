@@ -2,6 +2,6 @@ Sitemap: https://zachuri.com/contact
 
 # Allow all user agents.
 User-agent: *
-Allow: /
+Allow: Homepage
 
 Disallow: /contact 

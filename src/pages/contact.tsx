@@ -78,7 +78,7 @@ const ContactUs: React.FC = () => {
   );
 
   const url = 'https://zachuri.com/contact';
-  const title = 'Contact';
+  const title = 'ZACHURI | Contact';
   const description = 'Contact ZACHURI';
 
   return (

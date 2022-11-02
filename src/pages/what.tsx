@@ -4,6 +4,7 @@ import LayoutMotion from '../components/Layouts/Motion';
 import Skills from '../components/Skills';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+import { MetaProps } from '../../types/layout';
 
 interface Props {
   children: React.ReactNode;
@@ -55,6 +56,10 @@ const title = 'What';
 const description = 'What - get to know more about ZACHURI';
 
 const What: React.FC = () => {
+  const customMeta: MetaProps = {
+    title: `ZACHURI | What`,
+    description: 'Get to know more about me :)'
+  };
   return (
     <>
       <NextSeo
@@ -63,8 +68,7 @@ const What: React.FC = () => {
         canonical={url}
         openGraph={{ url, title, description }}
       />
-
-      <MainLayout>
+      <MainLayout customMeta={customMeta}>
         <LayoutMotion>
           <div className="max-w-full">
             <Container title={'Technical Skills'}>
