@@ -52,8 +52,8 @@ const ReadMore: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 const url = 'https://zachuri.com/what';
-const title = 'What';
-const description = 'Get to know more about ZACHURI';
+const title = 'Zachary Punsalang - What';
+const description = 'Get to know more about Zachary Punsalang | ZACHURI';
 
 const What: React.FC = () => {
   const customMeta: MetaProps = {

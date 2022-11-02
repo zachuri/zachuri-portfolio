@@ -8,7 +8,7 @@ import { MetaProps } from '../../types/layout';
 
 const Who: React.FC = () => {
   const customMeta: MetaProps = {
-    title: `ZACHURI | Home`,
+    title: `Zachary Punsalang - Homepage`,
     description:
       'Hello, I&apos;m a Web Developer based in Irvine, California! Zachary Punsalang. Developer (Web, Application, Game)'
   };

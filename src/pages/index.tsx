@@ -5,7 +5,7 @@ import LayoutMotion from '../components/Layouts/Motion';
 import Who from '../components/Who';
 
 const url = 'https://zachuri.com';
-const title = 'Home';
+const title = 'Zachary Punsalang - Home';
 const description =
   "Hello, I'm a Web Developer based in Irvine, California! Zachary Punsalang. Developer (Web, Application, Game)";
 

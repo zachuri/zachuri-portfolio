@@ -78,8 +78,8 @@ const ContactUs: React.FC = () => {
   );
 
   const url = 'https://zachuri.com/contact';
-  const title = 'ZACHURI | Contact';
-  const description = 'Contact ZACHURI';
+  const title = 'Zachary Punsalang - Contact';
+  const description = 'Contact Zachary Punsaalng | ZACHURI';
 
   return (
     <>

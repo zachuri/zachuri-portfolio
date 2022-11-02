@@ -14,13 +14,13 @@ type IndexProps = {
 };
 
 const url = 'https://zachuri.com/blog';
-const title = 'ZACHURI | Blog';
-const description = 'Blog posts of ZACHURI';
+const title = 'Zachary Punsalang - Blog';
+const description = 'Blog posts created by Zachary Punsalang | ZACHURI :)';
 
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   const customMeta: MetaProps = {
-    title: `ZACHURI | Blog`,
-    description: 'Get to know more about me :)'
+    title: `Zachary Punsalang - Blog`,
+    description: 'Blog posts created by Zachary Punsalang | ZACHURI :)'
   };
   return (
     <>

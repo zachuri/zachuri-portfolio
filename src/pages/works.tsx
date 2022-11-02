@@ -7,12 +7,12 @@ import { MetaProps } from '../../types/layout';
 
 const Works = () => {
   const url = 'https://zachuri.com/works';
-  const title = 'Works';
-  const description = 'Works - view projects of ZACHURI';
+  const title = 'Zachary Punsalang - Works';
+  const description = 'Works - view projects of Zachary Punsalang | ZACHURI';
 
   const customMeta: MetaProps = {
-    title: `ZACHURI | Works`,
-    description: "View my personal projects I've worked on"
+    title: `Zachary Punsalang - Works`,
+    description: 'Works - view projects of Zachary Punsalang | ZACHURI'
   };
   return (
     <>
