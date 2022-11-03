@@ -1,7 +1,5 @@
-Sitemap: https://zachuri.com/contact
-
-# Allow all user agents.
 User-agent: *
-Allow: Homepage
 
 Disallow: /contact 
+
+Sitemap: https://www.zachuri.com/sitemap.xml
