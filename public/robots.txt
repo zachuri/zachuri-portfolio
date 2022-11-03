@@ -1,5 +1,9 @@
 # *
 User-agent: *
+Disallow: /contact
+
+# *
+User-agent: *
 Allow: /
 
 # Host
