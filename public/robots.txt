@@ -1,5 +1,9 @@
+# *
 User-agent: *
+Allow: /
 
-Disallow: /contact 
+# Host
+Host: https://zachuri.com
 
-Sitemap: https://www.zachuri.com/sitemap.xml
+# Sitemaps
+Sitemap: https://zachuri.com/sitemap.xml
