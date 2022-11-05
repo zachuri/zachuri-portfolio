@@ -57,7 +57,7 @@ const description = 'Get to know more about Zachary Punsalang | ZACHURI';
 
 const What: React.FC = () => {
   const customMeta: MetaProps = {
-    title: `ZACHURI | What`,
+    title: `Zachary Punsalang - What`,
     description: 'Get to know more about me :)'
   };
   return (
