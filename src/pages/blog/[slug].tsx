@@ -47,10 +47,10 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
     <BlogLayout customMeta={customMeta}>
       <LayoutMotion>
         <article>
-          <h1 className="text-4xl mb-3 text-gray-900 dark:text-white">
+          <h1 className="text-4xl mt-6 text-gray-900 dark:text-white">
             {frontMatter.title}
           </h1>
-          <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
             {format(parseISO(frontMatter.date as string), 'MMMM dd, yyyy')}
           </p>
           <div className="prose dark:prose-dark">

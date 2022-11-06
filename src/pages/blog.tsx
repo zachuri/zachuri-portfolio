@@ -6,7 +6,7 @@ import React from 'react';
 import { getAllPosts } from '../../lib/api';
 import { MetaProps } from '../../types/layout';
 import { PostType } from '../../types/post';
-import MainLayout from '../components/Layouts/Main';
+import BlogLayout from '../components/Layouts/Blog';
 import LayoutMotion from '../components/Layouts/Motion';
 
 type IndexProps = {
@@ -30,12 +30,12 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         canonical={url}
         openGraph={{ url, title, description }}
       />
-      <MainLayout customMeta={customMeta}>
+      <BlogLayout customMeta={customMeta}>
         <LayoutMotion>
           {/* <Layout> */}
           <h1 className="text-4xl">Blog</h1>
           {posts.map(post => (
-            <article key={post.slug} className="my-5 max-w-md mx-auto ">
+            <article key={post.slug} className="my-5">
               <h1 className="mb-2 text-xl">
                 <Link as={`/blog/${post.slug}`} href={`/blog/[slug]`}>
                   <a className="text-gray-900 dark:text-[#bd93f9] dark:hover:text-purple-500">
@@ -58,7 +58,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
           ))}
           {/* </Layout> */}
         </LayoutMotion>
-      </MainLayout>
+      </BlogLayout>
     </>
   );
 };
