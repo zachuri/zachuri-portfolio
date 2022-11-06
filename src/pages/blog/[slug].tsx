@@ -17,7 +17,7 @@ import remarkGfm from 'remark-gfm';
 import { MetaProps } from '../../../types/layout';
 import { PostType } from '../../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../../utils/mdxUtils';
-import MainLayout from '../../components/Layouts/Main';
+import BlogLayout from '../../components/Layouts/Blog';
 import LayoutMotion from '../../components/Layouts/Motion';
 
 // Custom components/renderers to pass to MDX.
@@ -44,10 +44,10 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
     type: 'article'
   };
   return (
-    <MainLayout customMeta={customMeta}>
+    <BlogLayout customMeta={customMeta}>
       <LayoutMotion>
         <article>
-          <h1 className="mb-3 text-gray-900 dark:text-white">
+          <h1 className="text-4xl mb-3 text-gray-900 dark:text-white">
             {frontMatter.title}
           </h1>
           <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
@@ -58,7 +58,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
           </div>
         </article>
       </LayoutMotion>
-    </MainLayout>
+    </BlogLayout>
   );
 };
 
