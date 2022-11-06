@@ -1,15 +1,16 @@
 import Link from 'next/link';
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { useTheme } from 'next-themes';
 import router from 'next/router';
+import { FaGithub } from 'react-icons/fa';
 
 const links = [
   { href: '/', name: 'Who' },
   { href: '/what', name: 'What' },
   { href: '/works', name: 'Works' },
-  { href: '/contact', name: 'Contact' },
   { href: '/blog', name: 'Blog' },
+  { href: '/contact', name: 'Contact' },
   { href: 'https://github.com/zachuri/zachuri-portfolio', name: 'Source' }
 ];
 
@@ -18,7 +19,7 @@ function classNames(...classes: string[]) {
 }
 
 const Navbar: React.FC = () => {
-  const ref = useRef(null);
+  // const ref = useRef(null);
 
   const { theme, setTheme } = useTheme();
   const [darkToggle, setDarkToggle] = useState<boolean>(
