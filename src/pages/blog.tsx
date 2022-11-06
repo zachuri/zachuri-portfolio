@@ -36,9 +36,6 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
           <h1 className="text-4xl">Blog</h1>
           {posts.map(post => (
             <article key={post.slug} className="my-5 max-w-md mx-auto ">
-              <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                {format(parseISO(post.date as string), 'MMMM dd, yyyy')}
-              </p>
               <h1 className="mb-2 text-xl">
                 <Link as={`/blog/${post.slug}`} href={`/blog/[slug]`}>
                   <a className="text-gray-900 dark:text-[#bd93f9] dark:hover:text-purple-500">
@@ -46,6 +43,9 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
                   </a>
                 </Link>
               </h1>
+              <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
+                {format(parseISO(post.date as string), 'MMMM dd, yyyy')}
+              </p>
               <p className="mb-3">{post.description}</p>
               <p className="text-black dark:text-purple-200">
                 <Link as={`/blog/${post.slug}`} href={`/blog/[slug]`}>
