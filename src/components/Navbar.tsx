@@ -66,6 +66,11 @@ const Navbar: React.FC = () => {
                 <button>WORKS</button>
               </li>
             </Link>
+            <Link href="/blog">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                <button>BLOG</button>
+              </li>
+            </Link>
           </ul>
         </div>
 
