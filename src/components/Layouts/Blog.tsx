@@ -12,7 +12,7 @@ const BlogLayout: React.FC<mainProps> = ({ children, customMeta }) => {
     <>
       {customMeta !== null && <Head customMeta={customMeta} />}
       <main>
-        <div className="pt-10 md:pt-20 max-w-xl px-8 py-4 mx-auto">
+        <div className="pt-10 md:pt-20 max-w-2xl px-10 py-4 mx-auto">
           {children}
         </div>
       </main>
