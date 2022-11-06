@@ -25,8 +25,8 @@ module.exports = {
               borderLeftColor: theme('colors.gray.700'),
               color: theme('colors.gray.300')
             },
-            'h2,h3,h4': {
-              color: theme('colors.gray.100'),
+            'h1,h2,h3,h4': {
+              color: theme('colors.purple.400'),
               'scroll-margin-top': spacing[32]
             },
             hr: { borderColor: theme('colors.gray.700') },
