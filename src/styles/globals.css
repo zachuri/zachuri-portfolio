@@ -22,8 +22,8 @@
       Helvetica Neue, Helvetica, Arial, sans-serif;
     /* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
     @apply bg-gradient-to-t from-[#C76D86] via-[#BC87B5] to-[#A995C8] h-screen bg-fixed
-    dark:bg-gradient-to-t dark:from-[#000000] dark:via-[#0C131D] dark:to-[#405060] dark:h-screen dark:bg-fixed
-   dark:text-gray-100 text-[#FFFFFB];
+    dark:bg-gradient-to-b dark:from-[#000000] dark:via-[#04070C] dark:to-[#1e1f26] dark:h-screen dark:bg-fixed
+   dark:text-[#FFFFFB] text-[#FFFFFB];
   }
 }
 
