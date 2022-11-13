@@ -15,7 +15,7 @@ const Who: React.FC = () => {
   return (
     <MainLayout customMeta={customMeta}>
       {/* Where I'm from */}
-      <div className="bg-[#dbd7d7] dark:bg-[#1c1c1c] p-5 rounded-xl mb-6 w-full">
+      <div className="bg-[#282a36] dark:bg-[#282a36] p-5 rounded-xl mb-6 w-full">
         <h1 className="text-center">
           Hello, I&apos;m a Web Developer based in Irvine, California!
         </h1>
@@ -24,7 +24,7 @@ const Who: React.FC = () => {
       {/* Name */}
       <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-9 mb-6">
         <div>
-          <h1 className="text-4xl dark:text-[#bd93f9]">Zachary Punsalang</h1>
+          <h1 className="text-4xl ">Zachary Punsalang</h1>
           <p>Developer (Web, Application, Game)</p>
         </div>
         <div>
@@ -41,7 +41,7 @@ const Who: React.FC = () => {
       </div>
 
       {/* Work */}
-      <div className="w-full flex flex-items-center">
+      <div className="w-full flex flex-items-center dark:bg-[#0D141E] rounded-xl p-5">
         <div>
           <h2 className="font-bold text-2xl dark:text-[#bd93f9] mb-2">Who</h2>
           <p>
@@ -95,7 +95,7 @@ const Who: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex justify-center mt-5">
+          <div className="flex justify-center mt-5 ">
             <Link href="/works">
               <button className="bg-purple-200 text-purple-900 dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-purple-500 transition">
                 <div className="flex flex-row items-center justify-center">
@@ -122,7 +122,7 @@ const Who: React.FC = () => {
       </div>
 
       {/* Bio */}
-      <div className="w-full flex mt-6">
+      <div className="w-full flex mt-6 dark:bg-[#1C1C1C] rounded-xl p-5">
         <div className="w-full">
           <h2 className="text-2xl dark:text-[#bd93f9] mb-2 font-bold">Bio</h2>
           <div className="grid grid-cols-3 mb-4">

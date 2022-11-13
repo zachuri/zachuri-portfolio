@@ -20,7 +20,10 @@
     /* @apply max-w-2xl mx-auto px-4; */
     font-family: Roboto-Regular, Questrial, SF Pro Display, SF Pro Icons,
       Helvetica Neue, Helvetica, Arial, sans-serif;
-    @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900;
+    /* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
+    @apply bg-gradient-to-t from-[#C76D86] via-[#BA85B3] to-[#A995C8] h-screen bg-fixed
+    dark:bg-gradient-to-t dark:from-[#000000] dark:via-[#0C131D] dark:to-[#405060] dark:h-screen dark:bg-fixed
+   dark:text-gray-100 text-white;
   }
 }
 
