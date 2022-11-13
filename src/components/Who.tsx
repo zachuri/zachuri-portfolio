@@ -35,7 +35,7 @@ const Who: React.FC = () => {
       </div>
 
       {/* My Portfolio */}
-      <div className="">
+      <div className="mb-5">
         <div className="flex justify-center">
           <Link href="/works">
             <button className="border dark:border-none dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-gray-500 hover:border-gray-500 transition">
