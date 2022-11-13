@@ -15,14 +15,14 @@ const Who: React.FC = () => {
   return (
     <MainLayout customMeta={customMeta}>
       {/* Where I'm from */}
-      <div className="bg-[#282a36] dark:bg-[#282a36] p-5 rounded-xl mb-6 w-full">
+      <div className="border p-5 rounded-xl mb-5 w-full">
         <h1 className="text-center">
           Hello, I&apos;m a Web Developer based in Irvine, California!
         </h1>
       </div>
 
       {/* Name */}
-      <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-9 mb-6">
+      <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-9 mb-5">
         <div>
           <h1 className="text-4xl ">Zachary Punsalang</h1>
           <p>Developer (Web, Application, Game)</p>
@@ -41,7 +41,7 @@ const Who: React.FC = () => {
       </div>
 
       {/* Work */}
-      <div className="w-full flex flex-items-center dark:bg-[#0D141E] rounded-xl p-5">
+      <div className="w-full flex flex-items-center border dark:bg-[#0D141E] rounded-xl p-5">
         <div>
           <h2 className="font-bold text-2xl dark:text-[#bd93f9] mb-2">Who</h2>
           <p>
@@ -65,13 +65,13 @@ const Who: React.FC = () => {
               >
                 <FaLinkedin
                   size={20}
-                  className="fill-black dark:fill-white hover:bg-[#777777] hover:rounded"
+                  className="dark:fill-black fill-[#FFFFFB] hover:bg-[#777777] hover:rounded"
                 />
               </a>
               <a href="https://github.com/zachuri" aria-label="link to github">
                 <FaGithub
                   size={20}
-                  className="fill-black dark:fill-white hover:bg-[#777777] hover:rounded"
+                  className="dark:fill-black fill-[#FFFFFB] hover:bg-[#777777] hover:rounded"
                 />
               </a>
               <a
@@ -80,7 +80,7 @@ const Who: React.FC = () => {
               >
                 <FaTwitter
                   size={20}
-                  className="fill-black dark:fill-white hover:bg-[#777777] hover:rounded"
+                  className="dark:fill-black fill-[#FFFFFB] hover:bg-[#777777] hover:rounded"
                 />
               </a>
               <a
@@ -89,7 +89,7 @@ const Who: React.FC = () => {
               >
                 <AiOutlineMail
                   size={20}
-                  className="fill-black dark:fill-white hover:bg-[#777777] hover:rounded"
+                  className="dark:fill-black fill-[#FFFFFB] hover:bg-[#777777] hover:rounded"
                 />
               </a>
             </div>
@@ -97,7 +97,7 @@ const Who: React.FC = () => {
 
           <div className="flex justify-center mt-5 ">
             <Link href="/works">
-              <button className="bg-purple-200 text-purple-900 dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-purple-500 transition">
+              <button className="border dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-gray-500 hover:border-gray-500 transition">
                 <div className="flex flex-row items-center justify-center">
                   <p>My Portfolio</p>
                   <svg
@@ -122,7 +122,7 @@ const Who: React.FC = () => {
       </div>
 
       {/* Bio */}
-      <div className="w-full flex mt-6 dark:bg-[#1C1C1C] rounded-xl p-5">
+      <div className="w-full flex mt-6 dark:bg-[#1C1C1C] p-3">
         <div className="w-full">
           <h2 className="text-2xl dark:text-[#bd93f9] mb-2 font-bold">Bio</h2>
           <div className="grid grid-cols-3 mb-4">
@@ -133,7 +133,7 @@ const Who: React.FC = () => {
             <span className="font-bold">2017 to 2019</span>
             <p className="col-span-2">
               {' '}
-              Mount San Antonio Community College (Computer Science)
+              Mt. San Antonio Community College (Computer Science)
             </p>
           </div>
           <div className="grid grid-cols-3">
@@ -150,7 +150,7 @@ const Who: React.FC = () => {
           <button
             role="navigate to what page"
             aria-label="press to get to know more about me (link to what page)"
-            className="rounded px-4 border border-[#333333] text-[#333333] dark:border-[#AAAAAA] dark:text-[#AAAAAA] hover:dark:border-gray-200 transition hover:border-gray-600 hover:dark:text-gray-200 hover:text-gray-600"
+            className="border dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-gray-500 hover:border-gray-500 transition"
           >
             <div className="flex flex-row items-center justify-center">
               <p>MORE ABOUT ME</p>
