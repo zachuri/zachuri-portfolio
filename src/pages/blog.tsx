@@ -33,7 +33,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
       <BlogLayout customMeta={customMeta}>
         <LayoutMotion>
           {/* <Layout> */}
-          <h1 className="text-4xl">Blog</h1>
+          <h1 className="text-4xl mt-5">Blog</h1>
           {posts.map(post => (
             <article key={post.slug} className="my-5">
               <h1 className="mb-2 text-xl">
