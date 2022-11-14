@@ -70,10 +70,7 @@ const Links: React.FC = () => {
 					desc='zachuri#8553'
 					link=''
 					label='discord: zachuri#8553'>
-					<FaDiscord
-						size={30}
-						className='fill-[#77778b] dark:fill-[#292929]'
-					/>
+					<FaDiscord size={30} className='fill-[#77778b] dark:fill-[#292929]' />
 				</Link>
 			</div>
 		</>

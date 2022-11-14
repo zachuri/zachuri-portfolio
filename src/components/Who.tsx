@@ -18,7 +18,7 @@ const Who: React.FC = () => {
 			{/* Name */}
 			<div className='backdrop-blur-xl bg-white/30 rounded-xl p-5 w-full flex flex-col-reverse md:flex-row items-center justify-center md:gap-10 mb-5'>
 				<div className='text-center md:text-left'>
-					<h1 className='text-3xl md:text-4xl dark:text-[#bd93f9]'>
+					<h1 className='text-3xl md:text-4xl text-gray-600 dark:text-[#bd93f9]'>
 						Zachary Punsalang
 					</h1>
 					<p>Developer (Web, Application, Game)</p>
@@ -68,9 +68,12 @@ const Who: React.FC = () => {
 			{/* Who */}
 			<div className='w-full flex flex-items-center rounded-xl mb-5'>
 				<div className='backdrop-blur-sm bg-white/30 rounded-xl p-5'>
-					<h2 className='font-bold text-2xl dark:text-[#bd93f9] mb-2'>Who</h2>
+					<h2 className='font-bold text-2xl text-gray-600 dark:text-[#bd93f9] mb-2'>
+						Who
+					</h2>
 					<p>
-						Hola I&apos;m <span className='dark:text-[#bd93f9]'>ZACHURI</span>.
+						Hola I&apos;m{" "}
+						<span className='text-gray-600 dark:text-[#bd93f9]'>ZACHURI</span>.
 						I&apos;m a Computer and Information Science graduate from the
 						University of California, Irvine. What inspires me to code is being
 						able to build valuable projects that can help individuals with their
