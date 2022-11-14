@@ -22,7 +22,7 @@
 			Helvetica Neue, Helvetica, Arial, sans-serif;
 		/* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
 		@apply bg-gradient-to-b from-[#BFB0B8]  to-[#AE9ABD] h-screen bg-fixed
-    dark:bg-gradient-to-b dark:from-[#000000] dark:via-[#04070C] dark:to-[#0e0f12] dark:h-screen dark:bg-fixed
+    dark:bg-gradient-to-t dark:from-[#000000] dark:via-[#04070C] dark:to-[#0e0f12] dark:h-screen dark:bg-fixed
    dark:text-[#FFFFFB] text-[#FFFFFB];
 	}
 }
