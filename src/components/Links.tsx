@@ -11,7 +11,7 @@ interface Props {
 const Link: React.FC<Props> = ({ children, name, desc }) => {
   return (
     <>
-      <div className="mx-5 mb-4 items-center bg-[#FEF6F8] hover:bg-[#FEF6F8] dark:bg-[#908d8d] dark:hover:bg-[#b7b1b1] transition text-[#77778b] dark:text-[#292929] p-3 rounded-xl grid grid-cols-3 hover ">
+      <div className="mx-5 mb-4 items-center bg-[#FEF6F8] hover:bg-[#ded6d9] dark:bg-[#d0caca] dark:hover:bg-[#7c7878] transition text-[#77778b] dark:text-[#292929] p-3 rounded-xl grid grid-cols-3 hover ">
         <div className="items-center">{children}</div>
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-lg">{name}</h2>
