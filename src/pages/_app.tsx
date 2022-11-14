@@ -10,7 +10,12 @@ import SEO from '../../next-seo.config';
 const MyApp: AppType = ({ Component, pageProps }) => {
   // return <Component {...pageProps} />
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" storageKey="theme">
+    <ThemeProvider
+      enableSystem={false}
+      attribute="class"
+      defaultTheme="light"
+      storageKey="theme"
+    >
       <DefaultSeo {...SEO} />
       <Navbar />
       <AnimatePresence exitBeforeEnter initial={true}>
