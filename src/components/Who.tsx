@@ -38,7 +38,7 @@ const Who: React.FC = () => {
       <div className="mb-5">
         <div className="flex justify-center">
           <Link href="/works">
-            <button className="border dark:border-none dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-gray-500 hover:border-gray-500 transition">
+            <button className="border dark:border rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-gray-500 hover:border-gray-500 transition">
               <div className="flex flex-row items-center justify-center">
                 <p>My Portfolio</p>
                 <svg
@@ -82,7 +82,7 @@ const Who: React.FC = () => {
       </div>
 
       {/* Bio */}
-      <div className="w-full flex mt-6">
+      {/* <div className="w-full flex mt-6">
         <div className="w-full">
           <h2 className="text-2xl dark:text-[#bd93f9] mb-2 font-bold">Bio</h2>
           <div className="grid grid-cols-3 mb-4">
@@ -104,13 +104,15 @@ const Who: React.FC = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center my-6">
+      </div> */}
+
+      {/* More About me */}
+      <div className="flex justify-center">
         <Link href="/what">
           <button
             role="navigate to what page"
             aria-label="press to get to know more about me (link to what page)"
-            className="border dark:border-none dark:bg-[#bd93f9] dark:text-black rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-gray-500 hover:border-gray-500 transition"
+            className="border dark:border rounded-xl px-8 py-2 hover:dark:text-gray-700 hover:text-gray-500 hover:border-gray-500 transition"
           >
             <div className="flex flex-row items-center justify-center">
               <p>MORE ABOUT ME</p>
