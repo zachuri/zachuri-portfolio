@@ -46,7 +46,7 @@ function Sun() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6 hover:border-2 hover:rounded-lg"
+      className="w-6 h-6 hover:border-2 hover:rounded-lg transition"
     >
       <path
         strokeLinecap="round"
@@ -64,6 +64,8 @@ const Navbar: React.FC = () => {
   const [darkToggle, setDarkToggle] = useState<boolean>(
     theme === 'dark' ? false : true
   );
+
+  const [hamburger, setHamburger] = useState<boolean>(false);
 
   const [icon, setIcon] = useState<boolean>(darkToggle);
 
@@ -152,22 +154,42 @@ const Navbar: React.FC = () => {
               <Menu.Button
                 role="navigation"
                 aria-label="hamburger menu to navigate to pages"
+                onClick={() => {
+                  setHamburger(curr => (curr === true ? false : true));
+                }}
               >
-                <svg
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
+                {hamburger ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                )}
               </Menu.Button>
 
               <Transition
