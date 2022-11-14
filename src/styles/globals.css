@@ -16,6 +16,7 @@
 }
 
 @layer base {
+  html,
 	body {
 		/* @apply max-w-2xl mx-auto px-4; */
 		font-family: Roboto-Regular, Questrial, SF Pro Display, SF Pro Icons,

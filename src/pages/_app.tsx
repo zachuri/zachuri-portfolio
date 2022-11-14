@@ -11,8 +11,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   // return <Component {...pageProps} />
   return (
     <ThemeProvider
-      enableSystem={false}
-      attribute="class"
+      attribute="className"
       defaultTheme="light"
       storageKey="theme"
     >
