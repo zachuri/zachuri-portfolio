@@ -78,8 +78,8 @@ const Navbar: React.FC = () => {
   // console.log(darkToggle);
 
   useEffect(() => {
-    darkToggle;
-    icon;
+    setDarkToggle;
+    setIcon;
   }, [darkToggle, icon]);
 
   function handleTheme() {
