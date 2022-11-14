@@ -67,6 +67,11 @@ const Navbar: React.FC = () => {
 
   const [icon, setIcon] = useState<boolean>(darkToggle);
 
+  function IconShow() {
+    setIcon(curr => (curr === true ? false : true));
+    return <>{icon ? <Sun /> : <Moon />}</>;
+  }
+
   // console.log(theme);
   // console.log(darkToggle);
 
@@ -127,7 +132,7 @@ const Navbar: React.FC = () => {
             role="toggle"
             aria-label="toggle between light and dark mode"
           >
-            {icon ? <Moon /> : <Sun />}
+            <IconShow />
           </button>
           <Link href="/contact">CONTACT</Link>
         </div>
@@ -140,7 +145,7 @@ const Navbar: React.FC = () => {
             role="hamgurger menu"
             aria-label="view the links to all the other pages"
           >
-            {icon ? <Moon /> : <Sun />}
+            <IconShow />
           </button>
           <Menu as="div" className="relative inline-block text-left mt-1">
             <>
