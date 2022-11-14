@@ -72,8 +72,7 @@ const Who: React.FC = () => {
 						Who
 					</h2>
 					<p>
-						Hola I&apos;m{" "}
-						<span className='text-gray-600 dark:text-[#bd93f9]'>ZACHURI</span>.
+						Hola I&apos;m <span className='text-gray-600 dark:text-[#bd93f9]'>ZACHURI</span>.
 						I&apos;m a Computer and Information Science graduate from the
 						University of California, Irvine. What inspires me to code is being
 						able to build valuable projects that can help individuals with their
