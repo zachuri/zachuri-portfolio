@@ -65,17 +65,18 @@ const Navbar: React.FC = () => {
     theme === 'dark' ? false : true
   );
 
-  const [icon, setIcon] = useState<boolean>(true);
+  const [icon, setIcon] = useState<boolean>(darkToggle);
 
   // console.log(theme);
   // console.log(darkToggle);
 
   useEffect(() => {
     darkToggle;
-  }, [darkToggle]);
+    icon;
+  }, [darkToggle, icon]);
 
   function handleTheme() {
-    setIcon(curr => (curr === false ? true : false));
+    setIcon(curr => (curr === true ? false : true));
 
     if (theme === 'dark') {
       setTheme('light');
