@@ -50,7 +50,7 @@ const Links: React.FC = () => {
 				</Link>
 				<Link
 					name='Twitter'
-					desc='FLY'
+					desc='Looking at content'
 					link='https://twitter.com/zachurii'
 					label='link to twitter'>
 					<FaTwitter size={30} className='fill-[#77778b] dark:fill-[#292929]' />
