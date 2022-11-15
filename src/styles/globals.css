@@ -11,73 +11,73 @@
 */
 
 @font-face {
-  font-family: 'Roboto-Regular';
-  src: url('../../public/assets/fonts/Roboto-Regular.ttf');
+	font-family: "Roboto-Regular";
+	src: url("../../public/assets/fonts/Roboto-Regular.ttf");
 }
 
 @layer base {
-  body {
-    /* @apply max-w-2xl mx-auto px-4; */
-    font-family: Roboto-Regular, Questrial, SF Pro Display, SF Pro Icons,
-      Helvetica Neue, Helvetica, Arial, sans-serif;
-    /* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
-    @apply bg-[#BFB0B8] dark:bg-[#202023] bg-gradient-to-b from-[#BFB0B8]  to-[#AE9ABD] h-screen bg-fixed
+	body {
+		/* @apply max-w-2xl mx-auto px-4; */
+		font-family: Roboto-Regular, Questrial, SF Pro Display, SF Pro Icons,
+			Helvetica Neue, Helvetica, Arial, sans-serif;
+		/* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
+		@apply bg-[#BFB0B8] dark:bg-[#151516] bg-gradient-to-b from-[#BFB0B8]  to-[#AE9ABD] h-screen bg-fixed
     dark:bg-gradient-to-t dark:from-[#0f0f11] dark:to-[#151516] dark:h-screen dark:bg-fixed
    dark:text-[#FFFFFB] text-[#FFFFFB];
-  }
+	}
 }
 
 /* Post styles */
 
 .prose .anchor {
-  @apply absolute invisible no-underline;
+	@apply absolute invisible no-underline;
 
-  margin-left: -1em;
-  padding-right: 0.5em;
-  width: 80%;
-  max-width: 700px;
-  cursor: pointer;
+	margin-left: -1em;
+	padding-right: 0.5em;
+	width: 80%;
+	max-width: 700px;
+	cursor: pointer;
 }
 
 .anchor:hover {
-  @apply visible;
+	@apply visible;
 }
 
 .prose a {
-  @apply transition-all;
+	@apply transition-all;
 }
 
 .prose .anchor:after {
-  @apply text-gray-300 dark:text-gray-700;
-  /* content: '#'; */
+	@apply text-gray-300 dark:text-gray-700;
+	/* content: '#'; */
 }
 
 .prose *:hover > .anchor {
-  @apply visible;
+	@apply visible;
 }
 
 .prose pre {
-  @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+	@apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
 }
 
 .prose code {
-  @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-lg bg-gray-100 dark:bg-gray-900;
+	@apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-lg bg-gray-100 dark:bg-gray-900;
 }
 
 .prose pre code {
-  @apply text-gray-800 dark:text-gray-200 p-0;
-  border: initial;
+	@apply text-gray-800 dark:text-gray-200 p-0;
+	border: initial;
 }
 
 .prose img {
-  /* Don't apply styles to next/image */
-  @apply m-0;
+	/* Don't apply styles to next/image */
+	@apply m-0;
 }
 
 .prose > :first-child {
-  /* Override removing top margin, causing layout shift */
-  margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
+	/* Override removing top margin, causing layout shift */
+	margin-top: 1.25em !important;
+	margin-bottom: 1.25em !important;
 }
 
 /* Prism Styles */
@@ -85,11 +85,11 @@
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  @apply text-gray-700 dark:text-gray-300;
+	@apply text-gray-700 dark:text-gray-300;
 }
 
 .token.punctuation {
-  @apply text-gray-700 dark:text-gray-300;
+	@apply text-gray-700 dark:text-gray-300;
 }
 
 .token.property,
@@ -99,7 +99,7 @@
 .token.constant,
 .token.symbol,
 .token.deleted {
-  @apply text-green-500;
+	@apply text-green-500;
 }
 
 .token.selector,
@@ -108,7 +108,7 @@
 .token.char,
 .token.builtin,
 .token.inserted {
-  @apply text-purple-500;
+	@apply text-purple-500;
 }
 
 .token.operator,
@@ -116,48 +116,48 @@
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  @apply text-yellow-500;
+	@apply text-yellow-500;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  @apply text-blue-500;
+	@apply text-blue-500;
 }
 
 .token.function,
 .token.class-name {
-  @apply text-pink-500;
+	@apply text-pink-500;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  @apply text-yellow-500;
+	@apply text-yellow-500;
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
-  @apply text-gray-800 dark:text-gray-50;
+code[class*="language-"],
+pre[class*="language-"] {
+	@apply text-gray-800 dark:text-gray-50;
 }
 
 pre::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 .rehype-code-title {
-  @apply px-5 py-3 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t-lg dark:text-gray-200 dark:border-gray-700 dark:bg-gray-800;
+	@apply px-5 py-3 font-mono text-sm font-bold text-gray-800 bg-gray-200 border border-b-0 border-gray-200 rounded-t-lg dark:text-gray-200 dark:border-gray-700 dark:bg-gray-800;
 }
 
 .rehype-code-title + pre {
-  @apply mt-0 rounded-t-none;
+	@apply mt-0 rounded-t-none;
 }
 
 .highlight-line {
-  @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
+	@apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
 }
