@@ -14,7 +14,7 @@ const Link: React.FC<Props> = ({ children, name, desc, link, label }) => {
   return (
     <>
       <a href={link} aria-label={label}>
-        <div className="mx-3 mb-4 items-center bg-[#FEF6F8] hover:bg-[#ded6d9] dark:bg-[#d0caca] dark:hover:bg-[#7c7878] transition text-[#77778b] dark:text-[#292929] p-3 rounded-xl grid grid-cols-5 hover ">
+        <div className="mx-3 mb-4 items-center bg-[#FEF6F8] hover:bg-[#ded6d9] dark:bg-[#d0caca] dark:hover:bg-[#7c7878] transition text-[#77778b] dark:text-[#424242] p-3 rounded-xl grid grid-cols-5 hover ">
           <div className="ml-5 items-center">{children}</div>
           <div className="col-span-3 flex flex-col items-center justify-center">
             <h2 className="text-lg">{name}</h2>
@@ -37,7 +37,7 @@ const Links: React.FC = () => {
           link="https://github.com/zachuri"
           label="link to github"
         >
-          <FaGithub size={30} className="fill-[#77778b] dark:fill-[#292929]" />
+          <FaGithub size={30} className="fill-[#77778b] dark:fill-[#424242]" />
         </Link>
         <Link
           name="Linkden"
@@ -47,7 +47,7 @@ const Links: React.FC = () => {
         >
           <FaLinkedin
             size={30}
-            className="fill-[#77778b] dark:fill-[#292929]"
+            className="fill-[#77778b] dark:fill-[#424242]"
           />
         </Link>
         <Link
@@ -56,7 +56,7 @@ const Links: React.FC = () => {
           link="https://twitter.com/zachurii"
           label="link to twitter"
         >
-          <FaTwitter size={30} className="fill-[#77778b] dark:fill-[#292929]" />
+          <FaTwitter size={30} className="fill-[#77778b] dark:fill-[#424242]" />
         </Link>
         <Link
           name="Mail"
@@ -66,7 +66,7 @@ const Links: React.FC = () => {
         >
           <AiOutlineMail
             size={30}
-            className="fill-[#77778b] dark:fill-[#292929]"
+            className="fill-[#77778b] dark:fill-[#424242]"
           />
         </Link>
         <Link
@@ -75,7 +75,7 @@ const Links: React.FC = () => {
           link=""
           label="discord: zachuri#8553"
         >
-          <FaDiscord size={30} className="fill-[#77778b] dark:fill-[#292929]" />
+          <FaDiscord size={30} className="fill-[#77778b] dark:fill-[#424242]" />
         </Link>
       </div>
     </>
