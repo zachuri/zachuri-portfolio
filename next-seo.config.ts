@@ -9,12 +9,12 @@ const SEO = {
   openGraph: {
     type: 'website',
     locale: 'en_CA',
-    url: 'https://www.zachuri.com',
+    url: 'https://zachuri.com',
     title,
     description,
     images: [
       {
-        url: 'https://www.zachuri.com/site-preview.png',
+        url: 'https://zachuri.com/site-preview.png',
         alt: title
       }
     ]
