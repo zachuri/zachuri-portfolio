@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://www.zachuri.com',
+  siteUrl: 'https://zachuri.com',
   generateRobotsTxt: true, // (optional)
   robotsTxtOptions: {
     policies: [
