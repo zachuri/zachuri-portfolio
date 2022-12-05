@@ -81,7 +81,7 @@ const Who: React.FC = () => {
             lives, my curiosity on wanting to know how things are built from the
             ground up, and how one is able to express their ideas through code.
             I am a developer that is willing to learn new ideas and
-            technologies.
+            technologies. Let&apos;s build together!
           </p>
         </div>
       </div>
