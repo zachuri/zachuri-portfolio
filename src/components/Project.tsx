@@ -31,6 +31,7 @@ const Project: React.FC<Props> = ({ id, title, desc }) => {
               loading="eager"
               placeholder="blur"
               blurDataURL={`/assets/projects/${id}.png`}
+              priority={true}
             />
             <div className="text-center">
               <h1 className="text-xl mb-1 font-bold">{title}</h1>

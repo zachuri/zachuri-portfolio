@@ -32,6 +32,7 @@ const Who: React.FC = () => {
             alt="profile picture"
             placeholder="blur"
             blurDataURL="/assets/github-profile-pic.jpeg"
+            priority={true}
           />
         </div>
       </div>
