@@ -10,8 +10,13 @@ import Links from './Links';
 const Who: React.FC = () => {
   const customMeta: MetaProps = {
     title: `Zachary Punsalang - Homepage`,
-    description:
-      'Hello, I&apos;m a Web Developer based in Irvine, California! Zachary Punsalang. Developer (Web, Application, Game)'
+    description: `Hola I'm ZACHURI a Computer and Information Science graduate from the University of California, Irvine. 
+    What inspires me to code is being able to build valuable projects that can help individuals with their
+    lives, my curiosity on wanting to know how things are built from the
+    ground up, and how one is able to express their ideas through code.
+    I am a developer that is willing to learn new ideas and
+    technologies. Let's build together!
+    `
   };
   return (
     <MainLayout customMeta={customMeta}>

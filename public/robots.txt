@@ -7,7 +7,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.zachuri.com
+Host: https://zachuri.com
 
 # Sitemaps
-Sitemap: https://www.zachuri.com/sitemap.xml
+Sitemap: https://zachuri.com/sitemap.xml
