@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://zachuri.com</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/blog</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/what</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/works</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/works/be-fit</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/works/diversity-hotline</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/works/ecommerce-movie</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/works/twitch-clone</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/blog/job-hunting</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/blog/password-manager</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://zachuri.com/blog/t3-stack</loc><lastmod>2023-02-06T07:19:55.141Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/blog</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/what</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/works</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/works/be-fit</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/works/diversity-hotline</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/works/ecommerce-movie</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/works/twitch-clone</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/blog/job-hunting</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/blog/password-manager</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zachuri.com/blog/t3-stack</loc><lastmod>2023-02-06T07:27:48.795Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
