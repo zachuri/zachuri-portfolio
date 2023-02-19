@@ -30,7 +30,7 @@ const Links: React.FC = () => {
   return (
     <>
       {/* Links */}
-      <div className="flex flex-col w-full mb-5">
+      <div className="flex flex-col w-full">
         <Link
           name="Github"
           desc="My spaghetti codes"

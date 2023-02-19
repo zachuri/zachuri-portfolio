@@ -72,28 +72,8 @@ const Who: React.FC = () => {
       {/* Links */}
       <Links />
 
-      {/* Who */}
-      <div className="w-full flex flex-items-center rounded-xl mb-5">
-        <div className="backdrop-blur-sm bg-white/30 rounded-xl p-5">
-          <h2 className="font-bold text-2xl text-gray-600 dark:text-[#bd93f9] mb-2">
-            Who
-          </h2>
-          <p>
-            Hola I&apos;m{' '}
-            <span className="text-gray-600 dark:text-[#bd93f9]">ZACHURI</span>.
-            I&apos;m a Computer and Information Science graduate from the
-            University of California, Irvine. What inspires me to code is being
-            able to build valuable projects that can help individuals with their
-            lives, my curiosity on wanting to know how things are built from the
-            ground up, and how one is able to express their ideas through code.
-            I am a developer that is willing to learn new ideas and
-            technologies. Let&apos;s build together!
-          </p>
-        </div>
-      </div>
-
       {/* More About me */}
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-5">
         <Link href="/what">
           <button
             role="navigate to what page"
@@ -121,6 +101,26 @@ const Who: React.FC = () => {
             </div>
           </button>
         </Link>
+      </div>
+
+      {/* Who */}
+      <div className="w-full flex flex-items-center rounded-xl mb-5">
+        <div className="backdrop-blur-sm bg-white/30 rounded-xl p-5">
+          <h2 className="font-bold text-2xl text-gray-600 dark:text-[#bd93f9] mb-2">
+            Who
+          </h2>
+          <p>
+            Hola I&apos;m{' '}
+            <span className="text-gray-600 dark:text-[#bd93f9]">ZACHURI</span>.
+            I&apos;m a Computer and Information Science graduate from the
+            University of California, Irvine. What inspires me to code is being
+            able to build valuable projects that can help individuals with their
+            lives, my curiosity on wanting to know how things are built from the
+            ground up, and how one is able to express their ideas through code.
+            I am a developer that is willing to learn new ideas and
+            technologies. Let&apos;s build together!
+          </p>
+        </div>
       </div>
     </MainLayout>
   );

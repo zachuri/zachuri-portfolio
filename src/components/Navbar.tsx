@@ -94,13 +94,15 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="top-0 fixed w-full h-16 md:h-20 z-[100] bg-opacity-20 backdrop-blur-lg drop-shadow-lg">
-      <div className="flex justify-between items-center w-full h-full px-10">
+      <div className="flex justify-between md:justify-center items-center w-full h-full px-10">
         {/* Left */}
-        <Link href="/">ZACHURI</Link>
+        <div className="text-lg">
+          <Link href="/">ZACHURI</Link>
+        </div>
 
         {/* Middle */}
         <div>
-          <ul className="hidden md:flex">
+          <ul className="hidden md:flex md:mx-40">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 <button>WHO</button>
