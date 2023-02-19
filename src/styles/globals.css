@@ -21,7 +21,7 @@
     font-family: Roboto-Regular, Questrial, SF Pro Display, SF Pro Icons,
       Helvetica Neue, Helvetica, Arial, sans-serif;
     /* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
-    @apply bg-[#BFB0B8] dark:bg-[#1d1d1d] bg-gradient-to-b from-[#BFB0B8]  to-[#AE9ABD] h-screen bg-fixed
+    @apply bg-[#BFB0B8] dark:bg-[#1d1d1d] bg-gradient-to-b from-[#BFB0B8]  to-[#AE9ABD] min-h-screen bg-fixed
     dark:bg-gradient-to-b dark:from-[#1d1d1d] dark:to-[#151516] dark:h-screen dark:bg-fixed
    dark:text-[#FFFFFB] text-[#FFFFFB];
   }
