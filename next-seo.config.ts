@@ -11,13 +11,7 @@ const SEO = {
     locale: 'en_CA',
     url: 'https://zachuri.com',
     title,
-    description,
-    images: [
-      {
-        url: 'https://zachuri.com/site-preview.png',
-        alt: title
-      }
-    ]
+    description
   },
   twitter: {
     handle: '@zachurii',
