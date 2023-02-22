@@ -1,6 +1,12 @@
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import { FaDiscord, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import {
+  FaDiscord,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter
+} from 'react-icons/fa';
 
 interface Props {
   children: React.ReactNode;
@@ -76,6 +82,17 @@ const Links: React.FC = () => {
           label="discord: zachuri#8553"
         >
           <FaDiscord size={30} className="fill-[#77778b] dark:fill-[#424242]" />
+        </Link>
+        <Link
+          name="Instagram"
+          desc="My experiences"
+          link="https://www.instagram.com/zpunsa"
+          label="link to insta"
+        >
+          <FaInstagram
+            size={30}
+            className="fill-[#77778b] dark:fill-[#424242]"
+          />
         </Link>
       </div>
     </>
