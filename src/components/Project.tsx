@@ -50,7 +50,7 @@ const Project: React.FC<Props> = ({ id, title, desc, hash }) => {
               loading="eager"
               priority
               layout="fill"
-              className="rounded-xl"
+              className="rounded-lg"
               objectFit="cover"
               // placeholder="blur"
               // blurDataURL={blurDataUrl}
