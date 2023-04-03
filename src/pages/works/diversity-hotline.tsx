@@ -131,22 +131,22 @@ const DiversityHotline: React.FC<DemoProps> = ({ imgHashes }) => {
           <div className="flex flex-col gap-8">
             <ImageHash
               src={'/assets/projects/diversity-hotline.png'}
-              alt={'arceldesign'}
+              alt={'diversity-hotline'}
               hash={imgHashes.at(0)?.hash as string}
             />
             <ImageHash
               src={'/assets/projects/diversity-hotline-1.png'}
-              alt={'arceldesign'}
+              alt={'diversity-hotline-1'}
               hash={imgHashes.at(1)?.hash as string}
             />
             <ImageHash
               src={'/assets/projects/diversity-hotline-2.png'}
-              alt={'arceldesign'}
+              alt={'diversity-hotline-2'}
               hash={imgHashes.at(2)?.hash as string}
             />
             <ImageHash
               src={'/assets/projects/diversity-hotline-3.png'}
-              alt={'arceldesign'}
+              alt={'diversity-hotline-3'}
               hash={imgHashes.at(3)?.hash as string}
             />
           </div>

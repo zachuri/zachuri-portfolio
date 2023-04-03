@@ -150,17 +150,17 @@ const Befit: React.FC<DemoProps> = ({ imgHashes }) => {
         <div className="flex flex-col gap-8">
           <ImageHash
             src={'/assets/projects/be-fit.png'}
-            alt={'arceldesign'}
+            alt={'be-fit'}
             hash={imgHashes.at(0)?.hash as string}
           />
           <ImageHash
             src={'/assets/projects/be-fit-1.png'}
-            alt={'arceldesign'}
+            alt={'be-fit-1'}
             hash={imgHashes.at(1)?.hash as string}
           />
           <ImageHash
             src={'/assets/projects/be-fit-2.png'}
-            alt={'arceldesign'}
+            alt={'be-fit-2'}
             hash={imgHashes.at(2)?.hash as string}
           />
         </div>
