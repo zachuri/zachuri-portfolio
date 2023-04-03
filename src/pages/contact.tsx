@@ -91,7 +91,7 @@ const ContactUs: React.FC = () => {
       />
 
       <Layout>
-        <div className="dark:bg-black text-white flex flex-col justify-center items-center min-h-screen -my-10">
+        <div className=" text-white flex flex-col justify-center items-center min-h-screen -my-10">
           <div className="flex-1 flex flex-col justify-center items-center ">
             <div className="pb-5 pt-5 md:pt-0">
               <Image src="/logo.png" width={30} height={30} alt="logo" />
@@ -163,7 +163,7 @@ const ContactUs: React.FC = () => {
                     maxLength={128}
                     type="text"
                     placeholder="Company name"
-                    className="border-black text-black dark:bg-black dark:border-white dark:text-white outline-none border-2 px-8 py-2 ease-in duration-300"
+                    className="bg-[#B9A8BA] dark:bg-[#1d1d1d] placeholder-gray-500 border-black text-black  dark:border-white dark:text-white outline-none border-2 px-8 py-2 ease-in duration-300"
                     onChange={handleOnChange}
                     value={inputs.companyName}
                   />
@@ -174,7 +174,7 @@ const ContactUs: React.FC = () => {
                     required
                     maxLength={128}
                     placeholder="Your E-mail"
-                    className="border-black text-black dark:bg-black dark:border-white dark:text-white outline-none border-2 px-8 py-2 ease-in duration-300"
+                    className="dark:bg-[#1d1d1d] bg-[#B9A8BA] border-black placeholder-gray-500 text-black  dark:border-white dark:text-white outline-none border-2 px-8 py-2 ease-in duration-300"
                     onChange={handleOnChange}
                     value={inputs.email}
                   />
@@ -185,14 +185,14 @@ const ContactUs: React.FC = () => {
                     required
                     maxLength={1048576}
                     placeholder="Additional information"
-                    className="border-black text-black dark:bg-black dark:border-white dark:text-white border-2 px-8 py-6 min-h-[16em] ease-in duration-300"
+                    className="dark:bg-[#1d1d1d] bg-[#B9A8BA] border-black placeholder-gray-500 text-black  dark:border-white dark:text-white border-2 px-8 py-6 min-h-[16em] ease-in duration-300"
                     onChange={handleOnChange}
                     value={inputs.message}
                   ></textarea>
                   <div className="text-center mt-5">
                     <button
                       type="submit"
-                      className="bg-[#bd93f9] text-black px-8 py-2"
+                      className="border-2 border-black dark:border-none dark:bg-[#bd93f9] text-black dark:text-black px-8 py-2"
                     >
                       {!status.submitting
                         ? !status.submitted
