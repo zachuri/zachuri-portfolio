@@ -934,6 +934,11 @@ bl@^4.0.3:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
+blurhash@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/blurhash/-/blurhash-1.1.3.tgz#dc325af7da836d07a0861d830bdd63694382483e"
+  integrity sha512-yUhPJvXexbqbyijCIE/T2NCXcj9iNPhWmOKbPTuR/cm7Q5snXYIfnVnz6m7MWOXxODMz/Cr3UcVkRdHiuDVRDw==
+
 boxen@^5.0.0:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/boxen/-/boxen-5.1.2.tgz#788cb686fc83c1f486dfa8a40c68fc2b831d2b50"
@@ -3696,6 +3701,14 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
+next-blurhash@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/next-blurhash/-/next-blurhash-0.2.0.tgz#ee503fef6336ae53af2fefb1af97e1055f5736a4"
+  integrity sha512-jeIumculghar64y/TTMsFl1jmmUkpGkcLbumlrBL1XofK9HuNKBkujccTjA1zmTxHOirhIRJaX52k0EVt5pR9g==
+  dependencies:
+    blurhash "1.1.3"
+    next-placeholder "^0.2.0"
+
 next-mdx-remote@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/next-mdx-remote/-/next-mdx-remote-4.1.0.tgz"
@@ -3705,6 +3718,13 @@ next-mdx-remote@^4.1.0:
     "@mdx-js/react" "^2.0.0"
     vfile "^5.3.0"
     vfile-matter "^3.0.1"
+
+next-placeholder@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/next-placeholder/-/next-placeholder-0.2.0.tgz#20ab985a4bcd2b77d3359b2ccf1ff020a5a60d6c"
+  integrity sha512-+35r1nYrbSc5e4JywLR8vZ3c6aRKSNOd/A6IJm0QEUT171Pdv6I3j9nNG8S3TuVEaDFaFte9ukpyy9jsPgViYg==
+  dependencies:
+    blurhash "1.1.3"
 
 next-seo@^5.13.0:
   version "5.13.0"
@@ -4234,6 +4254,11 @@ rc@1.2.8, rc@^1.2.7, rc@^1.2.8:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-blurhash@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-blurhash/-/react-blurhash-0.3.0.tgz#f125801d052644f74420c79b05981691d17c9705"
+  integrity sha512-XlKr4Ns1iYFRnk6DkAblNbAwN/bTJvxTVoxMvmTcURdc5oLoXZwqAF9N3LZUh/HT+QFlq5n6IS6VsDGsviYAiQ==
 
 react-dom@18.2.0:
   version "18.2.0"
