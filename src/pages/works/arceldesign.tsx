@@ -3,8 +3,43 @@ import React from 'react';
 import MainLayout from '../../components/Layouts/Main';
 import LayoutMotion from '../../components/Layouts/Motion';
 import { Badge } from '../../components/Project';
+import { GetStaticProps } from 'next';
+import { getBlurhash } from 'next-blurhash';
+import { BlurhashCanvas } from 'react-blurhash';
 
-const ArcelDesign = () => {
+type DemoProps = {
+  imgHashes: { src: string; hash: string }[];
+};
+
+export const getStaticProps: GetStaticProps<DemoProps> = async () => {
+  const images = [
+    { src: '/assets/projects/arceldesign.png' },
+    { src: '/assets/projects/arceldesign-1.png' },
+    { src: '/assets/projects/arceldesign-2.png' }
+  ];
+
+  const hashes: { [src: string]: string | undefined } = {};
+
+  for (let i = 0; i < images.length; i++) {
+    const hash = await getBlurhash(images[i]?.src as string);
+    hashes[images[i]?.src as string] = hash;
+  }
+
+  const imgHashes = images
+    .filter(img => hashes[img.src] !== undefined)
+    .map(img => ({
+      src: img.src,
+      hash: hashes[img.src]!
+    }));
+
+  return {
+    props: {
+      imgHashes
+    }
+  };
+};
+
+const ArcelDesign: React.FC<DemoProps> = ({ imgHashes }) => {
   return (
     <MainLayout>
       <LayoutMotion>
@@ -55,37 +90,80 @@ const ArcelDesign = () => {
         </ul>
 
         <div className="flex flex-col gap-8">
-          <div className="rounded-xl">
+          <div className="relative">
+            <BlurhashCanvas
+              hash={imgHashes.at(0)?.hash as string}
+              width={32}
+              height={32}
+              punch={1}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                width: '100%',
+                height: '90%'
+              }}
+              className="rounded-xl"
+            />
             <Image
               src={`/assets/projects/arceldesign.png`}
               alt={'arceldesign'}
               width="1200"
               height="700"
-              className="rounded-xl mb-5"
-              placeholder="blur"
-              blurDataURL={`/assets/projects/be-fit.png`}
+              className="rounded-lg"
             />
           </div>
-          <div className="rounded-xl">
+
+          <div className="relative">
+            <BlurhashCanvas
+              hash={imgHashes.at(0)?.hash as string}
+              width={32}
+              height={32}
+              punch={1}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                width: '100%',
+                height: '90%'
+              }}
+              className="rounded-xl"
+            />
             <Image
               src={`/assets/projects/arceldesign-1.png`}
               alt={'arceldesign'}
               width="1200"
               height="700"
-              className="rounded-xl mb-5"
-              placeholder="blur"
-              blurDataURL={`/assets/projects/be-fit-1.png`}
+              className="rounded-lg"
             />
           </div>
-          <div className="rounded-xl">
+          <div className="relative">
+            <BlurhashCanvas
+              hash={imgHashes.at(0)?.hash as string}
+              width={32}
+              height={32}
+              punch={1}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                width: '100%',
+                height: '90%'
+              }}
+              className="rounded-xl"
+            />
             <Image
               src={`/assets/projects/arceldesign-2.png`}
               alt={'arceldesign'}
               width="1200"
               height="700"
-              className="rounded-xl mb-5"
-              placeholder="blur"
-              blurDataURL={`/assets/projects/be-fit-2.png`}
+              className="rounded-lg"
             />
           </div>
         </div>

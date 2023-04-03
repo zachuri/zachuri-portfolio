@@ -23,7 +23,7 @@ const Project: React.FC<Props> = ({ id, title, desc, hash }) => {
     <div>
       <Link href={`works/${id}`}>
         <button>
-          <div className="relative w-full md:h-36 h-64 ">
+          <div className="relative w-full">
             <BlurhashCanvas
               hash={hash}
               width={32}
@@ -36,24 +36,19 @@ const Project: React.FC<Props> = ({ id, title, desc, hash }) => {
                 right: 0,
                 bottom: 0,
                 width: '100%',
-                height: '100%'
+                height: '90%'
               }}
               className="rounded-lg"
             />
             <Image
               // allows object to fit as a cover instead of filled
-              sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
               src={`/assets/projects/${id}.png`}
               alt={id}
-              loading="eager"
               priority
-              layout="fill"
               className="rounded-lg"
-              objectFit="cover"
-              // placeholder="blur"
-              // blurDataURL={blurDataUrl}
+              width="1200"
+              height="700"
+              objectFit="fill"
             />
           </div>
           <div className="mt-2 text-center">
