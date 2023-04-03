@@ -16,7 +16,7 @@ type DemoProps = {
 export const getStaticProps: GetStaticProps<DemoProps> = async () => {
   const images = [
     { src: '/assets/keyboards/jp-02.jpeg' },
-    { src: '/assets/keyboards/tofu-60.jpeg' }
+    { src: '/assets/keyboards/tofu60.jpeg' }
   ];
 
   const hashes: { [src: string]: string | undefined } = {};
