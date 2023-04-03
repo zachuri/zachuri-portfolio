@@ -32,7 +32,7 @@ const ArcelDesign = () => {
               href="https://github.com/zachuri/arceldesign"
               className="hover:underline text-purple-900 dark:text-[#bd93f9]"
             >
-              github.com/zachuri/BeFit
+              github.com/zachuri/arceldesign
             </a>
           </li>
           <li>
