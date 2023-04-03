@@ -45,13 +45,13 @@ const Project: React.FC<Props> = ({ id, title, desc, hash }) => {
               sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-              style={{ objectFit: 'cover' }}
               src={`/assets/projects/${id}.png`}
               alt={id}
               loading="eager"
               priority
               layout="fill"
               className="rounded-xl"
+              objectFit="cover"
               // placeholder="blur"
               // blurDataURL={blurDataUrl}
             />
