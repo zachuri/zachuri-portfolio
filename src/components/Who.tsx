@@ -6,8 +6,13 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import { MetaProps } from '../../types/layout';
 import Links from './Links';
+import { BlurhashCanvas } from 'react-blurhash';
 
-const Who: React.FC = () => {
+type DemoProps = {
+  imgHashes: { src: string; hash: string }[];
+};
+
+const Who: React.FC<DemoProps> = ({ imgHashes }) => {
   const customMeta: MetaProps = {
     title: `Zachary Punsalang - Homepage`,
     description: `Hola I'm ZACHURI a Computer and Information Science graduate from the University of California, Irvine. 
@@ -28,16 +33,29 @@ const Who: React.FC = () => {
           </h1>
           <p className="text-center">Developer (Web, Application, Game)</p>
         </div>
-        <div>
-          <Image
+        <div className="relative">
+          <BlurhashCanvas
+            hash={imgHashes.at(0)?.hash as string}
+            width={32}
+            height={32}
+            punch={1}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              width: '100%',
+              height: '94%'
+            }}
             className="rounded-full"
-            src="/assets/github-profile-pic.jpeg"
-            width={100}
-            height={100}
-            alt="profile picture"
-            placeholder="blur"
-            blurDataURL="/assets/github-profile-pic.jpeg"
-            priority={true}
+          />
+          <Image
+            src={'/assets/github-profile-pic.jpeg'}
+            alt={'avatar'}
+            width="100"
+            height="100"
+            className="rounded-full"
           />
         </div>
       </div>
