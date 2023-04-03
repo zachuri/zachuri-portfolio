@@ -5,6 +5,80 @@ import Skills from '../components/Skills';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 import { MetaProps } from '../../types/layout';
+import { GetStaticProps } from 'next';
+import { getBlurhash } from 'next-blurhash';
+import { BlurhashCanvas } from 'react-blurhash';
+
+type DemoProps = {
+  imgHashes: { src: string; hash: string }[];
+};
+
+export const getStaticProps: GetStaticProps<DemoProps> = async () => {
+  const images = [
+    { src: '/assets/keyboards/jp-02.jpeg' },
+    { src: '/assets/keyboards/tofu-60.jpeg' }
+  ];
+
+  const hashes: { [src: string]: string | undefined } = {};
+
+  for (let i = 0; i < images.length; i++) {
+    const hash = await getBlurhash(images[i]?.src as string);
+    hashes[images[i]?.src as string] = hash;
+  }
+
+  const imgHashes = images
+    .filter(img => hashes[img.src] !== undefined)
+    .map(img => ({
+      src: img.src,
+      hash: hashes[img.src]!
+    }));
+
+  return {
+    props: {
+      imgHashes
+    }
+  };
+};
+
+function ImageHash({
+  src,
+  alt,
+  hash
+}: {
+  src: string;
+  alt: string;
+  hash: string;
+}) {
+  return (
+    <>
+      <div className="relative">
+        <BlurhashCanvas
+          hash={hash}
+          width={32}
+          height={32}
+          punch={1}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: '100%',
+            height: '95%'
+          }}
+          className="rounded-xl"
+        />
+        <Image
+          src={src}
+          alt={alt}
+          width="350"
+          height="500"
+          className="rounded-lg"
+        />
+      </div>
+    </>
+  );
+}
 
 interface Props {
   children: React.ReactNode;
@@ -57,7 +131,7 @@ const url = 'https://zachuri.com/what';
 const title = 'Zachary Punsalang - What';
 const description = 'Get to know more about Zachary Punsalang | ZACHURI';
 
-const What: React.FC = () => {
+const What: React.FC<DemoProps> = ({ imgHashes }) => {
   const customMeta: MetaProps = {
     title: `Zachary Punsalang - What`,
     description: 'Get to know more about me :)'
@@ -177,30 +251,20 @@ const What: React.FC = () => {
                   subTitleH3="JP-02 (Arisu)"
                   justify="flex items-center justify-center items-center"
                 >
-                  <Image
-                    src="/assets/keyboards/jp-02.jpeg"
-                    width="350"
-                    height="550"
-                    alt="jp-02 keyboard"
-                    placeholder="blur"
-                    blurDataURL="assets/keyboards/jp-02.jpeg"
-                    className="rounded"
-                    priority={true}
+                  <ImageHash
+                    src={'/assets/keyboards/jp-02.jpeg'}
+                    alt={'jp-02'}
+                    hash={imgHashes.at(0)?.hash as string}
                   />
                 </Container>
                 <Container
                   subTitleH3="Tofu 60 (60%)"
                   justify="flex items-center justify-center items-center"
                 >
-                  <Image
-                    src="/assets/keyboards/tofu60.jpeg"
-                    width="350"
-                    height="500"
-                    alt="tofu 60 keyboard"
-                    placeholder="blur"
-                    blurDataURL="assets/keyboards/tofu60.jpeg"
-                    className="rounded"
-                    priority={true}
+                  <ImageHash
+                    src={'/assets/keyboards/tofu60.jpeg'}
+                    alt={'tofo60'}
+                    hash={imgHashes.at(1)?.hash as string}
                   />
                 </Container>
               </Container>
