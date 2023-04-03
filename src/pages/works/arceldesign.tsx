@@ -139,12 +139,12 @@ const ArcelDesign: React.FC<DemoProps> = ({ imgHashes }) => {
           <ImageHash
             src={'/assets/projects/arceldesign-1.png'}
             alt={'arceldesign'}
-            hash={imgHashes.at(0)?.hash as string}
+            hash={imgHashes.at(1)?.hash as string}
           />
           <ImageHash
             src={'/assets/projects/arceldesign-2.png'}
             alt={'arceldesign'}
-            hash={imgHashes.at(0)?.hash as string}
+            hash={imgHashes.at(2)?.hash as string}
           />
         </div>
       </LayoutMotion>
