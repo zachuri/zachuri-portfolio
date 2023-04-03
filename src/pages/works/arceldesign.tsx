@@ -39,6 +39,46 @@ export const getStaticProps: GetStaticProps<DemoProps> = async () => {
   };
 };
 
+function ImageHash({
+  src,
+  alt,
+  hash
+}: {
+  src: string;
+  alt: string;
+  hash: string;
+}) {
+  return (
+    <>
+      <div className="relative">
+        <BlurhashCanvas
+          hash={hash}
+          width={32}
+          height={32}
+          punch={1}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            width: '100%',
+            height: '100%'
+          }}
+          className="rounded-xl"
+        />
+        <Image
+          src={src}
+          alt={alt}
+          width="1200"
+          height="700"
+          className="rounded-lg"
+        />
+      </div>
+    </>
+  );
+}
+
 const ArcelDesign: React.FC<DemoProps> = ({ imgHashes }) => {
   return (
     <MainLayout>
@@ -89,83 +129,23 @@ const ArcelDesign: React.FC<DemoProps> = ({ imgHashes }) => {
           </li>
         </ul>
 
+        {/* Display images */}
         <div className="flex flex-col gap-8">
-          <div className="relative">
-            <BlurhashCanvas
-              hash={imgHashes.at(0)?.hash as string}
-              width={32}
-              height={32}
-              punch={1}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                width: '100%',
-                height: '90%'
-              }}
-              className="rounded-xl"
-            />
-            <Image
-              src={`/assets/projects/arceldesign.png`}
-              alt={'arceldesign'}
-              width="1200"
-              height="700"
-              className="rounded-lg"
-            />
-          </div>
-
-          <div className="relative">
-            <BlurhashCanvas
-              hash={imgHashes.at(0)?.hash as string}
-              width={32}
-              height={32}
-              punch={1}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                width: '100%',
-                height: '90%'
-              }}
-              className="rounded-xl"
-            />
-            <Image
-              src={`/assets/projects/arceldesign-1.png`}
-              alt={'arceldesign'}
-              width="1200"
-              height="700"
-              className="rounded-lg"
-            />
-          </div>
-          <div className="relative">
-            <BlurhashCanvas
-              hash={imgHashes.at(0)?.hash as string}
-              width={32}
-              height={32}
-              punch={1}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                width: '100%',
-                height: '90%'
-              }}
-              className="rounded-xl"
-            />
-            <Image
-              src={`/assets/projects/arceldesign-2.png`}
-              alt={'arceldesign'}
-              width="1200"
-              height="700"
-              className="rounded-lg"
-            />
-          </div>
+          <ImageHash
+            src={'/assets/projects/arceldesign.png'}
+            alt={'arceldesign'}
+            hash={imgHashes.at(0)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/arceldesign-1.png'}
+            alt={'arceldesign'}
+            hash={imgHashes.at(0)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/arceldesign-2.png'}
+            alt={'arceldesign'}
+            hash={imgHashes.at(0)?.hash as string}
+          />
         </div>
       </LayoutMotion>
     </MainLayout>
