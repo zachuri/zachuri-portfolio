@@ -19,9 +19,7 @@ export function loadGLTFModel(
     const loader = new GLTFLoader();
     const dracoLoader = new DRACOLoader();
     // dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
-    dracoLoader.setDecoderPath(
-      '/draco/'
-    );
+    dracoLoader.setDecoderPath('/draco/');
     dracoLoader.setDecoderConfig({ type: 'js' });
     loader.setDRACOLoader(dracoLoader);
 
