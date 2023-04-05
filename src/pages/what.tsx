@@ -8,6 +8,13 @@ import { MetaProps } from '../../types/layout';
 import { GetStaticProps } from 'next';
 import { getBlurhash } from 'next-blurhash';
 import { BlurhashCanvas } from 'react-blurhash';
+import ThreeModelLoader from '../components/Three-Model-Loader';
+import dynamic from 'next/dynamic';
+
+const LazyThreeModel = dynamic(() => import('../components/Three-Model'), {
+  ssr: false,
+  loading: () => <ThreeModelLoader />
+});
 
 type DemoProps = {
   imgHashes: { src: string; hash: string }[];
@@ -147,6 +154,8 @@ const What: React.FC<DemoProps> = ({ imgHashes }) => {
       <MainLayout customMeta={customMeta}>
         <LayoutMotion>
           <div className="max-w-full">
+            <LazyThreeModel />
+
             <Container title={'Technical Skills'}>
               {/* <div className='grid grid-cols-3 md:grid-cols-5'> */}
               <div className="flex flex-wrap">
