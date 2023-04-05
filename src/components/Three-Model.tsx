@@ -13,9 +13,8 @@ const ThreeModel = () => {
   const [loading, setLoading] = useState(true);
   const refRenderer = useRef<THREE.WebGLRenderer>();
   const urlModelGLB =
-    (process.env.NODE_ENV === 'production'
-      ? 'https://zachuri.global.ssl.fastly.net/what'
-      : '') + '/zachuri-person.glb';
+    (process.env.NODE_ENV === 'production' ? 'https://zachuri.com/what' : '') +
+    '/zachuri-person.glb';
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer;
