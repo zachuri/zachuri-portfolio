@@ -33,7 +33,10 @@ export const ModelLoadingSpinner = () => (
 
 export const ModelContainer = forwardRef<HTMLDivElement, ModelContainerProps>(
   ({ children }, ref) => (
-    <div className="relative m-auto h-[300px] w-[300px]" ref={ref}>
+    <div
+      className="relative m-auto h-[300px] w-[300px] -mb-10 md:-mb-20"
+      ref={ref}
+    >
       {children}
     </div>
   )
