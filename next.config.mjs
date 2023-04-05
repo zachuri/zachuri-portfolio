@@ -19,13 +19,5 @@ export default defineNextConfig({
   i18n: {
     locales: ['en'],
     defaultLocale: 'en'
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://api.example.com/:path*'
-      }
-    ];
   }
 });
