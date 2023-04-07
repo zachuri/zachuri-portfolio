@@ -46,7 +46,7 @@ const Links: React.FC = () => {
           <FaGithub size={30} className="fill-[#77778b] dark:fill-[#424242]" />
         </Link>
         <Link
-          name="Linkden"
+          name="Linkeden"
           desc="I might connect"
           link="https://www.linkedin.com/in/zachary-punsalang/"
           label="link to linkden"
