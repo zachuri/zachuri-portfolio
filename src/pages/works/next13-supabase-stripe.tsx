@@ -15,7 +15,8 @@ export const getStaticProps: GetStaticProps<DemoProps> = async () => {
   const images = [
     { src: '/assets/projects/next13-supabase-stripe-1.png' },
     { src: '/assets/projects/next13-supabase-stripe-2.png' },
-    { src: '/assets/projects/next13-supabase-stripe-3.png' }
+    { src: '/assets/projects/next13-supabase-stripe-3.png' },
+    { src: '/assets/projects/next13-supabase-stripe-4.png' }
   ];
 
   const hashes: { [src: string]: string | undefined } = {};
@@ -144,7 +145,7 @@ const Next13SupabaseStripe: React.FC<DemoProps> = ({ imgHashes }) => {
           <ImageHash
             src={'/assets/projects/next13-supabase-stripe-1.png'}
             alt={'arceldesign'}
-            hash={imgHashes.at(1)?.hash as string}
+            hash={imgHashes.at(0)?.hash as string}
           />
           <ImageHash
             src={'/assets/projects/next13-supabase-stripe-2.png'}
@@ -154,7 +155,12 @@ const Next13SupabaseStripe: React.FC<DemoProps> = ({ imgHashes }) => {
           <ImageHash
             src={'/assets/projects/next13-supabase-stripe-3.png'}
             alt={'arceldesign'}
-            hash={imgHashes.at(1)?.hash as string}
+            hash={imgHashes.at(2)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/next13-supabase-stripe-4.png'}
+            alt={'arceldesign'}
+            hash={imgHashes.at(3)?.hash as string}
           />
         </div>
       </LayoutMotion>
