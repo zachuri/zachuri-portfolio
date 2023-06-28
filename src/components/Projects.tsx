@@ -9,6 +9,14 @@ const Projects: React.FC<DemoProps> = ({ imgHashes }) => {
   return (
     <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-6 ">
       <Project
+        id={'next13-supabase-stripe'}
+        title={'Next.js 13 + Supabase + Stripe: SaaS Starter'}
+        desc={
+          'A boilerplate project that combines Next 13, Supabase, and Stripe to create a foundation for building SaaS applications'
+        }
+        hash={imgHashes.at(0)?.hash as string}
+      />
+      <Project
         id={'arceldesign'}
         title={'ArcelDesign, Inc.'}
         desc={
