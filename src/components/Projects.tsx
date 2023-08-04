@@ -22,7 +22,7 @@ const Projects: React.FC<DemoProps> = ({ imgHashes }) => {
         desc={
           'A boilerplate project that combines Next 13, Supabase, and Stripe to create a foundation for building SaaS applications'
         }
-        hash={imgHashes.at(0)?.hash as string}
+        hash={imgHashes.at(1)?.hash as string}
       />
       <Project
         id={'arceldesign'}
@@ -30,7 +30,7 @@ const Projects: React.FC<DemoProps> = ({ imgHashes }) => {
         desc={
           'Redesigned key elements of clients website, such as the landing page and navigation menu'
         }
-        hash={imgHashes.at(0)?.hash as string}
+        hash={imgHashes.at(2)?.hash as string}
       />
       <Project
         id={'be-fit'}
@@ -38,7 +38,7 @@ const Projects: React.FC<DemoProps> = ({ imgHashes }) => {
         desc={
           'Full Stack Fitness tracker that allows users to keep track of their diet, weight, and workouts'
         }
-        hash={imgHashes.at(1)?.hash as string}
+        hash={imgHashes.at(3)?.hash as string}
       />
       <Project
         id={'twitch-clone'}
@@ -46,7 +46,7 @@ const Projects: React.FC<DemoProps> = ({ imgHashes }) => {
         desc={
           'Clone of Twitch using next.js and tailwind.css to help my understanding of design'
         }
-        hash={imgHashes.at(2)?.hash as string}
+        hash={imgHashes.at(4)?.hash as string}
       />
       <Project
         id={'ecommerce-movie'}
@@ -54,7 +54,7 @@ const Projects: React.FC<DemoProps> = ({ imgHashes }) => {
         desc={
           'Full Stack ecommerce movie shop where users are able to buy movies'
         }
-        hash={imgHashes.at(3)?.hash as string}
+        hash={imgHashes.at(5)?.hash as string}
       />
       <Project
         id={'diversity-hotline'}
@@ -62,7 +62,7 @@ const Projects: React.FC<DemoProps> = ({ imgHashes }) => {
         desc={
           'Hotline for individuals to discuss topics regarding diversity, equity, inclusion, and discrimination'
         }
-        hash={imgHashes.at(4)?.hash as string}
+        hash={imgHashes.at(6)?.hash as string}
       />
     </div>
   );

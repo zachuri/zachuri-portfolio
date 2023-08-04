@@ -13,6 +13,7 @@ type DemoProps = {
 
 export const getStaticProps: GetStaticProps<DemoProps> = async () => {
   const images = [
+    { src: '/assets/projects/befit-v2.png' },
     { src: '/assets/projects/next13-supabase-stripe.png' },
     { src: '/assets/projects/arceldesign.png' },
     { src: '/assets/projects/be-fit.png' },
