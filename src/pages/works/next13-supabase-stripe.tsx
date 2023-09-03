@@ -13,6 +13,7 @@ type DemoProps = {
 
 export const getStaticProps: GetStaticProps<DemoProps> = async () => {
   const images = [
+    { src: '/assets/projects/next13-supabase-stripe.png' },
     { src: '/assets/projects/next13-supabase-stripe-1.png' },
     { src: '/assets/projects/next13-supabase-stripe-2.png' },
     { src: '/assets/projects/next13-supabase-stripe-3.png' },
@@ -142,6 +143,11 @@ const Next13SupabaseStripe: React.FC<DemoProps> = ({ imgHashes }) => {
 
         {/* Display images */}
         <div className="flex flex-col gap-8">
+          <ImageHash
+            src={'/assets/projects/next13-supabase-stripe.png'}
+            alt={'arceldesign'}
+            hash={imgHashes.at(0)?.hash as string}
+          />
           <ImageHash
             src={'/assets/projects/next13-supabase-stripe-1.png'}
             alt={'arceldesign'}
