@@ -14,7 +14,12 @@ type DemoProps = {
 export const getStaticProps: GetStaticProps<DemoProps> = async () => {
   const images = [
     { src: '/assets/projects/befit-v2.png' },
-    { src: '/assets/projects/befit-v2-1.png' }
+    { src: '/assets/projects/befit-v2-1.png' },
+    { src: '/assets/projects/befit-v2-2.png' },
+    { src: '/assets/projects/befit-v2-3.png' },
+    { src: '/assets/projects/befit-v2-4.png' },
+    { src: '/assets/projects/befit-v2-5.png' },
+    { src: '/assets/projects/befit-v2-6.png' }
   ];
 
   const hashes: { [src: string]: string | undefined } = {};
@@ -148,6 +153,31 @@ const BeFitV2: React.FC<DemoProps> = ({ imgHashes }) => {
           />
           <ImageHash
             src={'/assets/projects/befit-v2-1.png'}
+            alt={'be-fit-1'}
+            hash={imgHashes.at(1)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/befit-v2-2.png'}
+            alt={'be-fit'}
+            hash={imgHashes.at(0)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/befit-v2-3.png'}
+            alt={'be-fit-1'}
+            hash={imgHashes.at(1)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/befit-v2-4.png'}
+            alt={'be-fit'}
+            hash={imgHashes.at(0)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/befit-v2-5.png'}
+            alt={'be-fit-1'}
+            hash={imgHashes.at(1)?.hash as string}
+          />
+          <ImageHash
+            src={'/assets/projects/befit-v2-6.png'}
             alt={'be-fit-1'}
             hash={imgHashes.at(1)?.hash as string}
           />
