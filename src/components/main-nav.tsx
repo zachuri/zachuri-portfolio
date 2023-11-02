@@ -18,12 +18,11 @@ interface MainNavProps {
 
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment();
-  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
 
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
-        {/* <Icons.logo /> */}
+        <Icons.logo />
         <span className="hidden font-medium sm:inline-block uppercase">
           {siteConfig.name}
         </span>
@@ -47,16 +46,10 @@ export function MainNav({ items, children }: MainNavProps) {
           ))}
         </nav>
       ) : null}
-      <button
-        className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
-      >
-        {showMobileMenu ? <Icons.close /> : <Icons.hamburger />}
+      <div className="flex items-center space-x-2 md:hidden">
+        {items && <MobileNav items={items} />}
         <span className="font-medium uppercase">Zachuri</span>
-      </button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
+      </div>
     </div>
   );
 }
