@@ -1,7 +1,6 @@
 import { User } from '@prisma/client';
-import type { Icon } from 'lucide-react';
 
-import { Icons } from '@/components/icons';
+import { Icons } from '@/components/ui/icons';
 
 export type NavItem = {
   title: string;
@@ -45,6 +44,17 @@ export type DocsConfig = {
 
 export type MainConfig = {
   mainNav: MainNavItem[];
+};
+
+export type ContactItem = {
+  icon?: keyof typeof Icons;
+  name: string;
+  href: string;
+  description: string;
+};
+
+export type ContactConfig = {
+  contactItems: ContactItem[];
 };
 
 export type DashboardConfig = {

@@ -22,14 +22,18 @@ export default async function MainLayout({ children }: MainLayoutProps) {
           <ModeToggle />
         </div>
       </header>
-      <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
-        {/* <aside className="hidden w-[200px] flex-col md:flex">
+      {/* <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
+        <aside className="hidden w-[200px] flex-col md:flex">
           <DashboardNav items={dashboardConfig.sidebarNav} />
-        </aside> */}
+        </aside>
         <main className="flex w-full flex-1 flex-col overflow-hidden">
           {children}
         </main>
-      </div>
+      </div> */}
+      <main className="container flex w-full flex-1 flex-col overflow-hidden">
+        {children}
+      </main>
+
       <SiteFooter className="border-t" />
     </div>
   );
