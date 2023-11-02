@@ -19,8 +19,10 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row justify-center items-center space-x-4">
-          <Button>My Portfolio</Button>
-          <Button variant={'outline'}>About me</Button>
+          <Button size={'lg'}>My Portfolio</Button>
+          <Button size={'lg'} variant={'secondary'}>
+            About me
+          </Button>
         </div>
 
         <MainContact items={contactConfig.contactItems} />
