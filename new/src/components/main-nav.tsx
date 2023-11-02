@@ -8,7 +8,8 @@ import { MainNavItem } from '@/types';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 // import { Icons } from '@/components/icons';
-// import { MobileNav } from '@/components/mobile-nav';
+import { MobileNav } from '@/components/mobile-nav';
+import { Icons } from './ui/icons';
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -23,7 +24,7 @@ export function MainNav({ items, children }: MainNavProps) {
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
         {/* <Icons.logo /> */}
-        <span className="hidden font-bold sm:inline-block">
+        <span className="hidden font-bold sm:inline-block uppercase">
           {siteConfig.name}
         </span>
       </Link>
@@ -46,16 +47,16 @@ export function MainNav({ items, children }: MainNavProps) {
           ))}
         </nav>
       ) : null}
-      {/* <button
+      <button
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.logo />}
+        {showMobileMenu ? <Icons.close /> : <Icons.hamburger />}
         <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && items && (
         <MobileNav items={items}>{children}</MobileNav>
-      )} */}
+      )}
     </div>
   );
 }

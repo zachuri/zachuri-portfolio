@@ -4,6 +4,9 @@ import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 import { MainNav } from '@/components/main-nav';
 import { mainConfig } from '@/config/main';
+import { SiteFooter } from '@/components/site-footer';
+import { Icons } from '@/components/ui/icons';
+import { ModeToggle } from '@/components/mode-toggle';
 // import { SiteFooter } from "@/components/site-footer"
 
 interface MainLayoutProps {
@@ -16,13 +19,7 @@ export default async function MainLayout({ children }: MainLayoutProps) {
       <header className="sticky top-0 z-40 border-b bg-background">
         <div className="container flex h-16 items-center justify-between py-4">
           <MainNav items={mainConfig.mainNav} />
-          {/* <UserAccountNav
-            user={{
-              name: user.name,
-              image: user.image,
-              email: user.email,
-            }}
-          /> */}
+          <ModeToggle />
         </div>
       </header>
       <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
@@ -33,7 +30,7 @@ export default async function MainLayout({ children }: MainLayoutProps) {
           {children}
         </main>
       </div>
-      {/* <SiteFooter className="border-t" /> */}
+      <SiteFooter className="border-t" />
     </div>
   );
 }
