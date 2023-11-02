@@ -14,23 +14,18 @@ export default function Home() {
     <div className="flex flex-col justify-center items-center space-y-10">
       <section
         id="Me"
-        className="container space-y-6 dark:bg-transparent md:py-12 lg:py-24 "
+        className="container space-y-5 dark:bg-transparent md:py-12 lg:py-24 "
       >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <h2 className="font-heading font-semibold text-4xl leading-[1.1] md:text-6xl">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center">
+          <h2 className="font-heading font-semibold text-5xl leading-[1.1] md:text-6xl">
             Zachary Punsalang
           </h2>
-          <p className="max-w-[85%] leading-normal text-muted-foreground sm:leading-7">
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:leading-7 md:text-xl">
             Full Stack Developer
           </p>
         </div>
 
         <MainContact items={contactConfig.contactItems} />
-
-        <div className="flex flex-row justify-center items-center space-x-4">
-          <Button>My Portfolio</Button>
-          <Button variant={'outline'}>About me</Button>
-        </div>
 
         <div className="mx-auto text-center md:max-w-[58rem] space-y-3 pt-3">
           <p className="leading-normal text-muted-foreground text-2xl sm:text-3xl sm:leading-7">
@@ -47,6 +42,11 @@ export default function Home() {
           <p className="leading-normal text-foreground sm:text-xl sm:leading-7">
             Let&apos;s build together!
           </p>
+        </div>
+
+        <div className="flex flex-row justify-center items-center space-x-4 pt-5">
+          <Button>My Portfolio</Button>
+          <Button variant={'outline'}>About me</Button>
         </div>
       </section>
     </div>
