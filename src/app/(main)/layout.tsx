@@ -16,7 +16,7 @@ interface MainLayoutProps {
 export default async function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col space-y-6">
-      <header className="sticky top-0 z-40 border-b bg-background">
+      <header className="sticky top-0 z-40 bg-opacity-20 backdrop-blur-lg drop-shadow-lg">
         <div className="container flex h-16 items-center justify-between py-4">
           <MainNav items={mainConfig.mainNav} />
           <ModeToggle />

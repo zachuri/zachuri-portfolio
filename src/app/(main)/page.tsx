@@ -1,12 +1,5 @@
 import MainContact from '@/components/main-contact';
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader
-} from '@/components/ui/card';
-import { Icons } from '@/components/ui/icons';
 import { contactConfig } from '@/config/contact';
 
 export default function Home() {
