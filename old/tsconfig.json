@@ -17,5 +17,5 @@
     "noUncheckedIndexedAccess": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "next-sitemap.config.js"],
-  "exclude": ["node_modules"]
+  "exclude": ["old/node_modules"]
 }
