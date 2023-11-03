@@ -26,13 +26,13 @@ export function MobileNav({ items }: MobileNavProps) {
         <Icons.hamburger />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="ml-8">
-        {/* <DropdownMenuLabel>
+        <DropdownMenuLabel>
           <Link href="/" className="flex items-center space-x-2">
             <Icons.logo />
             <span className="font-medium uppercase">{siteConfig.name}</span>
           </Link>
-        </DropdownMenuLabel> */}
-        {/* <DropdownMenuSeparator /> */}
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
         {items.map(item => (
           <DropdownMenuItem key={item.title}>{item.title}</DropdownMenuItem>
         ))}
