@@ -48,7 +48,9 @@ export function MainNav({ items, children }: MainNavProps) {
       ) : null}
       <div className="flex items-center space-x-2 md:hidden">
         {items && <MobileNav items={items} />}
-        <span className="font-medium uppercase">Zachuri</span>
+        <span className="max-sm:hidden font-medium uppercase">
+          {siteConfig.name}
+        </span>
       </div>
     </div>
   );
