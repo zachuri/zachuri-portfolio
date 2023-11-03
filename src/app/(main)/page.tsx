@@ -19,11 +19,16 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row justify-center items-center space-x-4">
-          <Button>My Portfolio</Button>
-          <Button variant={'outline'}>About me</Button>
+          <Button className="md:p-7">My Portfolio</Button>
         </div>
 
         <MainContact items={contactConfig.contactItems} />
+
+        <div className="flex flex-row justify-center items-center space-x-4">
+          <Button className="md:p-6" variant={'outline'}>
+            About me
+          </Button>
+        </div>
 
         <div className="mx-auto text-center md:max-w-[58rem] space-y-3 pt-3">
           <p className="leading-normal text-muted-foreground text-2xl sm:text-3xl sm:leading-7">
