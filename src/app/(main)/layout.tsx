@@ -5,9 +5,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { MainNav } from '@/components/main-nav';
 import { mainConfig } from '@/config/main';
 import { SiteFooter } from '@/components/site-footer';
-import { Icons } from '@/components/ui/icons';
 import { ModeToggle } from '@/components/mode-toggle';
-// import { SiteFooter } from "@/components/site-footer"
 
 interface MainLayoutProps {
   children: React.ReactNode;

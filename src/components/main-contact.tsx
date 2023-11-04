@@ -20,13 +20,13 @@ const MainContact: React.FC<Props> = ({ items }) => {
           >
             <div className="flex h-[100x] flex-col justify-between rounded-md p-4 md:p-6">
               <div className="space-y-2">
-                <div className="grid grid-cols-6 items-center">
+                <div className="max-lg:grid max-lg:grid-cols-6 items-center lg:space-y-4">
                   {/* @ts-ignore */}
                   <Icon
                     className="mr-2 h-6 w-6 md:h-7 md:w-7"
                     strokeWidth={1.5}
                   />
-                  <div className="col-span-4 flex flex-col items-center justify-center">
+                  <div className="col-span-4 max-lg:flex max-lg:flex-col items-center justify-center">
                     <h3 className="font-bold">{item.name}</h3>
                     <p className="text-sm text-muted-foreground">
                       {item.description}
