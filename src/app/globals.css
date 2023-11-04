@@ -54,6 +54,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background dark:bg-background transition-all duration-300 ease-in-out; /* Apply background color utility classes */
+    @apply bg-background dark:bg-background transition-colors duration-300 ease-in-out; /* Apply background color utility classes */
   }
 }
