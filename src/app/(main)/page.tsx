@@ -38,7 +38,8 @@ export default function Home() {
 
             <div className="mx-auto text-center md:max-w-[58rem] space-y-3 pt-3">
               <p className="leading-normal text-muted-foreground text-2xl sm:text-3xl sm:leading-7">
-                Hi I&apos;m <span className="text-foreground">ZACHURI</span>.
+                Hi I&apos;m{' '}
+                <span className="text-foreground font-medium">ZACHURI</span>.
               </p>
               <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
                 I&apos;m a Computer Science graduate from the University of
@@ -49,7 +50,7 @@ export default function Home() {
                 through code. I am a developer that is willing to learn new
                 ideas and technologies.
               </p>
-              <p className="leading-normal text-foreground sm:text-xl sm:leading-7">
+              <p className="leading-normal text-foreground font-medium text-lg sm:text-xl sm:leading-7">
                 Let&apos;s build together!
               </p>
             </div>
