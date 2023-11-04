@@ -18,7 +18,7 @@ export const contactConfig: ContactConfig = {
       icon: 'twitter',
       name: 'Twitter',
       href: 'https://twitter.com/zachurii',
-      description: 'Looking at developer content'
+      description: 'Looking at dev content'
     },
     {
       icon: 'mail',

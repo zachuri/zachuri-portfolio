@@ -25,9 +25,9 @@ const MainContact: React.FC<Props> = ({ items }) => {
                     className="mr-2 h-6 w-6 md:h-7 md:w-7"
                     strokeWidth={1.5}
                   />
-                  <div className="col-span-5">
+                  <div className="col-span-4 flex flex-col items-center justify-center">
                     <h3 className="font-bold">{item.name}</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="max-sm:text-xs text-sm text-muted-foreground">
                       {item.description}
                     </p>
                   </div>
