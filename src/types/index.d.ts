@@ -53,6 +53,7 @@ export type ContactItem = {
   name: string;
   href: string;
   description: string;
+  info: string;
 };
 
 export type ContactConfig = {
