@@ -21,7 +21,7 @@ export default function Home() {
             className="container space-y-6 lg:space-y-14 dark:bg-transparent md:py-12 lg:py-24 "
           >
             <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center">
-              <h2 className="font-heading font-semibold text-4xl sm:text-5xl leading-[1.1] md:text-6xl">
+              <h2 className="font-heading font-semibold leading-[1.1] text-6xl">
                 Zachary Punsalang
               </h2>
               <p className="max-w-[85%] leading-normal text-muted-foreground sm:leading-7 md:text-xl">
