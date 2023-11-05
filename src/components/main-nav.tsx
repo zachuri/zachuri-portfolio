@@ -33,14 +33,14 @@ export function MainNav() {
 			<motion.div
 				className='bg-background absolute text-sm font-medium text-primary rounded-[8px] px-2 py-1 '
 				initial={{ x: items[defaultActiveIndex]?.position ?? 0 }}
-				animate={{ x: items[activeIndex].position }}
+				animate={{ x: items[activeIndex]?.position ?? 0 }}
 				transition={{
 					type: "spring",
 					stiffness: 500,
 					damping: 30,
 					duration: 1,
 				}}>
-				{items[activeIndex].title}
+				{items[activeIndex]?.title}
 			</motion.div>
 		</div>
 	);

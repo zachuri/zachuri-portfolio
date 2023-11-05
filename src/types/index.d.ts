@@ -5,7 +5,7 @@ import { Icons } from "@/components/ui/icons";
 export type NavItem = {
 	title: string;
 	href: string;
-	position?: number;
+	position: number;
 	disabled?: boolean;
 };
 
