@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { mainConfig } from "@/config/main";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export function MainNav() {
 	const path = usePathname();
@@ -22,13 +23,16 @@ export function MainNav() {
 	return (
 		<div className='flex items-center gap-x-7'>
 			{items.map((item, index) => (
-				<motion.a
-					href={item.href}
-					key={index}
-					className='text-sm font-medium'
-					onClick={() => handleItemClick(index)}>
-					{item.title}
-				</motion.a>
+				<>
+					<Link href={item.href}>
+						<motion.div
+							key={index}
+							className='text-sm font-medium'
+							onClick={() => handleItemClick(index)}>
+							{item.title}
+						</motion.div>
+					</Link>
+				</>
 			))}
 			<motion.div
 				className='bg-background absolute text-sm font-medium text-primary rounded-[8px] px-2 py-1 '
