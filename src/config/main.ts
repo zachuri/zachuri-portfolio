@@ -4,7 +4,7 @@ export const mainConfig: MainConfig = {
   mainNav: [
     {
       title: 'Who',
-      href: '/who'
+      href: '/'
     },
     {
       title: 'What',
