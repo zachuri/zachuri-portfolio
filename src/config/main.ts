@@ -4,23 +4,27 @@ export const mainConfig: MainConfig = {
   mainNav: [
     {
       title: 'Who',
-      href: '/'
+      href: '/',
+      position: -7
     },
     {
       title: 'What',
-      href: '/what'
+      href: '/what',
+      position: 47
     },
     {
       title: 'Works',
-      href: '/works'
+      href: '/works',
+      position: 106
     },
     {
       title: 'Blog',
-      href: '/blog'
-    },
-    {
-      title: 'Contact',
-      href: '/contact'
+      href: '/blog',
+      position: 172
     }
+    // {
+    //   title: 'Contact',
+    //   href: '/contact'
+    // }
   ]
 };

@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
-import { MainNav } from './main-nav';
 import { ModeToggle } from './mode-toggle';
 import { mainConfig } from '@/config/main';
+import { MainNav } from './main-nav';
+import { Icons } from './ui/icons';
 
 const Navbar = () => {
   return (
@@ -14,8 +15,10 @@ const Navbar = () => {
           <ModeToggle />
         </div> */}
         <div className="p-5 flex justify-center items-center">
-          <div className="p-3 rounded-xl bg-primary text-primary-foreground">
-            <MainNav displayLogo={false} items={mainConfig.mainNav} />
+          <div className="flex flex-row p-2 gap-x-6 rounded-xl bg-primary text-primary-foreground">
+            <Icons.logo />
+            <MainNav />
+            <Icons.logo />
           </div>
         </div>
       </header>
