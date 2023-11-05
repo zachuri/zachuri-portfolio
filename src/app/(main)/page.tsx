@@ -24,17 +24,17 @@ export default function Home() {
               <h2 className="font-heading font-semibold leading-[1.1] text-6xl">
                 Zachary Punsalang
               </h2>
-              <p className="max-w-[85%] leading-normal text-muted-foreground sm:leading-7 md:text-xl">
+              <p className="max-w-[85%] leading-normal text-muted-foreground sm:leading-7 text-lg md:text-xl">
                 Full Stack Developer
               </p>
             </div>
-
-            <MainContact items={contactConfig.contactItems} />
 
             <div className="flex flex-row justify-center items-center space-x-4">
               <Button>My Portfolio</Button>
               <Button variant={'outline'}>About me</Button>
             </div>
+
+            <MainContact items={contactConfig.contactItems} />
 
             <div className="mx-auto text-center md:max-w-[58rem] space-y-3">
               <p className="leading-normal text-muted-foreground text-2xl sm:text-3xl sm:leading-7">
