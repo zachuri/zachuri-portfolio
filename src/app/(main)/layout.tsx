@@ -9,9 +9,14 @@ export default async function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col space-y-6">
       {/* <Navbar /> */}
-      <main className="container flex w-full flex-1 flex-col overflow-hidden">
+      {/* <main className="container flex w-full flex-1 flex-col overflow-hidden">
         {children}
-      </main>
+      </main> */}
+      <div className="grow sm:container sm:flex-1">
+        <main className="relative flex w-full flex-col overflow-hidden">
+          {children}
+        </main>
+      </div>
       <SiteFooter className="border-t" />
     </div>
   );
