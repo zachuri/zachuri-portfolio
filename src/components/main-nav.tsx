@@ -23,16 +23,12 @@ export function MainNav() {
 	return (
 		<div className='flex items-center gap-x-7'>
 			{items.map((item, index) => (
-				<>
-					<Link href={item.href}>
-						<motion.div
-							key={index}
-							className='text-sm font-medium'
-							onClick={() => handleItemClick(index)}>
-							{item.title}
-						</motion.div>
-					</Link>
-				</>
+				<motion.div
+					key={index}
+					className='text-sm font-medium'
+					onClick={() => handleItemClick(index)}>
+					<Link href={item.href}>{item.title}</Link>
+				</motion.div>
 			))}
 			<motion.div
 				className='bg-background absolute text-sm font-medium text-primary rounded-[8px] px-2 py-1 '
