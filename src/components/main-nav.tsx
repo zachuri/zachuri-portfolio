@@ -36,9 +36,8 @@ export function MainNav() {
 				animate={{ x: items[activeIndex]?.position ?? 0 }}
 				transition={{
 					type: "spring",
-					stiffness: 500,
-					damping: 30,
-					duration: 1,
+					stiffness: 900,
+					damping: 50,
 				}}>
 				{items[activeIndex]?.title}
 			</motion.div>
