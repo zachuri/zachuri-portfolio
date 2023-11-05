@@ -1,51 +1,49 @@
-'use client';
+"use client";
 
 // NavigationBar.js
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { mainConfig } from '@/config/main';
-import { usePathname } from 'next/navigation';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { mainConfig } from "@/config/main";
+import { usePathname } from "next/navigation";
 
 export function MainNav() {
-  const path = usePathname();
+	const path = usePathname();
 
-  const items = mainConfig.mainNav;
+	const items = mainConfig.mainNav;
 
-  const defaultActiveIndex = items.findIndex(item => item.href === path);
+	const defaultActiveIndex = items.findIndex(item => item.href === path);
 
-  const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
+	const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
 
-  const handleItemClick = (index: React.SetStateAction<number>) => {
-    setActiveIndex(index);
-  };
+	const handleItemClick = (index: React.SetStateAction<number>) => {
+		setActiveIndex(index);
+	};
 
-  return (
-    <div className="flex items-center gap-x-7">
-      {items.map((item, index) => (
-        <motion.a
-          href={item.href}
-          key={index}
-          className="text-sm font-medium"
-          onClick={() => handleItemClick(index)}
-        >
-          {item.title}
-        </motion.a>
-      ))}
-      <motion.div
-        className="bg-background absolute text-sm font-medium text-primary rounded-[8px] px-2 py-1 "
-        initial={{ x: items[defaultActiveIndex].position }}
-        animate={{ x: items[activeIndex].position }}
-        transition={{
-          type: 'spring',
-          stiffness: 500,
-          damping: 30,
-          duration: 1 
-        }}
-      >
-        {items[activeIndex].title}
-      </motion.div>
-    </div>
-  );
+	return (
+		<div className='flex items-center gap-x-7'>
+			{items.map((item, index) => (
+				<motion.a
+					href={item.href}
+					key={index}
+					className='text-sm font-medium'
+					onClick={() => handleItemClick(index)}>
+					{item.title}
+				</motion.a>
+			))}
+			<motion.div
+				className='bg-background absolute text-sm font-medium text-primary rounded-[8px] px-2 py-1 '
+				initial={{ x: items[defaultActiveIndex]?.position ?? 0 }}
+				animate={{ x: items[activeIndex].position }}
+				transition={{
+					type: "spring",
+					stiffness: 500,
+					damping: 30,
+					duration: 1,
+				}}>
+				{items[activeIndex].title}
+			</motion.div>
+		</div>
+	);
 }
 
 // 'use client';
