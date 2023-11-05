@@ -12,17 +12,17 @@ interface Props {
 
 const MainContact: React.FC<Props> = ({ items }) => {
   return (
-    <div className="sm:grid sm:grid-cols-2 md:grid-cols-3 flex gap-5 justify-center md:max-w-[64rem]">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 justify-center md:max-w-[64rem]">
       {items?.map(item => {
         const Icon = Icons[item.icon || 'arrowRight'];
         return (
           <div
             key={item.name}
-            className="relative overflow-hidden rounded-lg sm:border bg-background hover:border-foreground transition-colors duration-300"
+            className="relative overflow-hidden rounded-lg border bg-background hover:border-foreground transition-colors duration-300"
           >
             <HoverCard>
               <HoverCardTrigger href={item.href}>
-                <div className="flex flex-col items-center justify-center sm:p-8">
+                <div className="flex flex-col items-center justify-center p-8">
                   <div className="space-y-2">
                     {/* @ts-ignore */}
                     <Icon className="h-6 w-6 md:h-7 md:w-7" strokeWidth={1.5} />
