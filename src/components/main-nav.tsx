@@ -1,8 +1,7 @@
 "use client";
 
-// NavigationBar.js
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { mainConfig } from "@/config/main";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -16,137 +15,31 @@ export function MainNav() {
 
 	const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
 
-	// If user presses logo
 	useEffect(() => {
 		const defaultActiveIndex = items.findIndex(item => item.href === path);
 		setActiveIndex(defaultActiveIndex);
 	}, [path]);
 
-	const handleItemClick = (index: React.SetStateAction<number>) => {
-		setActiveIndex(index);
-	};
-
 	return (
-		<div className='flex items-center gap-x-7'>
+		<div className='flex items-center gap-x-7 relative'>
 			{items.map((item, index) => (
-				<Link
-					key={index}
-					href={item.href}
-					className='text-sm font-medium'
-					onClick={() => handleItemClick(index)}>
+				<Link key={index} href={item.href} className='text-sm font-medium'>
 					{item.title}
 				</Link>
 			))}
-			<motion.div
-				className='bg-background absolute text-sm font-medium text-primary rounded-[8px] p-2 '
-				initial={{ x: items[defaultActiveIndex]?.position ?? 0 }}
-				animate={{ x: items[activeIndex]?.position ?? 0 }}
-				transition={{
-					type: "spring",
-					stiffness: 900,
-					damping: 50,
-				}}>
-				{items[activeIndex]?.title}
-			</motion.div>
+			<AnimatePresence>
+				<motion.div
+					className='bg-background absolute text-sm font-medium text-primary rounded-[8px] p-2'
+					initial={{ opacity: 0, x: items[defaultActiveIndex]?.position ?? 0 }}
+					animate={{
+						opacity: 1,
+						x: items[activeIndex]?.position ?? 0,
+						transition: { duration: 0.3 },
+					}}
+					exit={{ opacity: 0, x: items[activeIndex]?.position ?? 0 }}>
+					{items[activeIndex]?.title}
+				</motion.div>
+			</AnimatePresence>
 		</div>
 	);
 }
-
-// 'use client';
-
-// import * as React from 'react';
-// import Link from 'next/link';
-// import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
-
-// import { MainNavItem } from '@/types';
-// import { siteConfig } from '@/config/site';
-// import { cn } from '@/lib/utils';
-// import { MobileNav } from '@/components/mobile-nav';
-// import { Icons } from './ui/icons';
-// import { motion } from 'framer-motion';
-
-// interface MainNavProps {
-//   items?: MainNavItem[];
-//   displayLogo?: boolean;
-//   children?: React.ReactNode;
-// }
-
-// export function MainNav({ items, displayLogo = true, children }: MainNavProps) {
-//   const segment = useSelectedLayoutSegment();
-
-//   const path = usePathname();
-
-//   return (
-//     <div className="flex gap-6 md:gap-10">
-//       {displayLogo && (
-//         <Link href="/" className="hidden items-center space-x-2 md:flex">
-//           <Icons.logo />
-//           <span className="hidden font-medium sm:inline-block uppercase">
-//             {siteConfig.name}
-//           </span>
-//         </Link>
-//       )}
-//       <motion.div>
-//         {items?.length ? (
-//           <nav className="hidden gap-6 md:flex">
-//             {items?.map((item, index) => (
-//               <Link
-//                 key={index}
-//                 href={item.disabled ? '#' : item.href}
-//                 className={cn(
-//                   'bg-white rounded-lg',
-//                   'text-primary',
-//                   'flex items-center text-lg transition-colors hover:text-foreground/80 sm:text-sm',
-//                   item.disabled && 'cursor-not-allowed opacity-80'
-//                 )}
-//               >
-//                 {item.title}
-//               </Link>
-//             ))}
-//           </nav>
-//         ) : null}
-//       </motion.div>
-//       <div className="flex items-center space-x-2 md:hidden">
-//         {items && <MobileNav items={items} />}
-//         <span className="max-sm:hidden font-medium uppercase">
-//           {siteConfig.name}
-//         </span>
-//       </div>
-//     </div>
-//     // <div className="flex gap-6 md:gap-10">
-//     //   {displayLogo && (
-//     //     <Link href="/" className="hidden items-center space-x-2 md:flex">
-//     //       <Icons.logo />
-//     //       <span className="hidden font-medium sm:inline-block uppercase">
-//     //         {siteConfig.name}
-//     //       </span>
-//     //     </Link>
-//     //   )}
-//     //   {items?.length ? (
-//     //     <nav className="hidden gap-6 md:flex">
-//     //       {items?.map((item, index) => (
-//     //         <Link
-//     //           key={index}
-//     //           href={item.disabled ? '#' : item.href}
-//     //           className={cn(
-//     //             'flex items-center text-lg transition-colors hover:text-foreground/80 sm:text-sm',
-//     //             item.href.startsWith(`/${segment}`)
-//     //               ? 'text-foreground'
-//     //               : 'text-foreground/60',
-//     //             item.disabled && 'cursor-not-allowed opacity-80'
-//     //           )}
-//     //         >
-//     //           {item.title}
-//     //         </Link>
-//     //       ))}
-//     //     </nav>
-//     //   ) : null}
-//     //   <div className="flex items-center space-x-2 md:hidden">
-//     //     {items && <MobileNav items={items} />}
-//     //     <span className="max-sm:hidden font-medium uppercase">
-//     //       {siteConfig.name}
-//     //     </span>
-//     //   </div>
-//     // </div>
-//   );
-// }
