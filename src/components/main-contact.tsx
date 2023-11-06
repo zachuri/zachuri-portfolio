@@ -12,7 +12,7 @@ interface Props {
 
 const MainContact: React.FC<Props> = ({ items }) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 justify-center md:max-w-[64rem]">
+    <div className="grid grid-cols-3 md:grid-cols-3 gap-5 justify-center md:max-w-[64rem]">
       {items?.map(item => {
         const Icon = Icons[item.icon || 'arrowRight'];
         return (
