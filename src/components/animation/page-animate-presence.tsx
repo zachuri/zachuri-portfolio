@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import FrozenRoute from './frozen-route';
+import { useMemo } from 'react';
 
 const PageAnimatePresence: React.FC<React.PropsWithChildren> = ({
   children
@@ -10,7 +11,7 @@ const PageAnimatePresence: React.FC<React.PropsWithChildren> = ({
   const pathname = usePathname();
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       {/**
        * We use `motion.div` as the first child of `<AnimatePresence />` Component so we can specify page animations at the page level.
        * The `motion.div` Component gets re-evaluated when the `key` prop updates, triggering the animation's lifecycles.
