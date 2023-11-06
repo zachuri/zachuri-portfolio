@@ -27,7 +27,7 @@ export function MainNav() {
 					{item.title}
 				</Link>
 			))}
-			<AnimatePresence>
+			<AnimatePresence mode='wait' initial={false}>
 				<motion.div
 					className='bg-background absolute text-sm font-medium text-primary rounded-[8px] p-2'
 					initial={{ opacity: 0, x: items[defaultActiveIndex]?.position ?? 0 }}
