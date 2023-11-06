@@ -18,8 +18,8 @@ export function ModeToggle() {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger asChild>
-				<AnimatePresence mode='wait' initial={false}>
+			<AnimatePresence initial={false}>
+				<DropdownMenuTrigger asChild>
 					<motion.div
 						style={{ display: "inline-block" }}
 						key={theme}
@@ -33,8 +33,8 @@ export function ModeToggle() {
 							<span className='sr-only'>Toggle theme</span>
 						</Button>
 					</motion.div>
-				</AnimatePresence>
-			</DropdownMenuTrigger>
+				</DropdownMenuTrigger>
+			</AnimatePresence>
 			<DropdownMenuContent align='end'>
 				<DropdownMenuItem onClick={() => setTheme("light")}>
 					Light
