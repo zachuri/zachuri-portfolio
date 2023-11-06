@@ -1,7 +1,7 @@
 "use client";
 
 // NavigationBar.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { mainConfig } from "@/config/main";
 import { usePathname } from "next/navigation";
@@ -15,6 +15,12 @@ export function MainNav() {
 	const defaultActiveIndex = items.findIndex(item => item.href === path);
 
 	const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
+
+	// If user presses logo
+	useEffect(() => {
+		const defaultActiveIndex = items.findIndex(item => item.href === path);
+		setActiveIndex(defaultActiveIndex);
+	}, [path]);
 
 	const handleItemClick = (index: React.SetStateAction<number>) => {
 		setActiveIndex(index);
@@ -32,7 +38,7 @@ export function MainNav() {
 				</Link>
 			))}
 			<motion.div
-				className='bg-background absolute text-sm font-medium text-primary rounded-[8px] px-2 py-1 '
+				className='bg-background absolute text-sm font-medium text-primary rounded-[8px] p-2 '
 				initial={{ x: items[defaultActiveIndex]?.position ?? 0 }}
 				animate={{ x: items[activeIndex]?.position ?? 0 }}
 				transition={{
