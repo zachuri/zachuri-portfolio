@@ -22,14 +22,9 @@ export function MainNav() {
 
   return (
     <div className="flex items-center gap-x-7 relative">
-      {items.map((item, index) => (
-        <Link key={index} href={item.href} className="text-sm font-medium">
-          {item.title}
-        </Link>
-      ))}
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
-          className="bg-background absolute text-sm font-medium text-primary rounded-lg p-1 px-3"
+          className="absolute text-sm font-medium text-primary rounded-lg p-1 px-3"
           initial={{ opacity: 0, x: items[defaultActiveIndex]?.position ?? 0 }}
           animate={{
             opacity: 1,
@@ -41,6 +36,11 @@ export function MainNav() {
           {items[activeIndex]?.title}
         </motion.div>
       </AnimatePresence>
+      {items.map((item, index) => (
+        <Link key={index} href={item.href} className="text-sm font-medium">
+          {item.title}
+        </Link>
+      ))}
     </div>
   );
 }
