@@ -22,10 +22,10 @@ export function MainNav() {
 
   const [activeIndex, setActiveIndex] = useState<number>(defaultActiveIndex);
 
-  // useEffect(() => {
-  //   const defaultActiveIndex = items.findIndex(item => item.href === path);
-  //   setActiveIndex(defaultActiveIndex);
-  // }, [path]);
+  useEffect(() => {
+    const defaultActiveIndex = items.findIndex(item => item.href === path);
+    setActiveIndex(defaultActiveIndex);
+  }, [path]);
 
   const [buttonRefs, setButtonRefs] = useState<Array<HTMLButtonElement | null>>(
     []
