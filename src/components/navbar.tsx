@@ -9,14 +9,18 @@ const Navbar = () => {
     <>
       <header className="sticky top-0 z-40">
         <div className="p-5 flex justify-center items-center">
-          <div className="flex flex-row items-center justify-center p-1 gap-x-1 rounded-xl bg-primary text-primary-foreground">
-            <Button size={'sm'}>
+          <div className="flex flex-row items-center justify-center p-1 gap-x-1 rounded-xl bg-primary">
+            <Button>
               <Link href="/">
                 <Icons.logo />
               </Link>
             </Button>
             <MainNav />
-            <ModeToggle variant={'ghost'} size={'sm'} />
+            <ModeToggle
+              className="text-primary-foreground"
+              variant={'ghost'}
+              size={'sm'}
+            />
           </div>
         </div>
       </header>
