@@ -97,7 +97,7 @@ export function MainNav() {
           //   transition={transition}
           // />
           <motion.div
-            className="absolute p-1 z-10 top-0 left-0 rounded-md bg-secondary/40"
+            className="absolute p-1 z-10 top-0 left-0 rounded-md bg-secondary/80"
             initial={{
               x: hoveredRect.left - navRect.left,
               y: hoveredRect.top - navRect.top,
