@@ -16,7 +16,7 @@ export type SkillItem = {
   type: SkillType;
 };
 
-export type SkillCOnfig = {
+export type SkillConfig = {
   skills: SkillItem[];
 };
 

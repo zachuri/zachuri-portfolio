@@ -14,7 +14,7 @@ const MainContainer: React.FC<Props> = ({ children }) => {
     <div className="flex min-h-screen flex-col space-y-6">
       <div className="grow sm:container sm:flex-1">
         <main className="relative flex w-full flex-col overflow-hidden">
-          <div className="flex flex-col justify-center items-center space-y-10 max-md:my-10">
+          <div className="flex flex-col justify-center items-center max-md:my-10">
             <PageAnimation>{children}</PageAnimation>
           </div>
         </main>
