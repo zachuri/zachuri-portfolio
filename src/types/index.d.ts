@@ -2,6 +2,24 @@ import { User } from '@prisma/client';
 
 import { Icons } from '@/components/ui/icons';
 
+export enum SkillType {
+  Frontend = 1,
+  Tools = 2,
+  Other = 3,
+  Database = 4,
+  Backend = 5
+}
+
+export type SkillItem = {
+  name: string;
+  proficiency?: string;
+  type: SkillType;
+};
+
+export type SkillCOnfig = {
+  skills: SkillItem[];
+};
+
 export type NavItem = {
   title: string;
   href: string;
