@@ -27,7 +27,7 @@ export function MainNav() {
     setActiveIndex(defaultActiveIndex);
   }, [path]);
 
-  const [buttonRefs, setButtonRefs] = useState<Array<HTMLButtonElement | null>>(
+  const [buttonRefs, setButtonRefs] = useState<Array<HTMLAnchorElement | null>>(
     []
   );
 
@@ -54,8 +54,9 @@ export function MainNav() {
         const isActive = hoveredTabIndex === index || activeIndex === index;
 
         return (
-          <motion.button
+          <Link
             key={index}
+            href={item.href}
             className={cn(
               'font-medium z-20 text-sm relative rounded-lg flex items-center h-8 px-4 bg-transparent cursor-pointer select-none transition-colors',
               {
@@ -75,23 +76,48 @@ export function MainNav() {
               console.log('HELLLO');
             }}
           >
-            <Link href={item.href}>{item.title}</Link>
-          </motion.button>
+            {item.title}
+          </Link>
         );
       })}
 
-      {/* Underline */}
+      {/* Underline/Highlight Box */}
       <AnimatePresence>
         {hoveredRect && navRect && (
+          // <motion.div
+          //   className={
+          //     'absolute z-10 bottom-0 left-0.5 h-[3px] bg-background/90'
+          //   }
+          //   initial={false}
+          //   animate={{
+          //     width: hoveredRect.width * 0.8,
+          //     x: `calc(${hoveredRect.left - navRect.left}px + 10%)`,
+          //     opacity: 1
+          //   }}
+          //   transition={transition}
+          // />
           <motion.div
-            className={
-              'absolute z-10 bottom-0 left-0.5 h-[3px] bg-background/90'
-            }
-            initial={false}
+            className="absolute p-1 z-10 top-0 left-0 rounded-md bg-secondary/40"
+            initial={{
+              x: hoveredRect.left - navRect.left,
+              y: hoveredRect.top - navRect.top,
+              width: hoveredRect.width,
+              height: hoveredRect.height,
+              opacity: 0
+            }}
             animate={{
-              width: hoveredRect.width * 0.8,
-              x: `calc(${hoveredRect.left - navRect.left}px + 10%)`,
+              x: hoveredRect.left - navRect.left,
+              y: hoveredRect.top - navRect.top,
+              width: hoveredRect.width,
+              height: hoveredRect.height,
               opacity: 1
+            }}
+            exit={{
+              x: hoveredRect.left - navRect.left,
+              y: hoveredRect.top - navRect.top,
+              width: hoveredRect.width,
+              height: hoveredRect.height,
+              opacity: 0
             }}
             transition={transition}
           />
@@ -101,7 +127,7 @@ export function MainNav() {
       {/* Box */}
       {selectedRect && navRect && (
         <motion.div
-          className="absolute p-1 mb-1 z-10 top-0 left-0 rounded-md bg-background"
+          className="absolute p-1 z-10 top-0 left-0 rounded-md bg-background"
           initial={{
             x: selectedRect.left - navRect.left,
             y: selectedRect.top - navRect.top,
