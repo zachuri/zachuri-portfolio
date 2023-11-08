@@ -24,7 +24,7 @@ export function MainNav() {
     <div className="flex items-center gap-x-7 relative">
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
-          className="absolute text-sm font-medium text-primary rounded-lg p-1 px-3"
+          className="bg-background absolute text-sm font-medium text-primary rounded-lg p-1 px-3"
           initial={{ opacity: 0, x: items[defaultActiveIndex]?.position ?? 0 }}
           animate={{
             opacity: 1,
