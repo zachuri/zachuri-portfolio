@@ -3,7 +3,6 @@
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import FrozenRoute from './frozen-route';
-import { useMemo } from 'react';
 
 const PageAnimatePresence: React.FC<React.PropsWithChildren> = ({
   children
