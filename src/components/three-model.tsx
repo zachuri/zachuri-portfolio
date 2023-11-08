@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 // @ts-ignore
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { Mesh } from 'three';
+import { Mesh, Scene } from 'three';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
 function MeshComponent() {
@@ -25,10 +25,7 @@ function MeshComponent() {
   useFrame(({ camera }) => {
     mesh.current.rotation.y += 0.002;
 
-    // Set the camera position to a front-top-middle angle
-    camera.position.set(0, 2, 5);
-
-    camera.lookAt(0, 1, 0); // Look at the center of the model
+    camera.lookAt(0, 0, 0); // Look at the center of the model
   });
 
   return (
@@ -43,7 +40,9 @@ export function ThreeModel() {
     <Canvas>
       <OrbitControls />
       <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+      <directionalLight castShadow />
+      <mesh castShadow receiveShadow />
+      <pointLight position={[5, 10, 5]} />
       <MeshComponent />
     </Canvas>
   );
