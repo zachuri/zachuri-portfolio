@@ -6,12 +6,14 @@ import {
   Instagram,
   Linkedin,
   LucideIcon,
-  Clipboard
+  Clipboard,
+  Loader2
 } from 'lucide-react';
 
 export type Icon = LucideIcon;
 
 export const Icons = {
+  loading: Loader2,
   arrowRight: ArrowRight,
   clipboard: Clipboard,
   twitter: Twitter,
