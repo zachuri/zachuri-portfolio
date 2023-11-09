@@ -38,8 +38,12 @@ export const angleToRadians = (angleInDeg: number) =>
 export function ThreeModel() {
   return (
     <Suspense fallback={<Icons.loading />}>
-      <Canvas camera={{ position: [5, 5, -5], fov: 7 }}>
-        <ModelMesh rotation={[0, Math.PI / 2, 0]} scale={0.2} />
+      <Canvas camera={{ position: [5, 5, -5], fov: 8 }}>
+        <ModelMesh
+          rotation={[0, Math.PI / 2, 0]}
+          position={[0, -0.1, 0]}
+          scale={0.25}
+        />
         <Environment preset="sunset" />
         <OrbitControls
           minPolarAngle={Math.PI / 2.5}
