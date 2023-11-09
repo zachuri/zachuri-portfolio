@@ -7,6 +7,8 @@ import { Icons } from './ui/icons';
 
 function ModelMesh({ ...props }) {
   const [isModelLoaded, setModelLoaded] = useState(false);
+  const [initialSpinFrames, setInitialSpinFrames] = useState(100); // Number of frames for initial spin
+  const [currentFrame, setCurrentFrame] = useState(0);
 
   if (!isModelLoaded) {
     setModelLoaded(true);
@@ -17,7 +19,16 @@ function ModelMesh({ ...props }) {
   // Add an automatic rotation using useFrame
   useFrame(() => {
     if (scene && isModelLoaded) {
-      scene.rotation.y += 0.002; // Adjust the rotation speed as needed
+      if (currentFrame < initialSpinFrames) {
+        // Initial spin logic
+        const initialSpinSpeed = 0.25;
+        scene.rotation.y += initialSpinSpeed;
+        setCurrentFrame(prevFrame => prevFrame + 1);
+      } else {
+        // Normal rotation logic
+        const normalRotationSpeed = 0.002;
+        scene.rotation.y += normalRotationSpeed;
+      }
     }
   });
 
@@ -39,7 +50,7 @@ export function ThreeModel() {
   return (
     <Suspense fallback={<Icons.loading />}>
       <Canvas camera={{ position: [5, 5, -5], fov: 8 }}>
-        <ModelMesh rotation={[0, Math.PI / 2, 0]} scale={0.2} />
+        <ModelMesh rotation={[0, Math.PI / 8, 0]} scale={0.2} />
         <Environment preset="sunset" />
         <OrbitControls
           minPolarAngle={Math.PI / 2.5}
