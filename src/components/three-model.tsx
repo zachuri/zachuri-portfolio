@@ -15,7 +15,7 @@ function ModelMesh({ ...props }) {
     const handleResize = () => {
       const xsScreenThreshold = 600; // Adjust this threshold as needed for your design
       const newInitialSpinSpeed =
-        window.innerWidth <= xsScreenThreshold ? 0.9 : 0.25;
+        window.innerWidth <= xsScreenThreshold ? 0.6 : 0.25;
       setInitialSpinSpeed(newInitialSpinSpeed);
     };
 
