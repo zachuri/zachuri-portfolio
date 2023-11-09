@@ -6,9 +6,9 @@ import { ThreeModel } from '@/components/three-model';
 
 const Page: React.FC = () => {
   return (
-    <div className="flex-col flex items-center justify-center">
-      <div className="w-[70%] -mb-40 sm:-mb-32">
-        <center className="h-[400px]">
+    <div className="flex-col max-sm:-mt-20 flex items-center justify-center">
+      <div className="w-[80%] sm:-mb-52 -mb-40">
+        <center className="h-[400px] sm:h-[600px]">
           <ThreeModel />
         </center>
       </div>
