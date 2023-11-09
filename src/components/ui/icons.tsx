@@ -13,7 +13,11 @@ import {
 export type Icon = LucideIcon;
 
 export const Icons = {
-  loading: Loader2,
+  loading: () => (
+    <div className="animate-spin">
+      <Loader2 />
+    </div>
+  ),
   arrowRight: ArrowRight,
   clipboard: Clipboard,
   twitter: Twitter,
