@@ -21,7 +21,7 @@ function ModelMesh({ ...props }) {
     if (scene && isModelLoaded) {
       if (currentFrame < initialSpinFrames) {
         // Initial spin logic
-        const initialSpinSpeed = 0.25;
+        const initialSpinSpeed = 0.28;
         scene.rotation.y += initialSpinSpeed;
         setCurrentFrame(prevFrame => prevFrame + 1);
       } else {
