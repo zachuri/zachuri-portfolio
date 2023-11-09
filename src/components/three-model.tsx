@@ -1,14 +1,31 @@
 'use client';
 
-import { Suspense, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, OrbitControls, useGLTF } from '@react-three/drei';
 import { Icons } from './ui/icons';
 
 function ModelMesh({ ...props }) {
   const [isModelLoaded, setModelLoaded] = useState(false);
-  const [initialSpinFrames, setInitialSpinFrames] = useState(100); // Number of frames for initial spin
+  const [initialSpinFrames, setInitialSpinFrames] = useState(100);
   const [currentFrame, setCurrentFrame] = useState(0);
+  const [initialSpinSpeed, setInitialSpinSpeed] = useState(0.02);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const xsScreenThreshold = 600; // Adjust this threshold as needed for your design
+      const newInitialSpinSpeed =
+        window.innerWidth <= xsScreenThreshold ? 0.9 : 0.25;
+      setInitialSpinSpeed(newInitialSpinSpeed);
+    };
+
+    handleResize(); // Call it initially to set the initial spin speed
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   if (!isModelLoaded) {
     setModelLoaded(true);
@@ -16,12 +33,10 @@ function ModelMesh({ ...props }) {
 
   const { scene } = useGLTF('/zachuri-person.glb');
 
-  // Add an automatic rotation using useFrame
   useFrame(() => {
     if (scene && isModelLoaded) {
       if (currentFrame < initialSpinFrames) {
         // Initial spin logic
-        const initialSpinSpeed = 0.28;
         scene.rotation.y += initialSpinSpeed;
         setCurrentFrame(prevFrame => prevFrame + 1);
       } else {
