@@ -12,7 +12,7 @@ function ModelMesh({ ...props }) {
     setModelLoaded(true);
   }
 
-  const { scene } = useGLTF('/dog.glb');
+  const { scene } = useGLTF('/zachuri-person.glb');
 
   // Add an automatic rotation using useFrame
   useFrame(() => {
@@ -38,14 +38,9 @@ export const angleToRadians = (angleInDeg: number) =>
 export function ThreeModel() {
   return (
     <Suspense fallback={<Icons.loading />}>
-      <Canvas camera={{ position: [5, 5, -5], fov: 25 }}>
-        <ambientLight intensity={0.5} />
-        <ModelMesh
-          // position={[-0.1, -0.2, 0]}
-          rotation={[0, Math.PI / 2, 0]}
-          scale={0.2}
-        />
-        <Environment preset="city" />
+      <Canvas camera={{ position: [5, 5, -5], fov: 7 }}>
+        <ModelMesh rotation={[0, Math.PI / 2, 0]} scale={0.2} />
+        <Environment preset="sunset" />
         <OrbitControls
           minPolarAngle={Math.PI / 2.5}
           maxPolarAngle={Math.PI / 2.5}
