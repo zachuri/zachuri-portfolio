@@ -39,7 +39,7 @@ export function ThreeModel() {
       fallback={
         <p className="flex flex-col">
           <Icons.loading />
-          {progress.toFixed(2)}%
+          {progress}%
         </p>
       }
     >
