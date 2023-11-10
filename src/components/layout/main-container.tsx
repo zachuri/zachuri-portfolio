@@ -13,7 +13,7 @@ const MainContainer: React.FC<Props> = ({ children }) => {
   return (
     <div className="flex min-h-screen flex-col space-y-6">
       <div className="grow sm:container sm:flex-1">
-        <main className="relative flex w-full flex-col overflow-hidden">
+        <main className="relative flex w-full flex-col">
           <div className="flex flex-col justify-center items-center max-md:my-10">
             <PageAnimation>{children}</PageAnimation>
           </div>
