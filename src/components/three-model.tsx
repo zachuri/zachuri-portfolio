@@ -44,7 +44,7 @@ export function ThreeModel() {
         </div>
       }
     >
-      <Canvas camera={{ fov: 12 }} shadows>
+      <Canvas frameloop="demand" camera={{ fov: 12 }} shadows>
         <ModelMesh rotation={[0, Math.PI / 8, 0]} scale={0.17} />
         <Environment preset="sunset" />
         <OrbitControls
