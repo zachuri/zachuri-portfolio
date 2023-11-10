@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import {
   Environment,
@@ -9,8 +9,6 @@ import {
   useGLTF,
   useProgress
 } from '@react-three/drei';
-import { Icons } from './ui/icons';
-import { progress } from 'framer-motion';
 import { Progress } from './ui/progress';
 
 function ModelMesh({ ...props }) {
@@ -29,19 +27,16 @@ function ModelMesh({ ...props }) {
   );
 }
 
-export const angleToRadians = (angleInDeg: number) =>
-  (Math.PI / 180) * angleInDeg;
-
 export function ThreeModel() {
   const { progress } = useProgress();
 
   return (
     <Suspense
       fallback={
-        <p className="w-full">
+        <p className="w-[80%]">
           {/* <Icons.loading /> */}
-          <Progress value={progress} />
           {/* {progress}% */}
+          <Progress className="h-[2px]" value={progress} />
         </p>
       }
     >
