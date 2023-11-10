@@ -22,6 +22,10 @@ function ModelMesh({ ...props }) {
 
   return (
     <mesh>
+      {/* <directionalLight position={[10, 10, 0]} intensity={1.5} />
+      <directionalLight position={[-10, 10, 5]} intensity={1} />
+      <directionalLight position={[-10, 20, 0]} intensity={1.5} />
+      <directionalLight position={[0, -10, 0]} intensity={0.25} /> */}
       <primitive object={scene} {...props} />
     </mesh>
   );
@@ -33,11 +37,11 @@ export function ThreeModel() {
   return (
     <Suspense
       fallback={
-        <p className="w-[80%]">
+        <div className="w-[80%]">
           {/* <Icons.loading /> */}
           {/* {progress}% */}
           <Progress className="h-[2px]" value={progress} />
-        </p>
+        </div>
       }
     >
       <Canvas camera={{ fov: 12 }} shadows>
