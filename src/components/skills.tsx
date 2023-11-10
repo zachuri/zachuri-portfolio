@@ -44,7 +44,7 @@ const Skills = () => {
               groupedSkills[category.type].map((skill, index) => (
                 <div
                   key={index}
-                  className="border py-1 px-2 border-primary text-xs rounded-md"
+                  className="border py-1 px-2 border-primary text-xs rounded-sm"
                 >
                   {skill.name}
                 </div>
