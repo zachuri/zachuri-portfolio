@@ -11,6 +11,7 @@ import {
 } from '@react-three/drei';
 import { Icons } from './ui/icons';
 import { progress } from 'framer-motion';
+import { Progress } from './ui/progress';
 
 function ModelMesh({ ...props }) {
   const { scene } = useGLTF('/zachuri-person.glb');
@@ -37,9 +38,10 @@ export function ThreeModel() {
   return (
     <Suspense
       fallback={
-        <p className="flex flex-col">
-          <Icons.loading />
-          {progress}%
+        <p className="w-full">
+          {/* <Icons.loading /> */}
+          <Progress value={progress} />
+          {/* {progress}% */}
         </p>
       }
     >
