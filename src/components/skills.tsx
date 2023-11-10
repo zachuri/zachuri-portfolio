@@ -38,7 +38,7 @@ const Skills = () => {
     <div>
       {skillCategories.map(category => (
         <div key={category.type}>
-          <h2 className="text-xl font-bold">{category.name}</h2>
+          <h2 className="text-xl md:text-2xl font-bold">{category.name}</h2>
           <div className="flex flex-wrap gap-2 mb-2">
             {groupedSkills[category.type] &&
               groupedSkills[category.type].map((skill, index) => (

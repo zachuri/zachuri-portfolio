@@ -14,7 +14,7 @@ const Page: React.FC = () => {
       </div>
 
       <section className="container space-y-2 z-20">
-        <h1 className="text-3xl font-bold">Technical Skills</h1>
+        <h1 className="text-2xl md:text-3xl font-bold">Technical Skills</h1>
         <Skills />
       </section>
     </div>
