@@ -2,12 +2,12 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 import { useFeatureStore } from '../store/feature';
 
-type FeatureCardProps = {
+export type FeatureCardProps = {
   gradient: string;
   children: React.ReactNode;
 } & CardProps;
 
-type CardProps = {
+export type CardProps = {
   id: string;
 };
 
