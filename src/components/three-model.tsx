@@ -45,6 +45,7 @@ export function ThreeModel() {
         <Environment preset="sunset" />
         <OrbitControls
           enableZoom={false}
+          enablePan={false}
           minPolarAngle={Math.PI / 2.5}
           maxPolarAngle={Math.PI / 2.5}
         />
