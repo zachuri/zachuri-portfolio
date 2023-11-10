@@ -22,11 +22,9 @@ function ModelMesh({ ...props }) {
   });
 
   return (
-    <>
-      <mesh>
-        <primitive object={scene} {...props} />
-      </mesh>
-    </>
+    <mesh>
+      <primitive object={scene} {...props} />
+    </mesh>
   );
 }
 
@@ -53,7 +51,7 @@ export function ThreeModel() {
           minPolarAngle={Math.PI / 2.5}
           maxPolarAngle={Math.PI / 2.5}
         />
-        <axesHelper args={[5]} />
+        {/* <axesHelper args={[5]} /> */}
         <Preload all />
       </Canvas>
     </Suspense>
