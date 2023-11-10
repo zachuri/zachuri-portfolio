@@ -73,7 +73,6 @@ export function MainNav() {
             }}
             onClick={() => {
               setActiveIndex(index);
-              console.log('HELLLO');
             }}
           >
             {item.title}
