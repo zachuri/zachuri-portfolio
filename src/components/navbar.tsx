@@ -10,7 +10,7 @@ const Navbar = () => {
       <header className="sticky top-0 z-40">
         <div className="p-5 flex justify-center items-center">
           <div className="flex flex-row items-center justify-center p-1 gap-x-1 rounded-xl bg-primary">
-            <Button size='sm'>
+            <Button size="sm">
               <Link href="/">
                 <Icons.logo />
               </Link>
