@@ -38,7 +38,7 @@ const Skills = () => {
     <div className="flex flex-col space-y-2 z-20">
       <h1 className="text-2xl md:text-3xl font-bold">Technical Skills</h1>
       {skillCategories.map(category => (
-        <div key={category.type} className="sm:container space-y-2">
+        <div key={category.type} className="space-y-2">
           <h2 className="text-xl md:text-2xl font-semibold">{category.name}</h2>
           <div className="flex flex-wrap gap-2">
             {groupedSkills[category.type] &&
