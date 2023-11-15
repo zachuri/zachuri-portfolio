@@ -23,21 +23,24 @@ const features = [
 
 export default async function Layout({ children }: MainLayoutProps) {
 	return (
-		<div className='flex w-full items-start'>
-			<div className='max-md:hidden w-1/5 mx-auto flex h-screen sticky top-[64px]'>
-				<div className='relative mx-auto text-[2vw] w-full p-4'>
-					<ul>
-						{features.map(feature => {
-							return <li key={feature.id}>{feature.title}</li>;
-						})}
-					</ul>
+		<div>
+			<div className='flex w-full items-start'>
+				<div className='max-md:hidden w-1/5 mx-auto flex h-screen sticky top-[64px]'>
+					<div className='relative mx-auto text-[2vw] w-full p-4'>
+						<ul>
+							{features.map(feature => {
+								return <li key={feature.id}>{feature.title}</li>;
+							})}
+						</ul>
+					</div>
+				</div>
+				<div className='w-4/5'>
+					<div className='w-3/4 p-4'>
+						<PageAnimation>{children}</PageAnimation>
+					</div>
 				</div>
 			</div>
-			<div className='w-4/5'>
-				<div className='w-3/4 p-4'>
-					<PageAnimation>{children}</PageAnimation>
-				</div>
-			</div>
+			<SiteFooter />
 		</div>
 	);
 }
