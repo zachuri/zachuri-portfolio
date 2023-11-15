@@ -33,7 +33,9 @@ const Page: React.FC = () => {
 					</center>
 				</div>
 			</section>
-			<Skills />
+      <section className='mx-auto'>
+        <Skills />
+      </section>
 
 			{/* <Feature features={features} /> */}
 			<Feature />
