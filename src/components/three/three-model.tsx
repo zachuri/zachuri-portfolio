@@ -6,19 +6,15 @@ import {
   Environment,
   OrbitControls,
   Preload,
+  Stage,
   useGLTF,
   useProgress
 } from '@react-three/drei';
-import { Progress } from './ui/progress';
+import { Progress } from '../ui/progress';
+import Model from './model-pmnd';
 
 function ModelMesh({ ...props }) {
   const { scene } = useGLTF('/zachuri-person.glb');
-
-  useFrame(() => {
-    if (scene) {
-      scene.rotation.y += 0.002;
-    }
-  });
 
   return (
     <mesh>
@@ -45,9 +41,25 @@ export function ThreeModel() {
       }
     >
       <Canvas camera={{ fov: 12 }} shadows>
-        <ModelMesh rotation={[0, Math.PI / 8, 0]} scale={0.17} />
+        <Stage
+          // controls={ref}
+          // // preset= {
+          // //   value: 'rembrandt',
+          // //   options: ['rembrandt', 'portrait', 'upfront', 'soft'],
+          // // }
+          // // intensity={value: 1, min: 0, max: 2, step: 0.1, label: 'light intensity'}
+          // contactShadow={true}
+          shadows
+          adjustCamera
+          environment={'city'}
+        >
+          {/* <ModelMesh rotation={[0, Math.PI / 8, 0]} scale={0.17} /> */}
+          <Model rotation={[0, Math.PI / 8, 0]} scale={0.17} />
+        </Stage>
+
         <Environment preset="sunset" />
         <OrbitControls
+          autoRotate={true}
           enableZoom={false}
           enablePan={false}
           minPolarAngle={Math.PI / 2.5}

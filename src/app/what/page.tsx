@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Skills from '@/components/skills';
-import { ThreeModel } from '@/components/three-model';
+import { ThreeModel } from '@/components/three/three-model';
 import {
   Availability,
   Colors,
