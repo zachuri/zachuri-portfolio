@@ -22,7 +22,7 @@ const SectionDiv: React.FC<Props> = ({ id, children, className }) => {
     if (isInView) setInViewFeature(id);
 
     if (!isInView && inViewFeature === id) setInViewFeature(null);
-  }, [isInView, id, setInViewFeature, inViewFeature]);
+  }, [isInView, id, setInViewFeature]);
 
   return (
     <section ref={ref} className={cn('flex flex-col', className)}>
