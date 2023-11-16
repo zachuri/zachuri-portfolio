@@ -6,5 +6,9 @@ export const sections = [
   {
     id: 'work-flow',
     title: 'Work Flow'
+  },
+  {
+    id: 'interests',
+    title: 'Interests'
   }
 ];
