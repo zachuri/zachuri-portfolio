@@ -1,40 +1,29 @@
 import PageAnimation from '@/components/animation/page-animation';
-import MainContainer from '@/components/layout/main-container';
 import { SiteFooter } from '@/components/site-footer';
-import FeatureTitle from '@/components/what/feature-title';
+import SectionTitle from '@/components/what/section-title';
+import { sections } from '@/config/what-sections';
 
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
-const features = [
-  {
-    id: 'technical-skills',
-    title: 'Technical Skills'
-  },
-  {
-    id: 'work-flow',
-    title: 'Work Flow'
-  }
-];
-
 export default async function Layout({ children }: MainLayoutProps) {
   return (
     <div>
-      <div className="flex w-full items-start">
-        <div className="max-md:hidden w-1/5 mx-auto flex h-screen sticky top-[64px]">
-          <div className="relative mx-auto text-[2vw] w-full p-4">
+      <div className="flex w-full min-h-screen md:items-start grow">
+        <div className="w-1/5 sticky top-16 hidden md:block">
+          <div className="relative w-full pl-[8vw]">
             <ul>
-              {features.map(feature => (
-                <FeatureTitle id={feature.id} key={feature.id}>
-                  {feature.title}
-                </FeatureTitle>
+              {sections.map(section => (
+                <SectionTitle id={section.id} key={section.id}>
+                  {section.title}
+                </SectionTitle>
               ))}
             </ul>
           </div>
         </div>
-        <div className="w-4/5">
-          <div className="w-3/4 p-4">
+        <div className="md:w-4/5 relative flex w-full flex-col">
+          <div className="md:w-3/4 flex flex-col justify-center items-center max-md:my-10 max-md:container">
             <PageAnimation>{children}</PageAnimation>
           </div>
         </div>

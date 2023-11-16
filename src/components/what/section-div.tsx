@@ -11,7 +11,7 @@ interface Props {
   id: string;
 }
 
-const Section: React.FC<Props> = ({ id, children, className }) => {
+const SectionDiv: React.FC<Props> = ({ id, children, className }) => {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { margin: '-50% 0px -50% 0px' });
 
@@ -19,7 +19,6 @@ const Section: React.FC<Props> = ({ id, children, className }) => {
   const inViewFeature = useFeatureStore(state => state.inViewFeature);
 
   useEffect(() => {
-    // setinviewelement
     if (isInView) setInViewFeature(id);
 
     if (!isInView && inViewFeature === id) setInViewFeature(null);
@@ -35,4 +34,4 @@ const Section: React.FC<Props> = ({ id, children, className }) => {
   );
 };
 
-export default Section;
+export default SectionDiv;

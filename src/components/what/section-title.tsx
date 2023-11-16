@@ -12,17 +12,14 @@ export type CardProps = {
   id: string;
 };
 
-const FeatureTitle: React.FC<FeatureCardProps> = ({ id, children }) => {
+const SectionTitle: React.FC<FeatureCardProps> = ({ id, children }) => {
   const inViewFeature = useFeatureStore(state => state.inViewFeature);
-
-  console.log(inViewFeature);
-  console.log(id);
 
   return (
     <p
       key={id}
       className={cn(
-        'py-16 font-heading text-5xl transition-colors text-gray-300',
+        'font-heading text-[1.5vw] lg:text-[1.25vw] transition-colors text-gray-300',
         inViewFeature === id ? 'text-black' : 'text-gray-300'
       )}
     >
@@ -31,4 +28,4 @@ const FeatureTitle: React.FC<FeatureCardProps> = ({ id, children }) => {
   );
 };
 
-export default FeatureTitle;
+export default SectionTitle;
