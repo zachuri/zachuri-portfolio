@@ -23,7 +23,7 @@ const FeatureTitle: React.FC<Props> = ({ id, children }) => {
 
     // when exiting out the div
     if (!isInView && inViewFeature === id) setInViewFeature(null);
-  }, [isInView, id, setInViewFeature]);
+  }, [isInView, id, setInViewFeature, inViewFeature]);
 
   return (
     <p
