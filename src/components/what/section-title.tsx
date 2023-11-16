@@ -20,7 +20,7 @@ const SectionTitle: React.FC<FeatureCardProps> = ({ id, children }) => {
       key={id}
       className={cn(
         'font-heading text-[1.5vw] lg:text-[1.25vw] transition-colors text-gray-300',
-        inViewFeature === id ? 'text-black' : 'text-gray-300'
+        inViewFeature === id ? 'text-primary' : 'text-primary/20'
       )}
     >
       {children}

@@ -26,7 +26,7 @@ export const workflowConfig = {
     { name: 'Bash', type: 1 },
 
     // Workflow
-    { name: 'Ryzen 5900x', type: 2 },
+    { name: 'AMD Ryzen 5900x', type: 2 },
     { name: 'GeForce RTX 2060', type: 2 },
     { name: 'MSI MPG B550 GAMING PLUS', type: 2 },
     { name: 'NZXT 850w Gold', type: 2 },
