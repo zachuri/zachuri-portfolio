@@ -1,5 +1,23 @@
 import { SkillConfig } from '@/types';
 
+export type SkillItem = {
+  name: string;
+  type: number;
+};
+
+export type SkillCategory = {
+  type: number;
+  name: string;
+};
+
+export const skillCategories: SkillCategory[] = [
+  { type: 1, name: 'Frontend' },
+  { type: 5, name: 'Backend' },
+  { type: 4, name: 'Database' },
+  { type: 2, name: 'Tools' },
+  { type: 3, name: 'Other' }
+];
+
 export const skillsConfig: SkillConfig = {
   skills: [
     // Languages
@@ -17,6 +35,7 @@ export const skillsConfig: SkillConfig = {
     { name: 'HTML', type: 1 }, // Frontend
     { name: 'CSS', type: 1 }, // Frontend
     { name: 'Tailwind CSS', type: 1 }, // Frontend
+    { name: 'Three.js', type: 1 }, // Frontend
 
     // Backend
     { name: 'RESTful API', type: 5 }, // Backend

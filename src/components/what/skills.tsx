@@ -1,20 +1,10 @@
-import { skillsConfig } from '@/config/skills';
+import { SkillItem, skillCategories, skillsConfig } from '@/config/skills';
 import React from 'react';
-
-type SkillItem = {
-  name: string;
-  type: number;
-};
-
-type SkillCategory = {
-  type: number;
-  name: string;
-};
 
 const Skills = () => {
   const skills: SkillItem[] = skillsConfig.skills;
 
-  // Group skills by type
+  // Group groupedCategories by type
   const groupedSkills: Record<number, SkillItem[]> = skills.reduce(
     (grouped, skill) => {
       if (!grouped[skill.type]) {
@@ -25,14 +15,6 @@ const Skills = () => {
     },
     {} as Record<number, SkillItem[]>
   ); // Use type assertion here
-
-  const skillCategories: SkillCategory[] = [
-    { type: 1, name: 'Frontend' },
-    { type: 5, name: 'Backend' },
-    { type: 4, name: 'Database' },
-    { type: 2, name: 'Tool' },
-    { type: 3, name: 'Other' }
-  ];
 
   return (
     <div className="flex flex-col space-y-2 z-20">

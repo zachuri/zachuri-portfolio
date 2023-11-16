@@ -13,7 +13,7 @@ interface Props {
 
 const SectionDiv: React.FC<Props> = ({ id, children, className }) => {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { margin: '-50% 0px -50% 0px' });
+  const isInView = useInView(ref, { margin: '-45% 0px -45% 0px' });
 
   const setInViewFeature = useFeatureStore(state => state.setInViewFeature);
   const inViewFeature = useFeatureStore(state => state.inViewFeature);
@@ -25,10 +25,7 @@ const SectionDiv: React.FC<Props> = ({ id, children, className }) => {
   }, [isInView, id, setInViewFeature, inViewFeature]);
 
   return (
-    <section
-      ref={ref}
-      className={cn('flex flex-col items-center justify-center', className)}
-    >
+    <section ref={ref} className={cn('flex flex-col', className)}>
       {children}
     </section>
   );
