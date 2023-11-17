@@ -40,7 +40,7 @@ import Image from 'next/image';
 
 import { blurHashToDataURL } from '@/utils/blurhash-to-base64';
 
-export const ImageExtended: FC<IImageExtended> = ({
+export const ImageBlur: FC<IImageExtended> = ({
   src,
   blurDataURL,
   ...props
