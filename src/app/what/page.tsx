@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 import React from 'react';
 import Skills from '@/components/what/skills';
@@ -11,10 +11,9 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion';
-import Image from 'next/image';
 import Interests from '@/components/what/interests';
 
-const Page: React.FC = () => {
+const Page = () => {
   return (
     <div className="max-sm:-mt-10 flex flex-col xl:mx-[10vw]">
       <Section

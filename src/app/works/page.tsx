@@ -1,27 +1,47 @@
-import React from "react";
+import fs from 'fs';
+import glob from 'fast-glob';
+import * as React from 'react';
+import Image from 'next/image';
+import { getPlaiceholder } from 'plaiceholder';
+// import { imageList, imageListItem } from "@plaiceholder/ui";
 
-const Works = () => {
-	return (
-		<div className='flex'>
-			<div className='w-1/5 bg-gray-500 h-screen'>
-				<div className='w-3/4 mx-auto mt-4 bg-white p-4'>
-					{/* Content for the 20% width div */}
-					{/* Using w-3/4 to make the content 75% of the div width */}
-					<p className='text-[3vw]'>Hello</p>
-				</div>
-			</div>
-			<div className='w-4/5 bg-blue-500 h-screen'>
-				{" "}
-				{/* 80% of the screen */}
-				{/* Content for the 80% width div */}
-				<div className='w-3/4 mt-4 bg-white p-4'>
-					{/* Content for the 20% width div */}
-					{/* Using w-3/4 to make the content 75% of the div width */}
-					<p className='text-[3vw]'>Hello</p>
-				</div>
-			</div>
-		</div>
-	);
-};
+const getImages = async (pattern: string) =>
+  Promise.all(
+    glob.sync(pattern).map(async file => {
+      const src = file.replace('./public', '');
+      const buffer = await fs.promises.readFile(file);
 
-export default Works;
+      const plaiceholder = await getPlaiceholder(buffer);
+
+      return { ...plaiceholder, img: { src } };
+    })
+  );
+
+export default async function Page() {
+  const images = await getImages('./public/assets/interests/*.{jpg,png,jpeg}');
+
+  return (
+    <div className="flex flex-col justify-center items-center h-screen ">
+      <div className="flex flex-col item-center justify-center w-[500px] h-[700px] absolute ">
+        <ul
+          role="list"
+          className={'grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8'}
+        >
+          {images.map(({ base64, img }) => (
+            <li key={img.src} className={'relative block overflow-hidden h-64'}>
+              <Image
+                {...img}
+                alt="Paint Splashes"
+                title="Photo from Unsplash"
+                blurDataURL={base64}
+                placeholder="blur"
+                layout="fill"
+                objectFit="cover"
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}

@@ -1,111 +1,39 @@
-'use client';
+import fs from 'fs';
+import glob from 'fast-glob';
+import * as React from 'react';
+import Image from 'next/image';
+import { getPlaiceholder } from 'plaiceholder';
+// import { imageList, imageListItem } from "@plaiceholder/ui";
 
-import React from 'react';
-import { ImageBlur } from '@/utils/image-blur';
+const getImages = async (pattern: string) =>
+  Promise.all(
+    glob.sync(pattern).map(async file => {
+      const src = file.replace('./public', '');
+      const buffer = await fs.promises.readFile(file);
 
-const Interests = () => {
-  return (
-    <>
-      <h1 className="text-2xl md:text-3xl font-bold pb-5">Interests</h1>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="grid gap-4">
-          <div>
-            {/* Use Blurhash component for image preview */}
-            <ImageBlur
-              className="h-auto max-w-full rounded-sm"
-              src="/assets/keyboards/jp-02.jpeg"
-              alt="jp-02"
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto'
-              }}
-              width={500}
-              height={300}
-              blurDataURL="/assets/keyboards/jp-02.jpeg"
-            />
-          </div>
-          <div>
-            <ImageBlur
-              className="h-auto max-w-full rounded-sm"
-              src="/assets/keyboards/tofu60.jpeg"
-              alt="tofu-60"
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto'
-              }}
-              width={500}
-              height={300}
-              blurDataURL="/assets/keyboards/tofu60.jpeg"
-            />
-          </div>
-          <div>
-            <ImageBlur
-              className="h-auto max-w-full rounded-sm"
-              src="https://novelkeys.com/cdn/shop/files/TypeK_16x9-4_1024x1024@2x.jpg?v=1691498876"
-              alt="tofu-60"
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto'
-              }}
-              width={500}
-              height={300}
-              blurDataURL="https://novelkeys.com/cdn/shop/files/TypeK_16x9-4_1024x1024@2x.jpg?v=1691498876"
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <ImageBlur
-              className="h-auto max-w-full rounded-sm"
-              src="https://ssb.wiki.gallery/images/thumb/1/16/Marth_Idle_Pose_Melee.gif/200px-Marth_Idle_Pose_Melee.gif"
-              alt="jp-02"
-              blurDataURL="https://ssb.wiki.gallery/images/thumb/1/16/Marth_Idle_Pose_Melee.gif/200px-Marth_Idle_Pose_Melee.gif"
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto'
-              }}
-              width={500}
-              height={300}
-            />
-          </div>
-          <div>
-            <ImageBlur
-              className="h-auto max-w-full rounded-sm"
-              src="/assets/interests/samurai-champloo.jpg"
-              alt="samurai champloo"
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto'
-              }}
-              width={500}
-              height={300}
-              blurDataURL="/assets/interests/samurai-champloo.jpg"
-            />
-          </div>
-          <div>
-            <ImageBlur
-              className="h-auto max-w-full rounded-sm"
-              src="/assets/interests/cowboy-bebop.jpg"
-              alt="cowboy bebop"
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto'
-              }}
-              width={500}
-              height={300}
-              blurDataURL="/assets/interests/cowboy-bebop.jpg"
-            />
-          </div>
-        </div>
-      </div>
-    </>
+      const plaiceholder = await getPlaiceholder(buffer);
+
+      return { ...plaiceholder, img: { src } };
+    })
   );
-};
 
-export default Interests;
+export default async function Page() {
+  const images = await getImages('./public/assets/interests/*.{jpg,png,jpeg}');
+
+  return (
+    <ul role="list" className={'grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8'}>
+      {images.map(({ base64, img }) => (
+        <li key={img.src} className={'relative block overflow-hidden'}>
+          <Image
+            {...img}
+            alt="Paint Splashes"
+            title="Photo from Unsplash"
+            blurDataURL={base64}
+            placeholder="blur"
+            fill
+          />
+        </li>
+      ))}
+    </ul>
+  );
+}
