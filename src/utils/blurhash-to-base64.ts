@@ -1,25 +1,41 @@
+
 import { decodeBlurHash } from "fast-blurhash";
 
-export function blurHashToDataURL(
-  hash: string | undefined
-): string | undefined {
-  if (!hash) return undefined;
+export function blurHashToDataURL(hash: string | undefined): string | undefined {
+  try {
+    if (!hash) return undefined;
 
-  const pixels = decodeBlurHash(hash, 32, 32);
-  const dataURL = parsePixels(pixels, 32, 32);
+    const pixels = decodeBlurHash(hash, 32, 32);
+    const dataURL = parsePixels(pixels, 32, 32);
+
+    return dataURL;
+  } catch (error) {
+    console.error('Error converting BlurHash to Data URL:', error);
+    return undefined;
+  }
+}
+
+function parsePixels(pixels: Uint8ClampedArray, width: number, height: number): string {
+  const pixelsString = pixelsToString(pixels);
+  const pngString = generatePng(width, height, pixelsString);
+  const dataURL = encodePngToDataURL(pngString);
+
   return dataURL;
 }
 
-function parsePixels(pixels: Uint8ClampedArray, width: number, height: number) {
-  const pixelsString = Array.from(pixels)
+function pixelsToString(pixels: Uint8ClampedArray): string {
+  return Array.from(pixels)
     .map((byte) => String.fromCharCode(byte))
-    .join("");
-  const pngString = generatePng(width, height, pixelsString);
-  const dataURL =
-    typeof Buffer !== "undefined"
-      ? Buffer.from(getPngArray(pngString)).toString("base64")
+    .join('');
+}
+
+function encodePngToDataURL(pngString: string): string {
+  const base64String =
+    typeof Buffer !== 'undefined'
+      ? Buffer.from(getPngArray(pngString)).toString('base64')
       : btoa(pngString);
-  return "data:image/png;base64," + dataURL;
+
+  return 'data:image/png;base64,' + base64String;
 }
 
 function getPngArray(pngString: string) {
