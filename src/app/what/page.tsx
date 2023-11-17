@@ -19,16 +19,14 @@ const Page: React.FC = () => {
     <div className="max-sm:-mt-10 flex flex-col lg:mx-[10vw]">
       <Section
         id={'technical-skills'}
-        className="flex items-center justify-center"
+        className="flex items-center justify-center pb-32"
       >
         <div className="w-[80%] sm:-mb-52 -mb-32 z-10">
           <center className="h-[400px] sm:h-[600px] flex items-center justify-center">
             <ThreeModel />
           </center>
         </div>
-      </Section>
 
-      <Section id={'technical-skills'} className="pb-32">
         <Skills />
       </Section>
 
