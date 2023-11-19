@@ -1,7 +1,7 @@
 import fs from 'fs';
 import glob from 'fast-glob';
 import * as React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 // import { imageList, imageListItem } from "@plaiceholder/ui";
 
@@ -21,26 +21,23 @@ export default async function Page() {
   const images = await getImages('./public/assets/interests/*.{jpg,png,jpeg}');
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen ">
-      <div className="flex flex-col item-center justify-center w-[500px] h-[700px] absolute ">
-        <ul
-          role="list"
-          className={'grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8'}
-        >
-          {images.map(({ base64, img }) => (
-            <li key={img.src} className={'relative block overflow-hidden h-64'}>
-              <Image
-                {...img}
-                alt="Paint Splashes"
-                title="Photo from Unsplash"
-                blurDataURL={base64}
-                placeholder="blur"
-                layout="fill"
-                objectFit="cover"
-              />
-            </li>
-          ))}
-        </ul>
+    <div className="flex items-center justify-center">
+      <div className="grid grid-cols-2 gap-4 mt-8">
+        {images.map(({ base64, img }) => (
+          <div key={img.src} className="relative h-64 w-44">
+            <Image
+              src={img.src}
+              alt="Paint Splashes"
+              title="Photo from Unsplash"
+              placeholder="blur"
+              blurDataURL={base64}
+              layout="fill"
+              objectFit="cover"
+              className="object-cover" // Equivalent to the old objectFit prop
+              style={{ aspectRatio: '5/7' }} // Set your desired aspect ratio
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

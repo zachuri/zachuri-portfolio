@@ -1,7 +1,7 @@
 import fs from 'fs';
 import glob from 'fast-glob';
 import * as React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { getPlaiceholder } from 'plaiceholder';
 // import { imageList, imageListItem } from "@plaiceholder/ui";
 
@@ -21,19 +21,23 @@ export default async function Page() {
   const images = await getImages('./public/assets/interests/*.{jpg,png,jpeg}');
 
   return (
-    <ul role="list" className={'grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8'}>
-      {images.map(({ base64, img }) => (
-        <li key={img.src} className={'relative block overflow-hidden'}>
-          <Image
-            {...img}
-            alt="Paint Splashes"
-            title="Photo from Unsplash"
-            blurDataURL={base64}
-            placeholder="blur"
-            fill
-          />
-        </li>
-      ))}
-    </ul>
+    <div className="flex justify-center items-center w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8">
+        {images.map(({ base64, img }) => (
+          <div key={img.src} className="relative w-[200px] h-[200px]">
+            <Image
+              src={img.src}
+              alt="Paint Splashes"
+              title="Photo from Unsplash"
+              placeholder="blur"
+              blurDataURL={base64}
+              layout="fill"
+              objectFit="cover"
+              className="object-cover relative" // Equivalent to the old objectFit prop
+            />
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
