@@ -15,7 +15,7 @@ import Interests from '@/components/what/interests';
 
 const Page = () => {
   return (
-    <div className="max-sm:-mt-10 flex flex-col xl:mx-[10vw]">
+    <div className="max-sm:-mt-10 flex flex-col lg:mx-[5vw] xl:mx-[10vw]">
       <Section
         id={'technical-skills'}
         className="flex items-center justify-center pb-32"
