@@ -21,20 +21,23 @@ export default async function Page() {
   const images = await getImages('./public/assets/interests/*.{jpg,png,jpeg}');
 
   return (
-    <div className="flex items-center justify-center">
-      <div className="grid grid-cols-2 gap-4 mt-8">
-        {images.map(({ base64, img }) => (
-          <div key={img.src} className="relative h-64 w-44">
+    <div className={'mt-[60px] grid py-10 md:mt-[82.5px] w-full'}>
+      <div className="grid grid-cols-2 gap-2 px-10 md:grid-cols-3 lg:grid-cols-4">
+        <h1 className="col-span-2 text-4xl uppercase text-primary max-md:text-3xl md:col-span-3 lg:col-span-4">
+          Projects
+        </h1>
+        {images.map(({ base64, img }, index) => (
+          <div key={index} className="relative aspect-square h-auto">
             <Image
               src={img.src}
-              alt="Paint Splashes"
-              title="Photo from Unsplash"
+              alt={img.src}
+              sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
               placeholder="blur"
               blurDataURL={base64}
               layout="fill"
               objectFit="cover"
-              className="object-cover" // Equivalent to the old objectFit prop
-              style={{ aspectRatio: '5/7' }} // Set your desired aspect ratio
             />
           </div>
         ))}
