@@ -1,34 +1,40 @@
-"use client";
+'use client';
 
-import { useInView } from "framer-motion";
-import React, { useEffect, useRef } from "react";
-import { useFeatureStore } from "../store/feature";
-import { cn } from "@/lib/utils";
+import { useInView } from 'framer-motion';
+// import { useInView } from 'react-intersection-observer';
+import React, { useEffect, useRef } from 'react';
+import { useFeatureStore } from '../store/feature';
+import { cn } from '@/lib/utils';
 
 interface Props {
-	className?: string;
-	children: React.ReactNode;
-	id: string;
+  className?: string;
+  children: React.ReactNode;
+  id: string;
 }
 
 const SectionDiv: React.FC<Props> = ({ id, children, className }) => {
-	const ref = useRef<HTMLElement>(null);
-	const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
+  const ref = useRef<HTMLElement>(null);
+  const inView = useInView(ref, { margin: '-50% 0px -50% 0px' });
 
-	const setInViewFeature = useFeatureStore(state => state.setInViewFeature);
-	const inViewFeature = useFeatureStore(state => state.inViewFeature);
+  // const { ref, inView } = useInView({
+  //   threshold: 0.9 // Trigger when element is 10% visible
+  //   // triggerOnce: true // Only trigger once
+  // });
 
-	useEffect(() => {
-		if (isInView) setInViewFeature(id);
+  const setInViewFeature = useFeatureStore(state => state.setInViewFeature);
+  const inViewFeature = useFeatureStore(state => state.inViewFeature);
 
-		if (!isInView && inViewFeature === id) setInViewFeature(null);
-	}, [isInView, id, setInViewFeature, inViewFeature]);
+  useEffect(() => {
+    if (inView) setInViewFeature(id);
 
-	return (
-		<section ref={ref} className={cn("flex flex-col", className)}>
-			{children}
-		</section>
-	);
+    if (!inView && inViewFeature === id) setInViewFeature(null);
+  }, [inView, id, setInViewFeature, inViewFeature]);
+
+  return (
+    <section ref={ref} className={cn('flex flex-col', className)}>
+      {children}
+    </section>
+  );
 };
 
 export default SectionDiv;
