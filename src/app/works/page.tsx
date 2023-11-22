@@ -26,12 +26,12 @@ export default async function Page() {
   return (
     <div className={'mt-[60px] grid py-10 md:mt-[82.5px] w-full'}>
       <div className="grid grid-cols-2 gap-10 px-10 md:grid-cols-3">
-        <h1 className="col-span-2 text-4xl uppercase text-primary max-md:text-3xl md:col-span-3">
+        <h1 className="col-span-2 text-4xl uppercase text-primary max-md:text-3xl md:col-span-3 font-medium">
           Projects
         </h1>
         {images.map(({ base64, img }, index) => (
           <div key={img.id} className="space-y-2">
-            <div className="relative aspect-square h-auto border ">
+            <div className="relative aspect-square h-auto border-[1px] rounded-md ">
               <Image
                 src={img.src}
                 alt={img.src}
@@ -44,8 +44,10 @@ export default async function Page() {
                 objectFit="cover"
               />
             </div>
-            <h2 className="text-md lg:text-2xl font-bold">{img.title}</h2>
-            <p className="hidden md:block text-xs lg:text-md">{img.desc}</p>
+            <h2 className="text-md lg:text-2xl font-medium">{img.title}</h2>
+            <p className="hidden md:block max-xl:text-xs lg:text-md">
+              {img.desc}
+            </p>
           </div>
         ))}
       </div>
