@@ -45,7 +45,7 @@ export const worksConfig: WorkConfig = {
       id: 'ecommerce-movie',
       title: 'Ecommerce Movie',
       desc: 'Full Stack ecommerce movie shop where users are able to buy movies',
-      src: '/assets/projects/ecommerce-movie.png'
+      src: '/assets/projects/ecommerce-movie-1.png'
     },
     {
       id: 'diversity-hotline',
