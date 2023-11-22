@@ -42,6 +42,7 @@ export default async function Page() {
                 blurDataURL={base64}
                 layout="fill"
                 objectFit="cover"
+                className="rounded-md"
               />
             </div>
             <h2 className="text-md lg:text-2xl font-medium">{img.title}</h2>
