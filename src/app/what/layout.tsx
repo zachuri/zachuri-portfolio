@@ -12,7 +12,7 @@ export default async function Layout({ children }: MainLayoutProps) {
     <div>
       <div className="flex w-full min-h-screen md:items-start grow">
         <div className="w-1/5 sticky top-16 hidden md:block">
-          <div className="relative w-full pl-[8vw]">
+          <div className="relative w-full flex flex-col items-center justify-center lg:pl-[8vw]">
             <ul>
               {sections.map(section => (
                 <SectionTitle id={section.id} key={section.id}>

@@ -33,7 +33,9 @@ const Page = () => {
         <Workflow />
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
-            <AccordionTrigger>Why?</AccordionTrigger>
+            <AccordionTrigger className="uppercase font-semibold">
+              Why?
+            </AccordionTrigger>
             <AccordionContent className="flex flex-col space-y-2">
               <span>
                 For most of my work flow it really depends on a keyboard. When I

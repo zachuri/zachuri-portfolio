@@ -35,6 +35,7 @@ export const skillsConfig: SkillConfig = {
     { name: 'HTML', type: 1 }, // Frontend
     { name: 'CSS', type: 1 }, // Frontend
     { name: 'Tailwind CSS', type: 1 }, // Frontend
+    { name: 'Framer Motion', type: 1 }, // Frontend
     { name: 'Three.js', type: 1 }, // Frontend
 
     // Backend

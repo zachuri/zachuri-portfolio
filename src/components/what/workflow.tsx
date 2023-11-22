@@ -22,11 +22,13 @@ const Workflow = () => {
 
   return (
     <div className="flex flex-col space-y-2 z-20">
-      <h1 className="text-2xl md:text-3xl font-bold">Workflow</h1>
+      <h1 className="text-4xl max-md:text-3xl uppercase font-medium">
+        Workflow
+      </h1>
       {workflowCategories.map(category => (
         <div key={category.type} className="space-y-2">
-          <h2 className="text-xl md:text-2xl font-semibold">{category.name}</h2>
-          <div className="flex flex-wrap gap-2">
+          <h2 className="text-lg md:text-xl uppercase">{category.name}</h2>
+          <div className="flex flex-wrap gap-2 pb-2">
             {groupedCategories[category.type] &&
               groupedCategories[category.type].map((skill, index) => (
                 <div
