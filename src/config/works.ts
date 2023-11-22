@@ -43,7 +43,7 @@ export const worksConfig: WorkConfig = {
     },
     {
       id: 'ecommerce-movie',
-      title: 'Ecommerce Movie',
+      title: 'Ecommerce Movie Shop',
       desc: 'Full Stack ecommerce movie shop where users are able to buy movies',
       src: '/assets/projects/ecommerce-movie-1.png'
     },
