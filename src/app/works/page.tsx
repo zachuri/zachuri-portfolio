@@ -26,9 +26,6 @@ export default async function Page() {
   return (
     <div className={'mt-[30px] grid py-10 md:mt-[82.5px] w-full'}>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-10 px-10 md:grid-cols-3 xl:grid-cols-4">
-        <h1 className="text-4xl uppercase text-primary max-md:text-3xl sm:col-span-2 md:col-span-3 xl:col-span-4 font-medium">
-          Projects
-        </h1>
         {images.map(({ base64, img }, index) => (
           <div key={img.id} className="space-y-2 mb-10">
             <div className="relative aspect-square h-auto border-[1px] rounded-sm ">
