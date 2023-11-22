@@ -22,7 +22,7 @@ const Workflow = () => {
 
   return (
     <div className="flex flex-col space-y-2 z-20">
-      <h1 className="text-4xl max-md:text-3xl uppercase font-medium">
+      <h1 className="text-3xl max-md:text-2xl uppercase font-medium">
         Workflow
       </h1>
       {workflowCategories.map(category => (

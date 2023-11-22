@@ -21,11 +21,11 @@ export default async function Page() {
 
   return (
     <>
-      <h1 className="text-4xl max-md:text-3xl font-medium uppercase">
+      <h1 className="text-3xl max-md:text-2xl font-medium uppercase">
         Interests
       </h1>
-      <div className={'mt-[60px] grid place-items-center py-10 md:mt-[82.5px]'}>
-        <div className="grid w-full grid-cols-2 gap-6 px-10 lg:grid-cols-3">
+      <div className={'grid place-items-center pt-5 '}>
+        <div className="grid w-full grid-cols-2 gap-6 px-5 lg:grid-cols-3">
           {images.map(({ base64, img }, index) => (
             <div key={index} className="relative aspect-square h-auto">
               <Image

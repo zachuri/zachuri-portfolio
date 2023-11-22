@@ -88,7 +88,7 @@ const Page = () => {
         </Accordion>
       </Section>
 
-      <Section id={'interests'} className="pb-32">
+      <Section id={'interests'} className="pb-44">
         <Interests />
       </Section>
     </div>
