@@ -14,25 +14,25 @@ export const worksConfig: WorkConfig = {
     {
       id: 'befit-v2',
       title: 'BeFit-v2',
-      desc: 'Enhanced Fitness Tracker: Building with Next.js and Supabase (Version 2) - In Progress',
+      desc: 'Enhanced Fitness Tracker: Building with Next.js and Supabase (Version 2)',
       src: '/assets/projects/befit-v2.png'
     },
     {
       id: 'next13-supabase-stripe',
-      title: 'Next.js 13 + Supabase + Stripe: SaaS Starter',
-      desc: 'A boilerplate project that combines Next 13, Supabase, and Stripe to create a foundation for building SaaS applications',
+      title: 'Next 13 + Supabase + Stripe: SaaS Starter',
+      desc: 'A boilerplate template to create a foundation for building SaaS applications',
       src: '/assets/projects/next13-supabase-stripe.png'
     },
     {
       id: 'arceldesign',
       title: 'ArcelDesign, Inc.',
-      desc: 'Redesigned key elements of clients website, such as the landing page and navigation menu',
+      desc: 'Redesigned and implemented key elements to clients website',
       src: '/assets/projects/arceldesign.png'
     },
     {
       id: 'be-fit',
       title: 'BeFit',
-      desc: 'Full Stack Fitness tracker that allows users to keep track of their diet, weight, and workouts',
+      desc: 'Full Stack fitness tracker that allows users to keep track of their diet, weight, and workouts',
       src: '/assets/projects/be-fit.png'
     },
     {
