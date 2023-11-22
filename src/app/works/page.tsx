@@ -25,7 +25,7 @@ export default async function Page() {
 
   return (
     <div className={'mt-[60px] grid py-10 md:mt-[82.5px] w-full'}>
-      <div className="grid grid-cols-2 gap-10 px-10 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 md:gap-5 lg:gap-10 px-10 md:grid-cols-3">
         <h1 className="col-span-2 text-4xl uppercase text-primary max-md:text-3xl md:col-span-3 font-medium">
           Projects
         </h1>
