@@ -38,3 +38,4 @@ const SectionDiv: React.FC<Props> = ({ id, children, className }) => {
 };
 
 export default SectionDiv;
+
