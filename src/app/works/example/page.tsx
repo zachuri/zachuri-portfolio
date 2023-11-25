@@ -6,30 +6,29 @@ const deatilConfig: DetailProps = {
   badges: [
     {
       badgeName: 'source',
-      detail: [
-        {
-          title: 'github.com/zachuri/BeFit-v2',
-          href: 'https://github.com/zachuri/BeFit-v2'
-        }
-      ]
+      detail: {
+        title: 'github.com/zachuri/BeFit-v2',
+        href: 'https://github.com/zachuri/BeFit-v2'
+      }
     },
     {
       badgeName: 'website',
-      detail: [
-        {
-          title: 'befit-v2.zachuri.com',
-          href: 'https://befit-v2.zachuri.com/'
-        }
-      ]
+      detail: {
+        title: 'befit-v2.zachuri.com',
+        href: 'https://befit-v2.zachuri.com/'
+      }
     },
     {
-      badgeName: 'website',
-      detail: [
-        {
-          title: 'befit-v2.zachuri.com',
-          href: 'https://befit-v2.zachuri.com/'
-        }
-      ]
+      badgeName: 'front-end',
+      detail: {
+        technologies: ['Next 13', 'React.js']
+      }
+    },
+    {
+      badgeName: 'back-end',
+      detail: {
+        technologies: ['Next 13', 'React.js']
+      }
     }
   ]
 };
