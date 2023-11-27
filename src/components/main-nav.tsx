@@ -23,7 +23,8 @@ export function MainNav() {
   const [activeIndex, setActiveIndex] = useState<number>(defaultActiveIndex);
 
   useEffect(() => {
-    const defaultActiveIndex = items.findIndex(item => item.href === path);
+    const parentPath = path.split('/').slice(0, 2).join('/');
+    const defaultActiveIndex = items.findIndex(item => item.href === parentPath);
     setActiveIndex(defaultActiveIndex);
   }, [path]);
 
