@@ -35,10 +35,10 @@ const deatilConfig: DetailProps = {
 
 const Example = () => {
   return (
-    <>
+    <section className="container space-y-6">
       <MastHead id={'Example'} title={'Example'} description={''} />
       <Details badges={deatilConfig.badges} />
-    </>
+    </section>
   );
 };
 
