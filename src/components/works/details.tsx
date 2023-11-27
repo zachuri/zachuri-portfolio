@@ -1,6 +1,8 @@
 import { BadgeCent } from 'lucide-react';
 import React from 'react';
 import { Badge } from '../ui/badge';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 type Detail = {
   title?: string;
@@ -17,7 +19,7 @@ export type DetailProps = {
 
 const Details: React.FC<DetailProps> = ({ badges }) => {
   return (
-    <div>
+    <div className="space-y-2">
       {badges.map((badge, index) => (
         <section key={index} className="grid grid-cols-6 space-x-5">
           <Badge className="flex items-center justify-center col-span-1 capitalize">
@@ -25,7 +27,9 @@ const Details: React.FC<DetailProps> = ({ badges }) => {
           </Badge>
           <div className="col-span-5">
             {badge.detail.title && badge.detail.href && (
-              <a href={badge.detail.href}>{badge.detail.title}</a>
+              <Button variant={'link'} className={'-px-4 -py-2 -h-9'}>
+                <Link href={badge.detail.href}>{badge.detail.title}</Link>
+              </Button>
             )}
             {badge.detail.technologies &&
               badge.detail.technologies.length > 0 && (
