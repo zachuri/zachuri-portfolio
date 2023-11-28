@@ -1,4 +1,4 @@
-# Zachuri's Portfolio
+# Zachuri's Portfolio OLD
 
 [https://zachuri.vercel.app/](https://zachuri.vercel.app/)
 
@@ -9,6 +9,7 @@
 - Framer Motion
 
 ## Project structure
+
 ```
 $PROJECT_ROOT
 │   # Page files
