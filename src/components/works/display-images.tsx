@@ -20,7 +20,7 @@ const DisplayImages: React.FC<ImageProp> = ({ images }) => {
             alt={img.src}
             placeholder="blur"
             blurDataURL={base64}
-            layout="responsive"
+            // layout="responsive"
             width={1920}
             height={1080}
             className="rounded-sm"
