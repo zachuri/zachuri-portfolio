@@ -3,7 +3,7 @@ import Image from 'next/legacy/image';
 import { getImagesInterests } from '@/utils/get-images';
 
 export default async function Page() {
-  const images = await getImagesInterests('./public/assets/interests/*.{jpg,png,jpeg}');
+  const images = await getImagesInterests();
 
   return (
     <>

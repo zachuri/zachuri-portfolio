@@ -3,14 +3,15 @@ import { getPlaiceholder } from 'plaiceholder';
 import fs from 'fs';
 import { WorkItem } from '@/config/works';
 
-export const getImagesPattern = (id: string) => {
-  const pattern = `./public/assets/projects/${id}-*.{jpg,png,jpeg}`;
-  return pattern;
+export const getImagesPattern = (type: string, id?: string) => {
+  return type === 'works'
+    ? `./public/assets/projects/${id}-*.{jpg,png,jpeg}` // gets all files with id
+    : './public/assets/interests/*.{jpg,png,jpeg}'; // gets all the images in interests
 };
 
 export const getImagesProject = async (pattern: string) =>
   Promise.all(
-    glob.sync(getImagesPattern(pattern)).map(async file => {
+    glob.sync(getImagesPattern('works', pattern)).map(async file => {
       const src = file.replace('./public', '');
       const buffer = await fs.promises.readFile(file);
 
@@ -36,9 +37,9 @@ export const getImagesWorks = async (works: WorkItem[]) =>
     })
   );
 
-export const getImagesInterests = async (pattern: string) =>
+export const getImagesInterests = async () =>
   Promise.all(
-    glob.sync(pattern).map(async file => {
+    glob.sync(getImagesPattern('interest')).map(async file => {
       const src = file.replace('./public', '');
       const buffer = await fs.promises.readFile(file);
 
