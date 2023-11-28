@@ -25,7 +25,7 @@ export default async function Page() {
   const images = await getImages(worksConfig.works);
 
   return (
-    <div className={'mt-[30px] grid py-10 md:mt-[82.5px] w-full'}>
+    <div className={'grid py-10 w-full'}>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-10 px-10 md:grid-cols-3 xl:grid-cols-4">
         {images.map(({ base64, img }) => (
           <Link key={img.id} href={`works/${img.id}`}>

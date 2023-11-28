@@ -21,11 +21,11 @@ const Details: React.FC<DetailProps> = ({ badges }) => {
   return (
     <div className="space-y-2">
       {badges.map((badge, index) => (
-        <section key={index} className="grid grid-cols-5 space-x-5">
-          <Badge className="flex items-center justify-center col-span-1 capitalize text-xs">
+        <section key={index} className="flex flex-row space-x-5">
+          <Badge className="flex col-span-1 capitalize text-xs">
             {badge.badgeName}
           </Badge>
-          <div className="col-span-4">
+          <div className="">
             {badge.detail.title && badge.detail.href && (
               <Button variant={'link'} className={'-px-4 -py-2 -h-9'}>
                 <Link href={badge.detail.href}>{badge.detail.title}</Link>
