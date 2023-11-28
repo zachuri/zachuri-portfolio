@@ -1,6 +1,10 @@
 import Details, { DetailProps } from '@/components/works/details';
+import DisplayImages from '@/components/works/display-images';
 import MastHead, { MastHeadProps } from '@/components/works/mast-head';
+import glob from 'fast-glob';
+import { getPlaiceholder } from 'plaiceholder';
 import React from 'react';
+import fs from 'fs';
 
 const detailConfig: DetailProps = {
   badges: [
@@ -21,13 +25,19 @@ const detailConfig: DetailProps = {
     {
       badgeName: 'front-end',
       detail: {
-        technologies: ['Next 13', 'React.js']
+        technologies: [
+          'Next 13',
+          'React.js',
+          'Shadcn UI',
+          'Tailwind CSS',
+          'TypeScript'
+        ]
       }
     },
     {
       badgeName: 'back-end',
       detail: {
-        technologies: ['Next 13', 'React.js']
+        technologies: ['Supabase', 'Postgres']
       }
     }
   ]
@@ -45,7 +55,25 @@ const mastheadConfig: MastHeadProps = {
   and a commitment to helping others realize their fitness potential.'
 };
 
-const BefitV2 = () => {
+const getImages = async (pattern: string) =>
+  Promise.all(
+    glob.sync(pattern).map(async file => {
+      const src = file.replace('./public', '');
+      const buffer = await fs.promises.readFile(file);
+
+      const plaiceholder = await getPlaiceholder(buffer);
+
+      return { ...plaiceholder, img: { src } };
+    })
+  );
+
+const BefitV2 = async () => {
+  const id = 'befit-v2';
+
+  const images = await getImages(
+    `./public/assets/projects/${id}-*.{jpg,png,jpeg}`
+  );
+
   return (
     <section className="container space-y-5 lg:space-y-10">
       <MastHead
@@ -53,6 +81,7 @@ const BefitV2 = () => {
         description={mastheadConfig.description}
       />
       <Details badges={detailConfig.badges} />
+      <DisplayImages images={images}/>
     </section>
   );
 };
