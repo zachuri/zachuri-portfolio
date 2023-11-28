@@ -56,7 +56,7 @@ const mastheadConfig: MastHeadProps = {
   `
 };
 
-const BefitV2 = async () => {
+const Page = async () => {
   const images = await getImagesProject('next13-supabase-stripe');
 
   return (
@@ -71,4 +71,4 @@ const BefitV2 = async () => {
   );
 };
 
-export default BefitV2;
+export default Page;

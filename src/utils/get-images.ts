@@ -5,7 +5,7 @@ import { WorkItem } from '@/config/works';
 
 export const getImagesPattern = (type: string, id?: string) => {
   return type === 'works'
-    ? `./public/assets/projects/${id}-*.{jpg,png,jpeg}` // gets all files with id
+    ? `./public/assets/projects/${id}*.{jpg,png,jpeg}` // gets all files with id
     : './public/assets/interests/*.{jpg,png,jpeg}'; // gets all the images in interests
 };
 
