@@ -3,12 +3,11 @@
 import MainContact from '@/components/main-contact';
 import { Button } from '@/components/ui/button';
 import { contactConfig } from '@/config/contact';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <section
-      className="container space-y-6 lg:space-y-14 md:py-12 lg:py-24 "
-    >
+    <section className="container space-y-6 lg:space-y-14 md:py-12 lg:py-24 ">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center">
         <h2 className="font-heading font-semibold leading-[1.1] text-6xl">
           Zachary Punsalang
@@ -19,9 +18,11 @@ export default function Home() {
       </div>
 
       <div className="flex flex-row justify-center items-center space-x-4">
-        <Button className="p-6">My Portfolio</Button>
+        <Button className="p-6">
+          <Link href="/works">My Portfolio</Link>
+        </Button>
         <Button className="p-6" variant={'secondary'}>
-          About me
+          <Link href="/what">About Me</Link>
         </Button>
       </div>
 
