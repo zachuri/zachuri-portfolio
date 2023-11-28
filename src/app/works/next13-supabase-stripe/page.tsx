@@ -1,10 +1,8 @@
 import Details, { DetailProps } from '@/components/works/details';
 import DisplayImages from '@/components/works/display-images';
 import MastHead, { MastHeadProps } from '@/components/works/mast-head';
-import glob from 'fast-glob';
-import { getPlaiceholder } from 'plaiceholder';
+import { getImagesProject } from '@/utils/get-images';
 import React from 'react';
-import fs from 'fs';
 
 const detailConfig: DetailProps = {
   badges: [
@@ -45,8 +43,7 @@ const detailConfig: DetailProps = {
 
 const mastheadConfig: MastHeadProps = {
   title: 'BeFit V2',
-  description:
-    `
+  description: `
     Our fitness journey began as a personal endeavor, aiding my brother and me in our quest for improved fitness. \
     However, our vision soon expanded: we aimed to assist both beginners and advanced individuals in their pursuit of fitness excellence. \
     Our focus encompassed crucial elements such as diet, weight management, and tailored workout regimens. \n
@@ -57,22 +54,10 @@ const mastheadConfig: MastHeadProps = {
   `
 };
 
-const getImages = async (pattern: string) =>
-  Promise.all(
-    glob.sync(pattern).map(async file => {
-      const src = file.replace('./public', '');
-      const buffer = await fs.promises.readFile(file);
-
-      const plaiceholder = await getPlaiceholder(buffer);
-
-      return { ...plaiceholder, img: { src } };
-    })
-  );
-
 const BefitV2 = async () => {
   const id = 'befit-v2';
 
-  const images = await getImages(
+  const images = await getImagesProject(
     `./public/assets/projects/${id}-*.{jpg,png,jpeg}`
   );
 

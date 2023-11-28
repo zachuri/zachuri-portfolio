@@ -1,23 +1,9 @@
-import fs from 'fs';
-import glob from 'fast-glob';
 import * as React from 'react';
 import Image from 'next/legacy/image';
-import { getPlaiceholder } from 'plaiceholder';
-
-const getImages = async (pattern: string) =>
-  Promise.all(
-    glob.sync(pattern).map(async file => {
-      const src = file.replace('./public', '');
-      const buffer = await fs.promises.readFile(file);
-
-      const plaiceholder = await getPlaiceholder(buffer);
-
-      return { ...plaiceholder, img: { src } };
-    })
-  );
+import { getImagesInterests } from '@/utils/get-images';
 
 export default async function Page() {
-  const images = await getImages('./public/assets/interests/*.{jpg,png,jpeg}');
+  const images = await getImagesInterests('./public/assets/interests/*.{jpg,png,jpeg}');
 
   return (
     <>

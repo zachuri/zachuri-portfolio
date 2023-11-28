@@ -9,7 +9,11 @@ const MastHead: React.FC<MastHeadProps> = ({ title, description }) => {
   return (
     <section className="space-y-5">
       <h1 className="text-3xl font-medium">{title}</h1>
-      <p>{description}</p>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: description.replace(/\n/g, '<br/>')
+        }}
+      />
     </section>
   );
 };

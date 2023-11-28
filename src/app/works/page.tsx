@@ -1,28 +1,12 @@
 import fs from 'fs';
 import * as React from 'react';
 import Image from 'next/legacy/image';
-import { getPlaiceholder } from 'plaiceholder';
-import { WorkItem, worksConfig } from '@/config/works';
+import { worksConfig } from '@/config/works';
 import Link from 'next/link';
-
-const getImages = async (works: WorkItem[]) =>
-  Promise.all(
-    works.map(async ({ src, title, desc, id }) => {
-      // Assuming that your images are stored in the public folder
-      const buffer = await fs.promises.readFile(`./public${src}`);
-
-      // Convert ArrayBuffer to Buffer
-      const plaiceholder = await getPlaiceholder(buffer);
-
-      return {
-        ...plaiceholder,
-        img: { src: src, title: title, desc: desc, id: id }
-      };
-    })
-  );
+import { getImagesWorks } from '@/utils/get-images';
 
 export default async function Page() {
-  const images = await getImages(worksConfig.works);
+  const images = await getImagesWorks(worksConfig.works);
 
   return (
     <div className={'grid py-10 w-full'}>
