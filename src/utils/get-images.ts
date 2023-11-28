@@ -3,9 +3,14 @@ import { getPlaiceholder } from 'plaiceholder';
 import fs from 'fs';
 import { WorkItem } from '@/config/works';
 
+export const getImagesPattern = (id: string) => {
+  const pattern = `./public/assets/projects/${id}-*.{jpg,png,jpeg}`;
+  return pattern;
+};
+
 export const getImagesProject = async (pattern: string) =>
   Promise.all(
-    glob.sync(pattern).map(async file => {
+    glob.sync(getImagesPattern(pattern)).map(async file => {
       const src = file.replace('./public', '');
       const buffer = await fs.promises.readFile(file);
 

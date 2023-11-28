@@ -2,7 +2,7 @@ import Details, { DetailProps } from '@/components/works/details';
 import DisplayImages from '@/components/works/display-images';
 import MastHead, { MastHeadProps } from '@/components/works/mast-head';
 import React from 'react';
-import { getImagesProject } from '@/utils/get-images';
+import { getImagesPattern, getImagesProject } from '@/utils/get-images';
 
 const detailConfig: DetailProps = {
   badges: [
@@ -55,11 +55,7 @@ const mastheadConfig: MastHeadProps = {
 };
 
 const BefitV2 = async () => {
-  const id = 'befit-v2';
-
-  const images = await getImagesProject(
-    `./public/assets/projects/${id}-*.{jpg,png,jpeg}`
-  );
+  const images = await getImagesProject('befit-v2');
 
   return (
     <section className="container space-y-5 lg:space-y-10">
