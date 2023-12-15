@@ -1,0 +1,135 @@
+---
+title: T3-Stack and Why I'm using it to learn Full Stack Dev
+description: I recently graduated college from UCI and I wanted to find a stack that can help me build my side projects quick and simply without too much hassel of setting things up.
+image: /assets/blog/t3-stack-blog-img.png
+date: "2022-11-05"
+authors:
+  - zachuri
+---
+
+---
+
+<img
+	alt={`T3-Stack and Why I'm using it to learn Full Stack Dev (https://analyticsindiamag.com/t3-is-the-next-big-web-stack-youve-never-heard-of/)`}
+	src={`/assets/blog/t3-stack-blog-img.png`}
+/>
+
+## Background
+
+Hello! My name is Zachary and at this time I'm a recent college graduate from UCI. During my time in university I really didn't know what I was going to do with my degree.
+University did allow my to explore different options where I can use my skills in programming, but was really glad to find out my last quarter of UCI which was Web Development.
+
+I would say this was one of the most influential and pretty much worth my money classes. We built an eccommerce website where users are able to search, add to cart and buy movies.
+We learned RESTful API's for querying and mutating JWT Tokens, Identity Managment, Billing, etc... using Spring Boot and MySQL for our backend and React for our frontend.
+It was a solid class and shoutout to the TA's as they couldn't have taught it any better.
+
+#### Beginning
+
+Now that I graduated, I've been wanting to building more side projects on my own; however, the time it took to setup certain parts of what I've learned in that project course to me
+seemed like a bummer. To be honest, if I put in the time to re-learn what I learned in that class I would've built more projects by now. To be honest, I think I'm happy where I'm at
+because my curiosity was able to find other technologies that I think are actually really good.
+
+The past three months or so, I actually started to do more research on Full Stack Development. I was overwhelmed with both the front and back end and was wasting my time on what new
+technologies I should learn first. Luckily, I was able stubble upon a youtuber "[theo ping.gg](https://www.youtube.com/c/TheoBrowne1017)" who actually developed the T3-stack which is all of his favorite technologies in one.
+He had one example where he built a website that compares two pokemons and allows users to vote on which one is the rounder. It really got hooked as it seemed really simple to learn.
+
+Fortunately, there were also few youtubers ([TomDoesTech](https://www.youtube.com/c/TomDoesTech), [WebDevJunkie](https://www.youtube.com/c/WebDevJunkie)) that were able to help me understand the stack and
+I saw the benefits of why it's a really useful stack to execute one's ideas. Here is how and what I learned, why I think it was useful and what I was able to build.
+
+## What is T3-stack?
+
+[T3-stack](https://github.com/t3-oss/create-t3-app) consists of Next.js, Tailwind CSS, tRPC, TypeScript, Prisma, NextAuth.js.
+
+> The "T3 Stack" is a web development stack made by Theo focused on simplicity, modularity, and full-stack typesafety.
+
+> #### What is it? Some Kind of Template?
+>
+> Kind of. We love the technologies that the T3 Stack includes but we do not believe that all of them are needed in every project.
+> So we made create-t3-app to do one thing: Simplify complex boilerplate around the core T3 Stack tech without compromising the pieces modularity.
+
+## How and What I learned
+
+### Frontend
+
+<details>
+<summary>Sources if y'all want to follow</summary>
+
+- [Code Commerce - Twitch Clone](https://www.youtube.com/watch?v=W3HulvsuqGI&t=1180s)
+- [Code Commerce - Portfolio Website](https://www.youtube.com/watch?v=CMx51wpd7g4)
+- [devaslife - Software Agency](https://www.youtube.com/watch?v=GznmPACXBlY&t=4420s)
+
+</details>
+
+Not knowing where to start I chose to learn front-end because I really like to visually see my ideas come to light. I started off learning how to build portfolio websites which at this time learning
+the popular technologies: React, Next.js, and Tailwind CSS.
+
+Those were the main sources that I felt I've learned a lot especially the devaslife source. Him being a freelancer and actually building a website for a company was mind blowing.
+Not knowing how websites worked seemed like magic but once you know the trick you know anything is possible.
+
+### Backend
+
+<details>
+<summary>Sources if y'all want to follow</summary>
+
+- [Web Dev Junkie - T3 Stack Overview](https://www.youtube.com/watch?v=VJH8dsPtbeU&t=204s)
+- [TomDoesTech - Blog](https://www.youtube.com/watch?v=syEWlxVFUrY&t=4837s)
+- [TomDoesTech - Chat App](https://www.youtube.com/watch?v=dXRRY37MPuk&t=29s)
+
+</details>
+
+I mainly learned from people who where familiar with full stack development and were able to create a simple t3 tutorial on how all the technologies connect together. Prisma is an amazing
+[ORM](https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one) for writing your schemas and obtaining data. For sure its good knowledge to
+understand SQL language but simply just writing a simple ORM makes your life easier.
+
+One of the amazing technologies used in this stack is NextAuth. The project course focused on user authentication for about 5 weeks. I was able to implement user authentication in less than a day.
+
+Also, this stack uses [tRPC](https://trpc.io/docs/v10/) instead of [RESTful](https://www.redhat.com/en/topics/api/what-is-a-rest-api) API's. From my understanding, simply it's remotely calling a function
+from a server to query, mutate, delete data instead of calling and endpoint. RPC was really easy to write queries compared to REST; however, there is a draw back to scaleability wise which
+I can accept.
+
+Lastly, I think one of the best features is Typescript for both the front and back end. For me I'm used to type languages like C/C++ and Java. Being able to use it in Javascript
+is something I feel is useful and many developers can agree typesafety is important in many aspects for one's project.
+
+I came to realize that languages are just tools that can get the same job done. Obviously, each technology has their draw back and you must chose the consequences of each one.
+
+From being able to build a project with this stack I think I was able to learn a lot based on how I needed to formulate ideas and what would be the most effective option like querying data.
+
+## Why
+
+Comparing between my project course stack versus this t3-stack it really does depend. I really like this stack because I was able to get my ideas out their by just learning these new technologies.
+It's really solid, easy to implement and learn stack. I can agree with many others it's a really good tool for side projects that you want to build easily without the headache of setting it up.
+
+But it really does depend on your need because scaleability wise for this stack it may not be good for the future. Using the stack I used in my project course it definitely are tools that are used
+in many big companies like Amazon. It doesn't hurt to know both but form me who is someone that is starting out to understand more of full stack development, I think it's a really good stack to learn
+for beginners or for those wanting to build a small project for themselves.
+
+## What I built
+
+<img alt={`Be Fit - zachuri`} src={`/assets/projects/be-fit.png`} />
+
+<details>
+<summary>App Links:</summary>
+
+- [Be Fit](https://be-fit-zachuri.vercel.app/)
+- [Source Code](https://github.com/zachuri/BeFit)
+
+</details>
+
+I was able to build an app called '[BeFit](https://be-fit-zachuri.vercel.app/)' similar to 'Be Real' where it's goal is to get people who are getting into the fitness industry or for even advanced people to track what we think are the
+core fundamentals: diet, weight, and workouts.
+
+It's scalable to where users are able to login and input their necessary data to track. I've organized it in a way where users first add what their workout splits (Back/Chest, Bicep/Back, Legs)
+is which users will be able add the exerciese corresponding to the split. Also, they will be able to track their sets, weights, and total weight they've done which will allow them to compare and analyze
+what they've prepared in the previous weeks.
+
+I've used it myself for the gym and I think it's something I found really useful for myself. My goal in mind was to build something I found wasn't used in other fitness tracker applications. Eventually, my knowledge
+for the gym is something that I wanted to help other's with so they don't waste their time and track their progress effectively.
+
+For now I know it's scalable where users can input their weight, workouts, diets, etc.... For sure will continue on implement new components and help others who may need it.
+
+## Conclusion
+
+Thanks for giving a read and seeing my thoughts on how I learned to build a full stack website with the t3-stack! This was just my thought process and for those who are getting into web dev I think this is a great place to start to understand full stack dev.
+If you have any questions just hit me up and I'll be happy to answer your questions!
+
+Back to Home [here](/blog).
