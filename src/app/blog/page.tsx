@@ -35,14 +35,16 @@ export default async function BlogPage() {
 			{posts?.length ? (
 				<div className='grid gap-10 md:grid-cols-2'>
 					{posts.map((post, index) => (
-						<article key={post._id} className='flex flex-col space-y-2'>
+						<article
+							key={post._id}
+							className='group relative flex flex-col space-y-2'>
 							{post.image && (
-								<div className='relative h-[15rem]'>
+								<div className='relative h-[300px] md:h-[250px] w-full'>
 									<Image
 										src={post.image}
 										alt={post.title}
-										layout='fill'
 										objectFit='cover'
+										layout='fill'
 										className='rounded-md border bg-muted transition-colors'
 										priority={index <= 1}
 									/>
