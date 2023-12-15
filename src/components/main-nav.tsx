@@ -60,7 +60,7 @@ export function MainNav() {
 						key={index}
 						href={item.href}
 						className={cn(
-							"uppercase font-medium z-20 text-sm relative rounded-lg flex items-center h-8 px-4 bg-transparent cursor-pointer select-none transition-colors",
+							"uppercase font-medium z-20 text-xs relative rounded-lg flex items-center h-8 px-4 bg-transparent cursor-pointer select-none transition-colors",
 							{
 								"text-background": !isActive, // Default color for non-active tabs
 								"text-primary": isActive, // Color for active tabs
