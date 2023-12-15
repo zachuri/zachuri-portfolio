@@ -1,12 +1,15 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 
 import { formatDate } from "@/lib/utils";
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: "Blog",
+	description:
+		"My blog to get to see my thoughts, ideas, and my personal interests!",
 };
 
 export default async function BlogPage() {

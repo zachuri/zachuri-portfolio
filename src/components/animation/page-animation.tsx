@@ -26,7 +26,7 @@ const PageAnimation: React.FC<
   React.PropsWithChildren<HTMLMotionProps<'div'>>
 > = props => (
   <motion.div
-    initial="initial"
+    initial="offscreen"
     animate="animate"
     exit="exit"
     variants={fadeInOut}
