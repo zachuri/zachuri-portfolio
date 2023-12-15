@@ -7,7 +7,7 @@ import { compareDesc } from "date-fns";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
-	title: "Blog",
+	title: "Zachary Punsalang - Blog",
 	description:
 		"My blog to get to see my thoughts, ideas, and my personal interests!",
 };
