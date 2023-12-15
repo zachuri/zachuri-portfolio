@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { Icons } from "../ui/icons";
+import { cn } from "@/lib/utils";
 
 export type MastHeadProps = {
 	title: string;
@@ -11,10 +12,13 @@ export type MastHeadProps = {
 const MastHead: React.FC<MastHeadProps> = ({ title, description }) => {
 	return (
 		<section className='space-y-5'>
-			<Button variant={"secondary"} className='text-xs'>
-				<Icons.chevronLeft size={15} />
-				<Link href={"/works"}>See all works</Link>
-			</Button>
+			<Link
+				href='/blog'
+				className={cn(buttonVariants({ variant: "secondary" }))}>
+				<Icons.chevronLeft className='mr-2 h-4 w-4' />
+				See all posts
+			</Link>
+
 			<h1 className='text-3xl font-medium'>{title}</h1>
 			<p
 				dangerouslySetInnerHTML={{
