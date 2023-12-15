@@ -39,7 +39,7 @@ export default async function BlogPage() {
 							key={post._id}
 							className='group relative flex flex-col space-y-2'>
 							{post.image && (
-								<div className='relative h-[300px] md:h-[250px] w-full'>
+								<div className='relative h-[250px] md:h-[200px] w-full'>
 									<Image
 										src={post.image}
 										alt={post.title}
