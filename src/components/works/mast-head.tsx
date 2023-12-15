@@ -13,8 +13,11 @@ const MastHead: React.FC<MastHeadProps> = ({ title, description }) => {
 	return (
 		<section className='space-y-5'>
 			<Link
-				href='/blog'
-				className={cn(buttonVariants({ variant: "secondary" }))}>
+				href='/works'
+				className={cn(
+					buttonVariants({ variant: "secondary" }),
+					"max-md:text-xs"
+				)}>
 				<Icons.chevronLeft className='mr-2 h-4 w-4' />
 				See all posts
 			</Link>
