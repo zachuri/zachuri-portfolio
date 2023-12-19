@@ -20,7 +20,7 @@ export function ThreeModel() {
 	return (
 		<Suspense
 			fallback={
-				<div className='w-[80%]'>
+				<div className='w-[200px] md:w-[80%]'>
 					{/* <Icons.loading /> */}
 					{/* {progress}% */}
 					<Progress className='h-[2px]' value={progress} />
