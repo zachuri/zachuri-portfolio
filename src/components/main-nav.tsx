@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { mainConfig } from "@/config/main";
-import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 const transition = {
 	type: "tween",
@@ -97,7 +97,7 @@ export function MainNav() {
 					//   transition={transition}
 					// />
 					<motion.div
-						className='absolute p-1 z-10 top-0 left-0 rounded-md bg-background/50'
+						className='absolute p-1 z-10 top-0 left-0 rounded-xl bg-background/50'
 						initial={{
 							x: hoveredRect.left - navRect.left,
 							y: hoveredRect.top - navRect.top,
@@ -127,7 +127,7 @@ export function MainNav() {
 			{/* Box */}
 			{selectedRect && navRect && (
 				<motion.div
-					className='absolute p-1 z-10 top-0 left-0 rounded-md bg-background'
+					className='absolute p-1 z-10 top-0 left-0 rounded-lg bg-background'
 					initial={{
 						x: selectedRect.left - navRect.left,
 						y: selectedRect.top - navRect.top,
