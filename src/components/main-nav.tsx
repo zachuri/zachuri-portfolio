@@ -127,7 +127,7 @@ export function MainNav() {
 			{/* Box */}
 			{selectedRect && navRect && (
 				<motion.div
-					className='absolute p-1 z-10 top-0 left-0 rounded-lg bg-background'
+					className='absolute p-1 z-10 top-0 left-0 rounded-xl bg-background'
 					initial={{
 						x: selectedRect.left - navRect.left,
 						y: selectedRect.top - navRect.top,
