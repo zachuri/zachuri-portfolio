@@ -1,13 +1,13 @@
-import Image from "next/image";
-import { Metadata } from "next";
-import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
-	title: "Zachary Punsalang - Blog",
+	title: "Blog",
 	description:
 		"My blog to get to see my thoughts, ideas, and my personal interests!",
 };
