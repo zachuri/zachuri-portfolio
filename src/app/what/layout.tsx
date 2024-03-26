@@ -9,7 +9,7 @@ interface MainLayoutProps {
 }
 
 export const metadata: Metadata = {
-	title: "Zachary Punsalang - What",
+	title: "What",
 	description: "Get to know me a little bit more!",
 };
 

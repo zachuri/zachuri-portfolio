@@ -1,16 +1,18 @@
-import PageAnimation from '@/components/animation/page-animation';
-import React from 'react'
+import PageAnimation from "@/components/animation/page-animation";
+import { Metadata } from "next";
+import React from "react";
 
 interface Props {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
-const Layout: React.FC<Props> = ({children}) => {
-  return (
-    <PageAnimation>
-      {children}
-    </PageAnimation>
-  )
-}
+export const metadata: Metadata = {
+	title: "Blog",
+	description: "My Thoughts and ideas!",
+};
 
-export default Layout
+const Layout: React.FC<Props> = ({ children }) => {
+	return <PageAnimation>{children}</PageAnimation>;
+};
+
+export default Layout;

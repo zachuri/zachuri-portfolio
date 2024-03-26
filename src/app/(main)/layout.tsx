@@ -1,19 +1,19 @@
-import MainContainer from '@/components/layout/main-container';
-import { Metadata } from 'next';
+import MainContainer from "@/components/layout/main-container";
+import { Metadata } from "next";
 
 interface MainLayoutProps {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 export const metadata: Metadata = {
-	title: "Zachary Punsalang ",
+	title: "Zachary Punsalang - Homepage",
 	description:
-		"I'm a Computer Science graduate from the University of California, Irvine. What inspires me to code is \
-    being able to build valuable projects that can help individuals with their lives, my curiosity on wanting \
+		"Zachary is a freelance and a full-stack developer based in Irvine, California with a passion for building digital products/services for himself \
+    and otherse to use. What inspires him to code is being able to build valuable projects that can help individuals with their lives, his curiosity on wanting \
     to know how things are built from the ground up, and how one is able to express their ideas through code. \
-    I am a developer that is willing to learn new ideas and technologies.",
+    He is a developer is willing to learn new ideas and technologies.",
 };
 
 export default async function MainLayout({ children }: MainLayoutProps) {
-  return <MainContainer>{children}</MainContainer>;
+	return <MainContainer>{children}</MainContainer>;
 }

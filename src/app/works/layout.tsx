@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const metadata: Metadata = {
-	title: "Zachary Punsalang - Works",
+	title: "Works",
 	description: "All of my projects and experience!",
 };
 
