@@ -31,7 +31,7 @@ export const worksConfig: WorkConfig = {
 			id: "nutripair",
 			title: "Nutripair",
 			desc: "Frontend Developer (Internship)",
-			src: "/assets/experience/nutripair-01.png",
+			src: "/assets/experience/nutripair-02.png",
 			website: "https://www.nutripair.co/",
 		},
 	],
