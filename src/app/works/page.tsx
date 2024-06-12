@@ -1,3 +1,4 @@
+import { Separator } from "@/components/ui/separator";
 import { worksConfig } from "@/config/works";
 import { getImagesExperience, getImagesWorks } from "@/utils/get-images";
 import Image from "next/legacy/image";
@@ -10,7 +11,13 @@ export default async function Page() {
 	return (
 		<div className={"grid py-10 w-full"}>
 			<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-10 px-10 md:grid-cols-3 xl:grid-cols-4'>
-				<h1 className='text-4xl font-semibold col-span-full'>Experience</h1>
+				<div className='col-span-full'>
+					<h1 className='text-3xl md:text-4xl font-medium col-span-full mb-3'>
+						Experience
+					</h1>
+					<Separator className='col-span-full' />
+				</div>
+
 				{experience.map(({ base64, img }) => (
 					<Link key={img.id} href={img.website}>
 						<div key={img.id} className='space-y-2 mb-10'>
@@ -36,7 +43,12 @@ export default async function Page() {
 			</div>
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-10 px-10 md:grid-cols-3 xl:grid-cols-4'>
-				<h1 className='text-4xl font-semibold col-span-full'>Projects</h1>
+				<div className='col-span-full'>
+					<h1 className='text-3xl md:text-4xl font-medium col-span-full mb-3'>
+						Projects
+					</h1>
+					<Separator className='col-span-full' />
+				</div>
 				{works.map(({ base64, img }) => (
 					<Link key={img.id} href={`works/${img.id}`}>
 						<div key={img.id} className='space-y-2 mb-10'>
