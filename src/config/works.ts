@@ -23,7 +23,7 @@ export const worksConfig: WorkConfig = {
 		{
 			id: "lightstrike",
 			title: "STAR/CHILD",
-			desc: "Tehcnical Project Manager\nQaulity Assurance Engineer\nSoftware Engineer",
+			desc: "Technical Project Manager\nQaulity Assurance Engineer\nSoftware Engineer",
 			src: "/assets/experience/starchild-01.jpeg",
 			website: "https://www.starchild.app/",
 		},
