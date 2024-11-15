@@ -21,6 +21,13 @@ export type WorkConfig = {
 export const worksConfig: WorkConfig = {
 	experience: [
 		{
+			id: "lightstrike",
+			title: "STAR/CHILD",
+			desc: "Tehcnical Project Manager\nQaulity Assurance Engineer\nSoftware Engineer",
+			src: "/assets/experience/starchild-01.jpeg",
+			website: "https://www.starchild.app/",
+		},
+		{
 			id: "tramona",
 			title: "Tramona",
 			desc: "Full Stack Developer",
@@ -30,7 +37,7 @@ export const worksConfig: WorkConfig = {
 		{
 			id: "nutripair",
 			title: "Nutripair",
-			desc: "Frontend Developer (Internship)",
+			desc: "Frontend Developer - Internship\nFull Stack Developer",
 			src: "/assets/experience/nutripair-02.png",
 			website: "https://www.nutripair.co/",
 		},

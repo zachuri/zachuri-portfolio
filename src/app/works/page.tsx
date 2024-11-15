@@ -36,7 +36,7 @@ export default async function Page() {
 								/>
 							</div>
 							<h2 className='text-md lg:text-2xl font-medium'>{img.title}</h2>
-							<p className='text-xs lg:text-sm'>{img.desc}</p>
+							<p className='text-xs lg:text-sm whitespace-pre-line'>{img.desc}</p>
 						</div>
 					</Link>
 				))}
@@ -67,7 +67,7 @@ export default async function Page() {
 								/>
 							</div>
 							<h2 className='text-md lg:text-2xl font-medium'>{img.title}</h2>
-							<p className='text-xs lg:text-sm'>{img.desc}</p>
+							<p className='text-xs lg:text-sm whitespace-pre-line'>{img.desc}</p>
 						</div>
 					</Link>
 				))}
