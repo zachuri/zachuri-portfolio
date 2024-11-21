@@ -12,7 +12,7 @@ export default async function Page() {
 		<div className={"grid py-10 w-full"}>
 			<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-10 px-10 md:grid-cols-3 xl:grid-cols-4'>
 				<div className='col-span-full'>
-					<h1 className='text-3xl md:text-4xl font-medium col-span-full mb-3'>
+					<h1 className='text-3xl md:text-4xl font-medium col-span-full mb-3 uppercase'>
 						Experience
 					</h1>
 					<Separator className='col-span-full' />
@@ -36,7 +36,9 @@ export default async function Page() {
 								/>
 							</div>
 							<h2 className='text-md lg:text-2xl font-medium'>{img.title}</h2>
-							<p className='text-xs lg:text-sm whitespace-pre-line'>{img.desc}</p>
+							<p className='text-xs lg:text-sm whitespace-pre-line'>
+								{img.desc}
+							</p>
 						</div>
 					</Link>
 				))}
@@ -44,7 +46,7 @@ export default async function Page() {
 
 			<div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 lg:gap-10 px-10 md:grid-cols-3 xl:grid-cols-4'>
 				<div className='col-span-full'>
-					<h1 className='text-3xl md:text-4xl font-medium col-span-full mb-3'>
+					<h1 className='text-3xl md:text-4xl font-medium col-span-full mb-3 uppercase'>
 						Projects
 					</h1>
 					<Separator className='col-span-full' />
@@ -67,7 +69,9 @@ export default async function Page() {
 								/>
 							</div>
 							<h2 className='text-md lg:text-2xl font-medium'>{img.title}</h2>
-							<p className='text-xs lg:text-sm whitespace-pre-line'>{img.desc}</p>
+							<p className='text-xs lg:text-sm whitespace-pre-line'>
+								{img.desc}
+							</p>
 						</div>
 					</Link>
 				))}
