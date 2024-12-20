@@ -29,6 +29,7 @@ export const workflowConfig = {
 		{ name: "Karbiner-Elements", type: 1 },
 
 		// Workflow
+		{ name: "M3 MacBook Pro Max", type: 2 },
 		{ name: "AMD Ryzen 5900x", type: 2 },
 		{ name: "GeForce RTX 2060", type: 2 },
 		{ name: "MSI MPG B550 GAMING PLUS", type: 2 },
