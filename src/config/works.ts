@@ -21,6 +21,13 @@ export type WorkConfig = {
 export const worksConfig: WorkConfig = {
 	experience: [
 		{
+			id: "vantasoft",
+			title: "VantaSoft",
+			desc: "Full Stack Software Engineer",
+			src: "/assets/experience/vantasoft-01.jpeg",
+			website: "https://www.vantasoft.com/",
+		},
+		{
 			id: "lightstrike",
 			title: "STAR/CHILD",
 			desc: "Technical Project Manager\nQuality Assurance Engineer\nSoftware Engineer",
@@ -30,14 +37,14 @@ export const worksConfig: WorkConfig = {
 		{
 			id: "tramona",
 			title: "Tramona",
-			desc: "Full Stack Developer",
+			desc: "Full Stack Engineer",
 			src: "/assets/experience/tramona-01.png",
 			website: "https://www.tramona.com/",
 		},
 		{
 			id: "nutripair",
 			title: "Nutripair",
-			desc: "Frontend Developer - Internship\nFull Stack Developer",
+			desc: "Frontend Engineer - Internship\nFull Stack Engineer",
 			src: "/assets/experience/nutripair-02.png",
 			website: "https://www.nutripair.co/",
 		},
