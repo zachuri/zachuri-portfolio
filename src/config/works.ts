@@ -23,8 +23,8 @@ export const worksConfig: WorkConfig = {
 		{
 			id: "vantasoft",
 			title: "VantaSoft",
-			desc: "Full Stack Software Engineer",
-			src: "/assets/experience/vantasoft-01.jpeg",
+			desc: "Full Stack Engineer",
+			src: "/assets/experience/vantasoft-02.jpeg",
 			website: "https://www.vantasoft.com/",
 		},
 		{
