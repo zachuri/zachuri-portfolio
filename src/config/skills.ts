@@ -67,7 +67,6 @@ export const skillsConfig: SkillConfig = {
 		// Tools
 		{ name: "Git", type: 2 }, // Tool
 		{ name: "Version Control", type: 2 }, // Tool
-		{ name: "Arch Linux", type: 2 }, // Tool
 		{ name: "Unix/Linux", type: 2 }, // Tool
 		{ name: "Docker", type: 2 }, // Tool
 		{ name: "Figma", type: 2 }, // Tool
@@ -84,8 +83,5 @@ export const skillsConfig: SkillConfig = {
 		{ name: "Stripe", type: 3 }, // Other
 		{ name: "Twilio", type: 3 }, // Other
 		{ name: "SEO", type: 3 }, // Other
-		{ name: "DWM", type: 3 }, // Other
-		{ name: "Yabai", type: 3 }, // Other
-		{ name: "Karbiner-Elements", type: 3 }, // Other
 	],
 };
