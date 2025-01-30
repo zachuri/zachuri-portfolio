@@ -34,7 +34,6 @@ export default function RootLayout({
 					disableTransitionOnChange>
 					<Navbar />
 					<PageAnimatePresence>{children}</PageAnimatePresence>
-					{/* {children} */}
 					<TailwindIndicator />
 					<Toaster />
 				</ThemeProvider>
