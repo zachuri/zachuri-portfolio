@@ -10,6 +10,8 @@ const words = [
 	"Full-Stack Engineer",
 	"Technical Project Manager",
 	"Quality Assurance Engineer",
+	"Keeb Enthusiast",
+	"I use Arch BTW",
 ];
 
 export default function Home() {

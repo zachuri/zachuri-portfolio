@@ -40,7 +40,7 @@ const MainContact: React.FC<Props> = ({ items }) => {
 													description: "Successfully copied info to clipboard",
 												});
 											}}
-											className='text-xs text-foreground flex flex-row space-x-3'>
+											className='text-xs text-foreground flex flex-wrap j space-x-3'>
 											{item.info}
 											<div className='opacity-0 hover:opacity-100 transition-all duration-500'>
 												<Icons.clipboard size={20} />
