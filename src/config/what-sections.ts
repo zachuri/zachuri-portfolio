@@ -1,14 +1,18 @@
 export const sections = [
-  {
-    id: 'technical-skills',
-    title: 'Technical Skills'
-  },
-  {
-    id: 'work-flow',
-    title: 'Work Flow'
-  },
-  {
-    id: 'interests',
-    title: 'Interests'
-  }
+	{
+		id: "me",
+		title: "Me",
+	},
+	{
+		id: "technical-skills",
+		title: "Technical Skills",
+	},
+	{
+		id: "workflow",
+		title: "Work Flow",
+	},
+	{
+		id: "interests",
+		title: "Interests",
+	},
 ];
