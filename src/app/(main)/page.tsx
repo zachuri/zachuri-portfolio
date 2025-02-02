@@ -19,7 +19,7 @@ export default function Home() {
 				<h2 className='font-heading font-semibold leading-[1.1] text-6xl'>
 					Zachary Punsalang
 				</h2>
-				<div className='max-w-[85%] leading-normal text-muted-foreground sm:leading-7 text-lg md:text-xl p-5'>
+				<div className='w-full leading-normal text-muted-foreground sm:leading-7 text-lg md:text-xl p-5'>
 					<FlipWords words={words} />
 				</div>
 			</div>
