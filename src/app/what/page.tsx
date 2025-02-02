@@ -41,9 +41,7 @@ const Page = () => {
 				</p>
 			</Section>
 
-			<Section
-				id={"technical-skills"}
-				className='flex items-center justify-center'>
+			<Section id={"technical-skills"}>
 				<Skills />
 			</Section>
 
