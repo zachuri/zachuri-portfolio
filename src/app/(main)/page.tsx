@@ -17,11 +17,11 @@ const words = [
 export default function Home() {
 	return (
 		<section className='container space-y-6 lg:space-y-14 min-h-screen flex flex-col items-center justify-center'>
-			<div className='mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center gap-5'>
+			<div className='mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center gap-5 '>
 				<h2 className='font-heading font-semibold leading-[1.1] text-6xl'>
 					Zachary Punsalang
 				</h2>
-				<div className='w-full leading-normal text-muted-foreground sm:leading-7 text-lg md:text-xl p-5'>
+				<div className='flex justify-center items-center w-full leading-normal text-muted-foreground sm:leading-7 text-lg md:text-xl p-5'>
 					<FlipWords words={words} />
 				</div>
 			</div>
