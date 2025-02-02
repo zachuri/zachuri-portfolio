@@ -11,7 +11,7 @@ interface Props {
 
 const MainContainer: React.FC<Props> = ({ children }) => {
 	return (
-		<div className='flex min-h-screen flex-col space-y-6 sm:-mt-20'>
+		<div className='flex min-h-screen flex-col space-y-6 -mt-20'>
 			<div className='grow sm:container sm:flex-1'>
 				<main className='relative flex w-full flex-col'>
 					<div className='flex flex-col justify-center items-center max-md:my-10'>
