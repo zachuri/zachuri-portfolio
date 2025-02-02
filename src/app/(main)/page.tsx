@@ -23,8 +23,8 @@ export default function Home() {
 						Zachary Punsalang
 					</h2>
 				</div>
-				<div className='text-lg mx-auto font-normal text-neutral-600 dark:text-neutral-400'>
-					<FlipWords words={words} /> <br />
+				<div className='text-lg font-normal text-neutral-600 dark:text-neutral-400'>
+					<FlipWords words={words} />
 				</div>
 				<MainContact items={contactConfig.contactItems} />
 			</div>
