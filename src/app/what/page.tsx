@@ -106,7 +106,7 @@ const Page = () => {
 				</Accordion>
 			</Section>
 
-			<Section id={"interests"}>
+			<Section id={"interests"} className='pb-32'>
 				<Interests />
 			</Section>
 		</div>
