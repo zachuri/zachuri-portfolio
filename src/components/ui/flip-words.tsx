@@ -16,19 +16,18 @@ export const FlipWords = ({
 	const [currentWord, setCurrentWord] = useState(words[0]);
 	const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
+	// thanks for the fix Julian - https://github.com/Julian-AT
 	const startAnimation = useCallback(() => {
-		const word = words[(words.indexOf(currentWord) + 1) % words.length];
+		const word = words[words.indexOf(currentWord) + 1] || words[0];
 		setCurrentWord(word);
 		setIsAnimating(true);
 	}, [currentWord, words]);
 
 	useEffect(() => {
-		if (!isAnimating) {
-			const timer = setTimeout(() => {
+		if (!isAnimating)
+			setTimeout(() => {
 				startAnimation();
 			}, duration);
-			return () => clearTimeout(timer);
-		}
 	}, [isAnimating, duration, startAnimation]);
 
 	return (
@@ -37,7 +36,6 @@ export const FlipWords = ({
 				setIsAnimating(false);
 			}}>
 			<motion.div
-				key={currentWord} // Ensure key is unique for each word
 				initial={{
 					opacity: 0,
 					y: 10,
@@ -57,12 +55,14 @@ export const FlipWords = ({
 					x: 40,
 					filter: "blur(8px)",
 					scale: 2,
-					position: "absolute",
+					// Removed position: "absolute"
 				}}
 				className={cn(
-					"z-10 inline-block relative text-left font-normal text-neutral-500 dark:text-neutral-300 px-2",
+					"z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
 					className
-				)}>
+				)}
+				key={currentWord}>
+				{/* edit suggested by Sajal: https://x.com/DewanganSajal */}
 				{currentWord.split(" ").map((word, wordIndex) => (
 					<motion.span
 						key={word + wordIndex}

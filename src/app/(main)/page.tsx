@@ -17,13 +17,13 @@ const words = [
 export default function Home() {
 	return (
 		<section className='container gap-6 lg:gap-14 min-h-screen flex flex-col items-center justify-center'>
-			<div className='relative flex flex-col items-center justify-center gap-10'>
+			<div className='flex flex-col items-center justify-center gap-10'>
 				<div className='mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center gap-5'>
 					<h2 className='font-heading font-semibold leading-[1.1] text-6xl'>
 						Zachary Punsalang
 					</h2>
 				</div>
-				<div className='text-lg font-normal text-neutral-600 dark:text-neutral-400'>
+				<div className='relative text-lg font-normal w-[300px]'>
 					<FlipWords words={words} />
 				</div>
 				<MainContact items={contactConfig.contactItems} />
