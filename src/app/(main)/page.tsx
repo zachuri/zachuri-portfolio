@@ -1,8 +1,8 @@
 "use client";
 
+import PageAnimation from "@/components/animation/page-animation";
 import MainContact from "@/components/main-contact";
 import { FlipWords } from "@/components/ui/flip-words";
-import { Separator } from "@/components/ui/separator";
 import { contactConfig } from "@/config/contact";
 
 const words = [

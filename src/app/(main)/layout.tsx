@@ -1,3 +1,4 @@
+import PageAnimation from "@/components/animation/page-animation";
 import MainContainer from "@/components/layout/main-container";
 import { Metadata } from "next";
 
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default async function MainLayout({ children }: MainLayoutProps) {
-	return <div>{children}</div>;
+	return <MainContainer>{children}</MainContainer>;
 }
