@@ -11,10 +11,10 @@ const fadeInOut: Variants = {
 		opacity: 1,
 		pointerEvents: "all",
 	},
-	exit: {
-		opacity: 0,
-		pointerEvents: "none",
-	},
+	// exit: {
+	// 	opacity: 0,
+	// 	pointerEvents: "none",
+	// },
 };
 
 const transition: HTMLMotionProps<"div">["transition"] = {
@@ -26,9 +26,9 @@ const PageAnimation: React.FC<
 	React.PropsWithChildren<HTMLMotionProps<"div">>
 > = props => (
 	<motion.div
-		initial='offscreen'
+		initial='initial' // Changed from 'offscreen' to 'initial'
 		animate='animate'
-		exit='exit'
+		// Removed exit prop to focus on fade-in
 		variants={fadeInOut}
 		transition={transition}
 		{...props}
