@@ -12,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default async function MainLayout({ children }: MainLayoutProps) {
-	return <MainContainer>{children}</MainContainer>;
+	return <div>{children}</div>;
 }
