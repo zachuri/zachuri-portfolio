@@ -19,7 +19,7 @@ const MainContact: React.FC<Props> = ({ items }) => {
 					<div
 						key={item.name}
 						className='relative overflow-hidden rounded-lg border bg-background hover:border-foreground transition-colors duration-300'>
-						<HoverCard>
+						<HoverCard openDelay={200} closeDelay={0}>
 							<HoverCardTrigger href={item.href}>
 								<div className='flex flex-col items-center justify-center p-8 md:p-16'>
 									<div className='space-y-2'>
@@ -28,7 +28,7 @@ const MainContact: React.FC<Props> = ({ items }) => {
 									</div>
 								</div>
 							</HoverCardTrigger>
-							<HoverCardContent>
+							<HoverCardContent sideOffset={20}>
 								<div className='flex justify-between space-x-4'>
 									<div className='space-y-1'>
 										<h4 className='text-sm font-semibold'>{item.name}</h4>
