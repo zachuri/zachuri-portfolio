@@ -6,7 +6,7 @@ import { contactConfig } from "@/config/contact";
 
 const words = [
 	"Software Engineer",
-	"Full-Stack Engineer",
+	"Full Stack Engineer",
 	"Technical Project Manager",
 	"Quality Assurance Engineer",
 	"Keeb Enthusiast",

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-proivder";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
@@ -7,8 +6,12 @@ import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/navbar";
 import PageAnimatePresence from "@/components/animation/page-animate-presence";
 
-const font = Inter({ subsets: ["latin"] });
-// const font = Roboto({ subsets: ['latin'], weight: ['400'] });
+import localFont from "next/font/local";
+const font = localFont({
+	src: "../../public/fonts/alt-systema/ALTSystema-Regular-BF666bbb8c5f299.ttf",
+});
+
+// const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Zachary Punsalang ",
