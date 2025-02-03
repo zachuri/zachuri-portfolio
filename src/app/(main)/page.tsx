@@ -1,6 +1,5 @@
 "use client";
 
-import PageAnimation from "@/components/animation/page-animation";
 import MainContact from "@/components/main-contact";
 import { FlipWords } from "@/components/ui/flip-words";
 import { contactConfig } from "@/config/contact";
@@ -16,7 +15,7 @@ const words = [
 
 export default function Home() {
 	return (
-		<section className='container gap-6 lg:gap-14 min-h-screen flex flex-col items-center justify-center'>
+		<section className='container gap-6 lg:gap-14 min-h-screen flex flex-col items-center justify-center overflow-x-hidden'>
 			<div className='flex flex-col items-center justify-center gap-10'>
 				<div className='mx-auto flex max-w-[58rem] flex-col items-center space-y-2 text-center gap-5'>
 					<h2 className='font-heading font-semibold leading-[1.1] text-6xl'>
