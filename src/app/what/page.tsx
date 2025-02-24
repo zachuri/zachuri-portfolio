@@ -1,10 +1,6 @@
 // 'use client';
 
-import React from "react";
-import Skills from "@/components/what/skills";
 import { ThreeModel } from "@/components/three/three-model";
-import Section from "@/components/what/section-div";
-import Workflow from "@/components/what/workflow";
 import {
 	Accordion,
 	AccordionContent,
@@ -12,6 +8,9 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion";
 import Interests from "@/components/what/interests";
+import Section from "@/components/what/section-div";
+import Skills from "@/components/what/skills";
+import Workflow from "@/components/what/workflow";
 
 const Page = () => {
 	return (
@@ -22,30 +21,30 @@ const Page = () => {
 						<ThreeModel />
 					</center>
 				</div>
-			</Section>
-			<Section id={"me"} className='gap-5'>
-				<h1 className='uppercase leading-normal text-muted-foreground text-2xl sm:text-3xl sm:leading-7'>
-					Hi I&apos;m{" "}
-					<span className='text-foreground font-medium'>ZACHURI</span>.
-				</h1>
-				<p className='text-gray-500 dark:text-gray-300'>
-					I&apos;m a Computer Science graduate from the University of
-					California, Irvine, driven by a passion for building meaningful
-					projects that positively impact people&apos;s lives. My curiosity
-					about how things are created from the ground up inspires me to explore
-					and understand the intricate details of technology. I’m also
-					fascinated by how coding allows us to express ideas and bring them to
-					life. As a developer, I’m always eager to learn new technologies,
-					embrace innovative ideas, and grow through collaboration and
-					challenges.
-				</p>
+				<Section id={"me"} className='gap-5'>
+					<h1 className='uppercase leading-normal text-muted-foreground text-2xl sm:text-3xl sm:leading-7'>
+						Hi I&apos;m{" "}
+						<span className='text-foreground font-medium'>ZACHURI</span>.
+					</h1>
+					<p className='text-gray-500 dark:text-gray-300'>
+						I&apos;m a Computer Science graduate from the University of
+						California, Irvine, driven by a passion for building meaningful
+						projects that positively impact people&apos;s lives. My curiosity
+						about how things are created from the ground up inspires me to
+						explore and understand the intricate details of technology. I’m also
+						fascinated by how coding allows us to express ideas and bring them
+						to life. As a developer, I’m always eager to learn new technologies,
+						embrace innovative ideas, and grow through collaboration and
+						challenges.
+					</p>
+				</Section>
 			</Section>
 
 			<Section id={"technical-skills"}>
 				<Skills />
 			</Section>
 
-			<Section id={"workflow"} className='pb-32'>
+			<Section id={"workflow"}>
 				<Workflow />
 				<Accordion type='single' collapsible>
 					<AccordionItem value='item-1'>
@@ -104,7 +103,7 @@ const Page = () => {
 				</Accordion>
 			</Section>
 
-			<Section id={"interests"} className='pb-32'>
+			<Section id={"interests"} className='pb-96'>
 				<Interests />
 			</Section>
 		</div>

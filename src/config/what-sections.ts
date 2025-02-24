@@ -1,7 +1,7 @@
 export const sections = [
 	{
 		id: "me",
-		title: "Me",
+		title: "",
 	},
 	{
 		id: "technical-skills",
